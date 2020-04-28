@@ -13,7 +13,6 @@
     "title": "Connecting Scotland",
     "menus": "{:./data/menus.json}",
     "elasticsearchUrl": "{$./data/elasticsearch-url.txt}",
-    "pledges": "{:./data/pledges.json}",
     "commonTasks": "{:./data/common-tasks.json}",
     "handlebars": {
       "partials": {
