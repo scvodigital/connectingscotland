@@ -1,16 +1,16 @@
 {
   "domains": [
-    "digitalparticipation.local",
-    "digitalparticipation.scot",
-    "www.digitalparticipation.scot"
+    "connectingscotland.local",
+    "connecting.scot",
+    "www.connecting.scot"
   ],
   "routes": [
     "{:./routes/*.json}"
   ],
   "metaData": {
     "assetsVersion": "{:../package.json@version}",
-    "assetsBase": "https://storage.googleapis.com/scvo-assets/test/digitalparticipation/",
-    "title": "Scotland's Digital Participation Charter",
+    "assetsBase": "https://storage.googleapis.com/scvo-assets/test/connectingscotland/",
+    "title": "Connecting Scotland",
     "menus": "{:./data/menus.json}",
     "elasticsearchUrl": "{$./data/elasticsearch-url.txt}",
     "pledges": "{:./data/pledges.json}",
