@@ -1,0 +1,48 @@
+<form action="{{@root.request.url.path}}" method="GET">
+  {{#if @root.request.params.query.q ~}}
+  <input type="hidden" name="q" value="{{@root.request.params.query.q}}" />
+  {{/if ~}}
+  {{#if @root.request.params.query.sector ~}}
+  <input type="hidden" name="sector" value="{{@root.request.params.query.sector}}" />
+  {{/if ~}}
+  {{#if @root.request.params.query.category ~}}
+  <input type="hidden" name="category" value="{{@root.request.params.query.category}}" />
+  {{/if ~}}
+  <div class="">
+    <div class="columns">
+      <div class="column col-6 col-md-12">
+        {{#if paging.totalResults ~}}
+        <p class="search-info">
+          <strong>Total results:</strong> {{addCommas paging.totalResults}}
+          {{#compare paging.totalResults ">" 10 ~}} |
+          <strong>Current page:</strong> {{addCommas paging.currentPage}} of {{addCommas paging.totalPages}}
+          {{/compare ~}}
+        </p>
+        {{else}}
+        {{#ifAny @root.request.params.query.q @root.request.params.query.sector @root.request.params.query.category ~}}
+        <p class="search-info">
+          No results could be found, please try a different search query
+        </p>
+        {{/ifAny ~}}
+        {{/if ~}}
+      </div>
+      <div class="column col-3 col-md-6 col-sm-12">
+        <div class="form-group">
+          <label class="form-checkbox">
+            <input type="checkbox" id="exclude_expired" name="exclude_expired" onchange="this.form.submit();"{{#if @root.request.params.query.exclude_expired}} checked{{/if}} />
+            <i class="form-icon"></i> Show only active signatories
+          </label>
+        </div>
+      </div>
+      <div class="column col-3 col-md-6 col-sm-12">
+        <div class="mdc-form-field sort pull-right">
+          <form action="{{@root.request.url.path}}" method="GET">
+          <select class="mdc-select" role="listbox" id="charter-sort" name="sort" onchange="this.form.submit();">
+            <option value=""{{#if @root.request.params.query.sort}}{{else}} selected{{/if}}>{{#if @root.request.params.query.q ~}}Relevance{{else}}Date signed{{/if}}</option>
+            <option value="AZ"{{#if @root.request.params.query.sort}} selected{{else}}{{/if}}>Alphabetical</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

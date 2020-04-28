@@ -1,0 +1,133 @@
+<div class="columns title">
+  <div class="column col-8 col-md-12">
+    <img src="https://storage.googleapis.com/digitalparticipation/images/illustrations/Main-Hero-RGB-04.png" alt="Illustration" class="responsive-img hide-md hide-lg" />
+    <h1>Sign Up & Skill Up for a Digitally Smarter Scotland</h1>
+    <p>
+      We are on a mission: to give everyone in Scotland the essential digital skills they need to do their jobs, live their lives, and confidently use different digital services. To do this, we need your help&hellip;
+    </p>
+  </div>
+  <div class="column col-4 col-md-6 hide-sm">
+    <img src="https://storage.googleapis.com/digitalparticipation/images/illustrations/Main-Hero-RGB-04.png" alt="Illustration" class="responsive-img" />
+  </div>
+</div>
+<div class="description">
+  <hr />
+</div>
+
+<div class="equal-height">
+  <div class="columns title">
+    <div class="column col-4 col-md-12">
+      <div class="mdc-card">
+        <div class="mdc-card__primary">
+          <h2>
+            <i class="fal fa-fw fa-marker fa-2x"></i>
+            Charter
+          </h2>
+        </div>
+        <div class="mdc-card__supplimentary-text">
+          <p>
+            Scotland's Digital Participation Charter helps your organisation take a step towards a digitally smarter Scotland.
+          </p>
+        </div>
+        <div class="mdc-card__actions">
+          <a href="/charter" class="btn mdc-card__action mdc-card__action--button">
+            Find out more
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="column col-4 col-md-12">
+      <div class="mdc-card">
+        <div class="mdc-card__primary">
+          <h2>
+            <i class="fal fa-fw fa-graduation-cap fa-2x"></i>
+            Skills
+          </h2>
+        </div>
+        <div class="mdc-card__supplimentary-text">
+          <p>
+            We developed the Essential Digital Skills Toolkit in consultation with over 60 organisations, to support individuals, groups and organisations to measure their digital skills in life and in the workplace.
+          </p>
+        </div>
+        <div class="mdc-card__actions">
+          <a href="/skills" class="btn mdc-card__action mdc-card__action--button">
+            Find out more
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="column col-4 col-md-12">
+      <div class="mdc-card">
+        <div class="mdc-card__primary">
+          <h2>
+            <span class="fa-stack fa-1x">
+              <i class="fal fa-stack-2x fa-search"></i>
+              <i class="fas fa-stack-1x fa-pound-sign" style="margin-top: -0.44rem; margin-left: -0.24em; font-size: 1.6rem;"></i>
+            </span>
+            Funding
+          </h2>
+        </div>
+        <div class="mdc-card__supplimentary-text">
+          <p>
+            The Digital Participation Charter Fund, supported by the Scottish Government and BT, invests in community digital participation projects across Scotland.
+          </p>
+        </div>
+        <div class="mdc-card__actions">
+          <a href="https://scvo.scot/funding/digital-participation-charter-fund" class="btn mdc-card__action mdc-card__action--button">
+            Find out more&ensp;<span class="fas fa-external-link" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="">
+  {{#compare @root.data.primaryResponse.hits.total ">" 0 ~}}
+  <div class="columns title">
+    <div class="column col-12">
+      <hr />
+      <h2>Latest story</h2>
+    </div>
+  </div>
+  {{#with @root.data.primaryResponse.hits.hits.[0]._source ~}}
+  <div class="columns stories">
+    <div class="column col-12">
+      <hr />
+    </div>
+    <div class="column col-2 col-md-12">
+      <a href="/{{replace slug "_" "/"}}"><img src="{{featured_image.sizes.full.source_url}}" alt="title" /></a>
+    </div>
+    <div class="column col-6 col-md-12">
+      <h3>
+        <a href="/{{replace slug "_" "/"}}">{{{title}}}</a>
+      </h3>
+      <p>
+        <a href="/{{replace slug "_" "/"}}">Read this story</a>
+      </p>
+    </div>
+    <div class="column col-4 col-md-12">
+      {{#if quotation}}
+      <blockquote>
+        {{#if quotation.text}}<p>“{{quotation.text}}”</p>{{/if}}
+        <cite>{{quotation.author}}</cite>
+      </blockquote>
+      {{/if}}
+    </div>
+  </div>
+  {{/with ~}}
+  <div class="title">
+    <p>
+      <a href="/stories" class="btn">Read more stories</a>
+    </p>
+    <p>
+      <br />
+      Looking for something else?
+    </p>
+    <p>
+      <a href="/resources" class="btn">Browse resources</a>
+    </p>
+
+    <hr class="margin-top" />
+  </div>
+  {{/compare ~}}
+</div>

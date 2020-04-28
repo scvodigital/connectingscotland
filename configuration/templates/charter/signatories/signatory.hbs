@@ -1,0 +1,164 @@
+{{#with @root.data.primaryResponse.hits.hits.[0]._source ~}}
+<div class="full digital-charter-signatory">
+  <div class="title">
+    <div class="column col-12">
+      <p>
+        <strong>
+          <span class="fas fa-chevron-circle-left" aria-hidden="true"></span>
+          {{#unless (compare (querystringify @root.request.params.query utm_source=null utm_campaign=null utm_medium=null) "") ~}}
+          <a href="/charter/signatories{{> query_search}}">Back to search results</a>
+          {{else}}
+          <a href="/charter/signatories">All signatories</a>
+          {{/unless ~}}
+        </strong>
+      </p>
+    </div>
+    <div class="column col-12">
+      {{#if logos.[0] ~}}
+      <div class="signatory-logo-background pull-right">
+        <p>
+          {{#if website ~}}
+          <a href="{{#if (contains website 'http')}}{{website}}{{else}}http://{{website}}{{/if}}" rel="noopener">
+            {{#if logos.[0] ~}}
+            <img src="{{logos.0.uploadUrl}}" alt="{{title}}" class="responsive-img resize-fit-center" />
+            {{/if ~}}
+          </a>
+          {{else}}
+          {{#if logos.[0] ~}}
+          <img src="{{logos.0.uploadUrl}}" alt="{{title}}" class="responsive-img resize-fit-center" />
+          {{/if ~}}
+          {{/if ~}}
+        </p>
+      </div>
+      {{/if ~}}
+      <h1>{{{title}}}</h1>
+      {{#compare status "===" "Signed" ~}}
+      <p class="signed">
+        <span class="fas fa-badge-check" aria-hidden="true"></span>&ensp;Signed {{momentFromNow date_signed}}
+      </p>
+      {{/compare ~}}
+      {{#if website ~}}
+      <p>
+        <span class="fas fa-link" aria-hidden="true"></span>
+        <a href="{{#if (contains website 'http')}}{{website}}{{else}}http://{{website}}{{/if}}" rel="noopener">{{website}}</a>
+      </p>
+      {{/if ~}}
+
+      {{#if blog ~}}
+      <p>
+        <span class="fas fa-rss-square" aria-hidden="true"></span>
+        <a href="{{#if (contains blog 'http')}}{{blog}}{{else}}http://{{blog}}{{/if}}" rel="noopener">{{blog}}</a>
+      </p>
+      {{/if ~}}
+
+      {{#if twitter ~}}
+      <p>
+        <span class="fab fa-twitter-square" aria-hidden="true"></span>
+        <a href="{{#if (contains twitter 'twitter.com')}}{{twitter}}{{else}}http://twitter.com/{{twitter}}{{/if}}" rel="noopener">{{twitter}}</a>
+      </p>
+      {{/if ~}}
+
+      {{#if facebook ~}}
+      <p>
+        <span class="fab fa-facebook-square" aria-hidden="true"></span>
+        <a href="{{#if (contains facebook 'http')}}{{facebook}}{{else}}http://{{facebook}}{{/if}}" rel="noopener">{{facebook}}</a>
+      </p>
+      {{/if ~}}
+
+      {{#if sector ~}}
+      {{#if category ~}}
+      <p>
+        <strong>{{sector}} category:</strong>
+        {{category}}
+      </p>
+      {{else}}
+      <p>
+        <strong>Sector:</strong>
+        {{sector}}
+      </p>
+      {{/if ~}}
+      {{else}}
+      {{#if category ~}}
+      <p>
+        <strong>Category:</strong>
+        {{category}}
+      </p>
+      {{/if ~}}
+      {{/if ~}}
+    </div>
+  </div>
+  <div class="columns title">
+    <div class="column col-12">
+      <hr />
+
+      {{#if mission_statement ~}}
+      <h4>
+        Organisation statement:
+      </h4>
+      <p>
+        {{{markdown (removeEntities mission_statement)}}}
+      </p>
+      {{/if ~}}
+
+      {{#if description ~}}
+      <h4>
+        Commitment to digital participation:
+      </h4>
+      <p>
+        {{{markdown (removeEntities description)}}}
+      </p>
+      {{/if ~}}
+
+      {{#if support_offered ~}}
+      <h4>
+        Support offered:
+      </h4>
+      <p>
+        {{{markdown (removeEntities support_offered)}}}
+      </p>
+      {{/if ~}}
+
+      {{#if support_wanted ~}}
+      <h4>
+        Support wanted:
+      </h4>
+      <p>
+        {{{markdown (removeEntities support_wanted)}}}
+      </p>
+      {{/if ~}}
+
+      {{#compare @root.data.supplimentaryResponses.projects.hits.total ">" 0 ~}}
+      <hr />
+
+      <h3>
+        {{{title}}} has been supported by the Charter Fund
+      </h3>
+      {{#each @root.data.supplimentaryResponses.projects.hits.hits ~}}
+      {{#with _source ~}}
+      <h4>
+        {{{title}}}
+      </h4>
+      <p>
+        <span class="fas fa-calendar-alt" aria-hidden="true"></span>&ensp;Funding provided {{momentFromNow day_awarded}}
+      </p>
+      <p>
+        {{{truncate (stripTags (default description description_alt)) 300}}}
+        <a href="https://scvo.scot/funding/digital-participation-charter-fund/projects/{{slug}}">Read more</a>
+        <span class="fas fa-external-link" aria-hidden="true"></span>
+      </p>
+      <p>
+        <br />
+        <a href="https://scvo.scot/funding/digital-participation-charter-fund">Find out more about the Charter Fund</a>
+        <span class="fas fa-external-link" aria-hidden="true"></span>
+      </p>
+      {{/with ~}}
+      {{/each ~}}
+      {{/compare ~}}
+
+      {{#ifAny mission_statement description support_offered support_wanted ~}}
+      <hr />
+      {{/ifAny ~}}
+    </div>
+  </div>
+</div>
+{{/with ~}}

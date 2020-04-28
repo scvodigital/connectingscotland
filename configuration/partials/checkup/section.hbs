@@ -1,0 +1,112 @@
+{{#with (getProperty @root.data.checkup section) ~}}
+<form action="/skills/checkup/{{next_section}}" method="post" class="checkup-section b-padding-full detail" id="checkup-{{../section}}">
+  {{> checkup_answers section=@root.request.body.answer-section}}
+  <input type="hidden" name="answer-section" value="{{../section}}" />
+  <div class="checkup-section-header b-padding-full v-margin-full">
+    <div class="container">
+      <div class="container-content">
+        {{#if progress ~}}
+        {{> checkup_progress progress=progress}}
+        {{/if ~}}
+        {{!-- {{#if name ~}}
+        <div>{{{name}}}</div>
+        {{/if ~}} --}}
+        {{#if title ~}}
+        <h1>{{{title}}}</h1>
+        {{/if ~}}
+        {{#if heading ~}}
+        <h2>{{{heading}}}</h2>
+        {{/if ~}}
+        {{#if description ~}}
+        <p>{{{description}}}</p>
+        {{/if ~}}
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="container-content">
+      {{#compare progress "<" 100 ~}}
+      <p>
+        * required information
+      </p>
+      {{/compare ~}}
+      {{#each questions ~}}
+      <div class="question-block">
+        <div class="question">
+          {{#if title ~}}
+          <h2 class="question-title t-margin-full">{{{title}}}{{#if required}} *{{/if}}</h2>
+          {{/if ~}}
+          {{#if hint ~}}
+          <p class="question-hint caption">{{{hint}}}</p>
+          {{/if ~}}
+          {{#if description ~}}
+          <p class="question-description">{{{description}}}</p>
+          {{/if ~}}
+        </div>
+        {{#ifAny (compare type "select-one") (compare type "select-many") ~}}
+        <div class="answer-block columns">
+          {{#each options ~}}
+          {{#switch ../type ~}}
+          {{#case "select-one" ~}}
+          {{#if answer ~}}
+          <div class="answer column {{#compare (length ../options) '>' 9}}col-3{{else}}col-12{{/compare}}">
+            {{> forms_radio_button label=answer id=(slugify (concat answer ../value)) name=(concat "answers-" ../../../section "-" ../value) value=value required=required}}
+          </div>
+          {{/if ~}}
+          {{/case ~}}
+          {{#case "select-many" ~}}
+          {{#if answer ~}}
+          <div class="answer column {{#compare (length ../options) '>' 9}}col-3{{else}}col-12{{/compare}}">
+            {{> forms_checkbox label=answer id=(slugify (concat answer ../value)) name=(concat "answers-" ../../../section "-" ../value) value=value}}
+          </div>
+          {{/if ~}}
+          {{/case ~}}
+          {{/switch ~}}
+          {{/each ~}}
+        </div>
+        {{/ifAny ~}}
+        {{#compare type "select-skill" ~}}
+        {{!-- <p>
+          Measuring your skills
+        </p> --}}
+        <ul class="answer-block">
+          {{#each (split "I can do this,I can partially do this,I can’t do this,I would like to learn how to do this,I have no interest in this" ",") ~}}
+          <li class="answer">{{> forms_radio_button label=this id=(slugify (concat this "-" ../value)) name=(concat "answers-" ../../../section "-" ../value "-measuring") value=(slugify this) required=required}}</li>
+          {{/each ~}}
+        </ul>
+        {{!-- <p>
+          Developing your skills
+        </p>
+        <ul class="answer-block">
+          {{#each (split "I can confidently show others how to do this,I’d like to learn how to do this,N/A to job role" ",") ~}}
+          <li class="answer">{{> forms_radio_button label=this id=(slugify (concat this "-" ../value)) name=(concat "answers-" ../../../section "-" ../value "-developing") value=(slugify this) required=required}}</li>
+          {{/each ~}}
+        </ul> --}}
+        {{/compare ~}}
+        {{#compare type "freetext" ~}}
+        <div class="answer-block">
+          <div class="form-group">
+            {{!-- <label for="{{slugify title}}" class="form-label">{{{title}}}</label> --}}
+            <textarea id="{{slugify title}}" name="answers-{{../../section}}-{{value}}" class="form-input" rows="5" placeholder="{{placeholder}}"{{#if required}} required{{/if}}></textarea>
+          </div>
+        </div>
+        {{/compare ~}}
+        {{#compare type "text" ~}}
+        <div class="answer-block">
+          <div class="form-group">
+            {{!-- <label class="form-label" for="{{slugify title}}">{{{title}}}</label> --}}
+            <input type="text" id="{{slugify title}}" name="answers-{{../../section}}-{{value}}" class="form-input" value="" data-lpignore="true" autocomplete="off" placeholder="{{placeholder}}"{{#if required}} required{{/if}}>
+          </div>
+        </div>
+        {{/compare ~}}
+      </div>
+      {{/each ~}}
+      {{#compare progress "<" 100 ~}}
+      <div class="cta v-padding-full">
+        <button type="submit" class="btn">Next section</button>
+      </div>
+      {{/compare ~}}
+    </div>
+  </div>
+</form>
+{{/with ~}}
