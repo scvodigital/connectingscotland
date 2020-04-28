@@ -1,5 +1,5 @@
 
-export class DigitalParticipation {
+export class ConnectingScotland {
   constructor(firebaseConfig) {
   }
 }

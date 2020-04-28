@@ -353,6 +353,7 @@ header.navbar {
     border-bottom: 3px solid $brand-typography;
   }
   .navbar__title {
+    max-width: 280px;
     margin: 0;
     padding: $unit 0 $unit;
     position: relative;
@@ -472,9 +473,9 @@ main {
 .home {
   main {
     background: $brand-purple;
-    background: -moz-linear-gradient(top, $brand-purple 10%, $brand-pink 90%);
-    background: -webkit-linear-gradient(top, $brand-purple 10%, $brand-pink 90%);
-    background: linear-gradient(to bottom, $brand-purple 10%, $brand-pink 90%);
+    background: -moz-linear-gradient(200deg, $brand-yellow 10%, $brand-pink 50%, $brand-purple 90%);
+    background: -webkit-linear-gradient(200deg, $brand-yellow 10%, $brand-pink 50%, $brand-purple 90%);
+    background: linear-gradient(200deg, $brand-yellow 10%, $brand-pink 50%, $brand-purple 90%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
