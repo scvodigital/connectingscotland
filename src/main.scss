@@ -355,11 +355,12 @@ header.navbar {
   .navbar__title {
     // max-width: 280px;
     margin: 0;
-    padding: $unit 0 $unit;
+    padding: $unit/2 0;
     position: relative;
     .brand-logo {
+      margin-left: -2.5rem;
       width: 280px;
-      height: 195px;
+      height: 180px;
       background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland_colour.svg');
       background-repeat: no-repeat;
       background-size: 100%;
