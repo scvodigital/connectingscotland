@@ -352,11 +352,16 @@ header.navbar {
     border-bottom: 3px solid $brand-typography;
   }
   .navbar__title {
-    max-width: 280px;
+    // max-width: 280px;
     margin: 0;
     padding: $unit 0 $unit;
     position: relative;
     .brand-logo {
+      width: 280px;
+      height: 195px;
+      background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland-colour.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
       display: block;
       font-size: 1.5rem;
       letter-spacing: -0.06rem;
@@ -1507,9 +1512,8 @@ footer {
 .cookies,
 .terms,
 .contact-us {
-  .navbar .navbar__title .brand-logo .digital,
-  .navbar .navbar__title .brand-logo .charter {
-    color: white;
+  .navbar .navbar__title .brand-logo {
+    background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland-reversed.png');
   }
   .navbar .container {
     border-bottom: 3px solid white;
