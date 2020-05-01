@@ -1,10 +1,28 @@
 {
   "name": "home",
+  "debug": true,
   "pattern": "/",
   "metaData": {
     "title": "Connecting Scotland"
   },
   "tasks": [
+    {
+      "name": "primaryResponse",
+      "taskModule": "elasticsearch",
+      "config": {
+        "connectionStringTemplate": "{$../data/elasticsearch-url.txt}",
+        "elasticsearchConfig": {
+          "apiVersion": "5.6"
+        },
+        "queryTemplates": {
+          "index": "{$../data/elasticsearch-index.txt}",
+          "type": "scvo-page",
+          "template": ">context.metaData.handlebars.queries.pages_page",
+          "noResultsRoute": "four_oh_four"
+        }
+      },
+      "renderer": "handlebars"
+    },
     {
       "name": "destination",
       "taskModule": "renderLayout",
@@ -21,7 +39,7 @@
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
-              "body": ">context.metaData.handlebars.templates.home",
+              "body": ">context.metaData.handlebars.templates.page-body",
               "foot": ""
             },
             "contentType": "text/html"
