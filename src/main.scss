@@ -195,7 +195,6 @@ a:focus {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
-  padding: 0;
 }
 header .container {
   overflow: visible;
@@ -310,9 +309,6 @@ main {
 .mdc-list-item {
   direction: ltr;
   padding: 0;
-}
-main {
-  padding-bottom: $unit;
 }
 .author {
   margin: 0 !important;
@@ -528,7 +524,7 @@ main {
 }
 
 main {
-  padding-bottom: 4rem;
+  padding: 0 $unit $unit*4;
   h1 {
     font-size: 3rem;
     line-height: 3.4rem;
@@ -1395,7 +1391,7 @@ footer {
     }
   }
   .fa-ul {
-    margin: 0 0 0 $unit*2;
+    margin: 0 0 0 $unit*1.6;
     li a {
       text-decoration: none;
     }
@@ -1421,9 +1417,6 @@ footer {
   }
   .footer-copyright {
     padding-bottom: $unit/2;
-    .container {
-      padding: $unit 0 .9rem;
-    }
     p {
       font-size: 1rem;
       margin: 0;
@@ -1699,8 +1692,10 @@ footer {
     }
   }
   footer {
-    .footer-copyright a {
-      display: inline-block;
+    .footer-copyright a.brand {
+      display: block;
+      margin: $unit 0;
+      text-align: center;
     }
     .logo.scvo,
     .logo.digital-scotland {
@@ -1988,6 +1983,10 @@ footer {
   .pagination-distance-3,
   .pagination-distance-4 {
     display: none !important;
+  }
+  header.navbar .navbar__title .brand-logo {
+    width: 235px;
+    height: 150px;
   }
   main {
     .signatory-logo-background {
