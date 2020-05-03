@@ -1,5 +1,5 @@
 {
-  "name": "cookies",
+  "name": "page_cookies",
   "pattern": "/cookies",
   "metaData": {
     "title": "Cookies policy – Connecting Scotland"
@@ -21,7 +21,7 @@
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
-              "body": ">context.metaData.handlebars.templates.cookies",
+              "body": ">context.metaData.handlebars.templates.body-cookies",
               "foot": ""
             },
             "contentType": "text/html"

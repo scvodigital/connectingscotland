@@ -1,5 +1,5 @@
 {
-  "name": "accessibility",
+  "name": "page_accessibility",
   "pattern": "/accessibility",
   "metaData": {
     "title": "Accessibility – Connecting Scotland"
@@ -21,7 +21,7 @@
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
-              "body": ">context.metaData.handlebars.templates.accessibility",
+              "body": ">context.metaData.handlebars.templates.body-accessibility",
               "foot": ""
             },
             "contentType": "text/html"

@@ -639,6 +639,8 @@ main {
 
   .form-group {
     input[type=text],
+    input[type=number],
+    input[type=email],
     input[type=search],
     .mdc-select,
     select,
@@ -1887,6 +1889,8 @@ footer {
     }
     .form-group {
       input[type=text],
+      input[type=number],
+      input[type=email],
       input[type=search],
       .mdc-select,
       select,

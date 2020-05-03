@@ -1,5 +1,5 @@
 {
-  "name": "terms",
+  "name": "page_terms",
   "pattern": "/terms",
   "metaData": {
     "title": "Terms and conditions – Connecting Scotland"
@@ -21,7 +21,7 @@
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
-              "body": ">context.metaData.handlebars.templates.terms",
+              "body": ">context.metaData.handlebars.templates.body-terms",
               "foot": ""
             },
             "contentType": "text/html"

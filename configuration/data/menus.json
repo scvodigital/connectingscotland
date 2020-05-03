@@ -4,6 +4,26 @@
       "label": "Home",
       "path": "/",
       "route": "^/$"
+    },
+    {
+      "label": "About",
+      "path": "/about",
+      "route": "^/about$"
+    },
+    {
+      "label": "Get involved",
+      "path": "/get-involved",
+      "route": "^/get-involved$"
+    },
+    {
+      "label": "Get support",
+      "path": "/about",
+      "route": "^/about$"
+    },
+    {
+      "label": "Supporters",
+      "path": "/supporters",
+      "route": "^/supporters$"
     }
   ]
 }

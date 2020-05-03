@@ -1,9 +1,9 @@
 {
-  "name": "page",
+  "name": "page_get_involved",
   "debug": true,
-  "pattern": "/*path",
+  "pattern": "/get-involved",
   "metaData": {
-    "title": "Connecting Scotland"
+    "title": "Get involved - Connecting Scotland"
   },
   "tasks": [
     {
@@ -40,7 +40,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-page",
+              "body": ">context.metaData.handlebars.templates.body-get-involved",
               "foot": ""
             },
             "contentType": "text/html"
