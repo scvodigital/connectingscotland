@@ -1,11 +1,11 @@
 <div class="columns title">
   <div class="column col-8 col-md-12">
-    <img src="https://storage.googleapis.com/digitalparticipation/images/illustrations/Main-Hero-RGB-04.png" alt="Illustration" class="responsive-img show-sm" />
+    <img src="{{~>asset_url url='images/Skill-Up-Scotland-RGB-04.png'~}}" alt="Illustration" class="responsive-img show-sm" />
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
     {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
     {{/if ~}}
   </div>
-  <div class="column col-4 col-md-6 hide-sm">
-    <img src="https://storage.googleapis.com/digitalparticipation/images/illustrations/Main-Hero-RGB-04.png" alt="Illustration" class="responsive-img" />
+  <div class="column col-4 col-md-6 hide-sm l-padding-full align-centre">
+    <img src="{{~>asset_url url='images/Skill-Up-Scotland-RGB-04.png'~}}" alt="Illustration" class="responsive-img" />
   </div>
 </div>

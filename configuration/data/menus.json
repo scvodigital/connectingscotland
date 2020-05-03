@@ -17,8 +17,8 @@
     },
     {
       "label": "Get support",
-      "path": "/about",
-      "route": "^/about$"
+      "path": "/get-support",
+      "route": "^/get-support$"
     },
     {
       "label": "Supporters",
