@@ -543,6 +543,7 @@ main {
   label {
     font-size: inherit;
     color: inherit;
+    line-height: 1.3;
   }
   ul li {
     list-style-type: disc;
@@ -642,6 +643,7 @@ main {
     input[type=number],
     input[type=email],
     input[type=search],
+    textarea,
     .mdc-select,
     select,
     select:focus {
@@ -661,11 +663,29 @@ main {
       box-sizing: border-box;
     }
   }
+  .form-group textarea {
+    height: $unit*8;
+    line-height: 2;
+  }
   .form-group.sort {
     margin-top: -0.4rem;
   }
   .form-input {
     font-size: 1.2rem;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  .input-group.has-icon-right {
+    height: $unit*3;
+    .form-icon {
+      margin-right: $unit/2;
+    }
   }
 
   .title {
@@ -774,6 +794,7 @@ main {
     dd {
       font-size: 1.3rem;
       font-weight: 400;
+      line-height: 1.5;
     }
     .sg-wrapper, .sg-question-title, .sg-question-title label {
       font-size: 1.3rem;
@@ -1863,8 +1884,20 @@ footer {
       p {
         margin: 0;
       }
+      blockquote cite,
+      td,
+      th,
       p {
         font-size: 1.1rem;
+        margin-top: $unit/2;
+        margin-bottom: $unit/2;
+      }
+      label,
+      li,
+      dt,
+      dd {
+        font-size: 1.1rem;
+        line-height: 1.3;
       }
     }
     .resources {
@@ -1891,7 +1924,8 @@ footer {
       input[type=text],
       input[type=number],
       input[type=email],
-      input[type=search],
+      input[type=search]
+      textarea,
       .mdc-select,
       select,
       select:focus {
