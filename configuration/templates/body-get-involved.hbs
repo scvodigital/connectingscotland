@@ -92,9 +92,9 @@
             </select>
           </div>
           <div class="form-group field-container-D" id="tfa_13-D">
-            <label id="tfa_13-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_13">Are you</label>
+            {{!-- <label id="tfa_13-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_13">Are you</label> --}}
             <select id="tfa_13" name="tfa_13" data-condition="`#tfa_10`" title="Are you" class="form-select col-3 col-lg-3 col-md-3 col-sm-6">
-              <option value="" disabled selected>Please select...</option>
+              <option value="" disabled selected>Are you</option>
               <option value="tfa_14" id="tfa_14" class="">NHS / Health</option>
               <option value="tfa_15" id="tfa_15" class="">Local Authority</option>
               <option value="tfa_16" id="tfa_16" class="">National public body</option>
@@ -365,36 +365,38 @@
           </div>
           <div class="form-group field-container-D" id="tfa_63-D">
             <label id="tfa_63-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_63">How many people do you work with that you would consider to be digitally excluded?</label>
-            <input type="number" id="tfa_63" name="tfa_63" value="" min="0" title="How many people do you work with that you would consider to be digitally excluded?" class="form-input col-3 col-lg-3 col-md-3 col-sm-6 validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group col-2 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_63" name="tfa_63" value="" min="0" max="5454000" title="How many people do you work with that you would consider to be digitally excluded?" class="form-input validate-integer" autocomplete="nope" data-lpignore="true">
+            </div>
           </div>
           <div class="htmlSection" id="tfa_64">
             <p class="htmlContent" id="tfa_64-HTML">What proportion of these people would you say...</p>
           </div>
           <div class="form-group field-container-D" id="tfa_72-D">
             <label id="tfa_72-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_72">Don’t have a smartphone</label>
-            <div class="input-group has-icon-right">
-              <input type="number" id="tfa_72" name="tfa_72" value="" min="0" max="100" title="Don’t have a smartphone" class="text-right form-input col-3 col-lg-3 col-md-3 col-sm-6 validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_72" name="tfa_72" value="" min="0" max="100" title="Don’t have a smartphone" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_73-D">
             <label id="tfa_73-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_73">Don’t have a tablet or laptop</label>
-            <div class="input-group has-icon-right">
-              <input type="number" id="tfa_73" name="tfa_73" value="" min="0" max="100" title="Don’t have a tablet or laptop" class="text-right form-input col-3 col-lg-3 col-md-3 col-sm-6 validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_73" name="tfa_73" value="" min="0" max="100" title="Don’t have a tablet or laptop" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_74-D">
             <label id="tfa_74-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_74">Don’t have home broadband</label>
-            <div class="input-group has-icon-right">
-              <input type="number" id="tfa_74" name="tfa_74" value="" min="0" max="100" title="Don’t have home broadband" class="text-right form-input col-3 col-lg-3 col-md-3 col-sm-6 validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_74" name="tfa_74" value="" min="0" max="100" title="Don’t have home broadband" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_75-D">
             <label id="tfa_75-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_75">Have no or limited confidence to use the internet</label>
-            <div class="input-group has-icon-right">
-              <input type="number" id="tfa_75" name="tfa_75" value="" min="0" max="100" title="Have no or limited confidence to use the internet" class="text-right form-input col-3 col-lg-3 col-md-3 col-sm-6 validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_75" name="tfa_75" value="" min="0" max="100" title="Have no or limited confidence to use the internet" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
