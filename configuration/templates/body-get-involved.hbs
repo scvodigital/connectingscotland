@@ -1,7 +1,15 @@
 <div class="detail">
-  {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
-  {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
-  {{/if ~}}
+  <div class="columns">
+    <div class="column col-9 col-md-12 b-padding-full r-padding-full">
+      {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+      {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+      {{/if ~}}
+    </div>
+    <div class="column col-3 col-lg-6 col-md-8 col-sm-10 l-padding-full" style="margin: auto auto 0;">
+      <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img" />
+    </div>
+  </div>
+  <hr style="margin-top:-.4rem;" />
 
   <!-- FORM: HEAD SECTION -->
   <script type="text/javascript">
@@ -356,7 +364,7 @@
             </label>
             <select id="tfa_57" name="tfa_57" title="Which priority group do you currently work with? Please select one. If you work with more than one of the groups, please complete a second expression of interest." class="form-select col-4 col-lg-4 col-md-6 col-sm-12 required" required>
               <option value="" disabled selected>Please select...</option>
-              <option value="tfa_58" id="tfa_58" class="">The ‘shielding’ group</option>
+              <option value="tfa_58" id="tfa_58" class="">The 'shielding' group</option>
               <option value="tfa_59" id="tfa_59" class="">Vulnerable households with children</option>
               <option value="tfa_60" id="tfa_60" data-conditionals="#tfa_61" class="">Other</option>
             </select>
@@ -379,23 +387,23 @@
             <p class="htmlContent" id="tfa_64-HTML">What proportion of these people would you say...</p>
           </div>
           <div class="form-group field-container-D" id="tfa_72-D">
-            <label id="tfa_72-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_72">Don’t have a smartphone</label>
+            <label id="tfa_72-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_72">Don't have a smartphone</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
-              <input type="number" id="tfa_72" name="tfa_72" value="" min="0" max="100" title="Don’t have a smartphone" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
+              <input type="number" id="tfa_72" name="tfa_72" value="" min="0" max="100" title="Don't have a smartphone" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_73-D">
-            <label id="tfa_73-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_73">Don’t have a tablet or laptop</label>
+            <label id="tfa_73-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_73">Don't have a tablet or laptop</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
-              <input type="number" id="tfa_73" name="tfa_73" value="" min="0" max="100" title="Don’t have a tablet or laptop" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
+              <input type="number" id="tfa_73" name="tfa_73" value="" min="0" max="100" title="Don't have a tablet or laptop" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_74-D">
-            <label id="tfa_74-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_74">Don’t have home broadband</label>
+            <label id="tfa_74-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_74">Don't have home broadband</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
-              <input type="number" id="tfa_74" name="tfa_74" value="" min="0" max="100" title="Don’t have home broadband" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
+              <input type="number" id="tfa_74" name="tfa_74" value="" min="0" max="100" title="Don't have home broadband" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
               <span class="form-icon fas fa-percent"></span>
             </div>
           </div>
