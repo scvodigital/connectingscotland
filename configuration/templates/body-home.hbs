@@ -1,5 +1,5 @@
 <div class="columns title">
-  <div class="column col-8 col-md-12">
+  <div class="column col-8 col-md-12 r-padding-full">
     <img src="{{~>asset_url url='images/home.png'~}}" alt="Illustration" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
     {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}

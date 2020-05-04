@@ -17,7 +17,7 @@
         "queryTemplates": {
           "index": "{$../data/elasticsearch-index.txt}",
           "type": "scvo-page",
-          "template": ">context.metaData.handlebars.queries.pages_page",
+          "template": ">context.metaData.handlebars.queries.page",
           "noResultsRoute": "four_oh_four"
         }
       },

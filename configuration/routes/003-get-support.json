@@ -1,9 +1,9 @@
 {
-  "name": "page",
+  "name": "page_get_support",
   "debug": true,
-  "pattern": "/*path",
+  "pattern": "/get-support",
   "metaData": {
-    "title": "Connecting Scotland"
+    "title": "Get support - Connecting Scotland"
   },
   "tasks": [
     {
@@ -24,6 +24,25 @@
       "renderer": "handlebars"
     },
     {
+      "name": "supplimentaryResponses",
+      "taskModule": "elasticsearch",
+      "config": {
+        "connectionStringTemplate": "{$../data/elasticsearch-url.txt}",
+        "elasticsearchConfig": {
+          "apiVersion": "5.6"
+        },
+        "queryTemplates": [
+          {
+            "name": "resources",
+            "index": "{$../data/elasticsearch-index.txt}",
+            "type": "scvo-resource",
+            "template": ">context.metaData.handlebars.queries.resources"
+          }
+        ]
+      },
+      "renderer": "handlebars"
+    },
+    {
       "name": "destination",
       "taskModule": "renderLayout",
       "renderer": "handlebars",
@@ -40,7 +59,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-page",
+              "body": ">context.metaData.handlebars.templates.body-get-support",
               "foot": ""
             },
             "contentType": "text/html"

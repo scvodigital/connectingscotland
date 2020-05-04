@@ -34,7 +34,7 @@ $pink-color: #FEB3B4;
 
 $unit: 1rem;
 $padding: 1.2rem;
-$thick-line: 5px;
+$brand-border-width: 5px;
 $thin-line: 0.05rem;
 $border-radius: 6px;
 $heading-font-family: 'Asap';
@@ -53,7 +53,7 @@ $transition-speed: .3s;
 @import url('//fonts.googleapis.com/css?family=Roboto:300,400,700|Poppins:700|Open+Sans:400,600,700');
 
 $unit: 1rem;
-$thick-line: 5px;
+$brand-border-width: 5px;
 
 // Brand colours
 
@@ -118,14 +118,14 @@ footer {
     box-sizing: border-box;
     height: 40px;
     line-height: 40px;
-    border-bottom: $thick-line solid transparent;
+    border-bottom: $brand-border-width solid transparent;
     margin-right: $unit;
     color: $secondary-color;
     transition: border $transition-speed;
   }
   .text-link:hover {
     text-decoration: none;
-    border-bottom: $thick-line solid $secondary-color;
+    border-bottom: $brand-border-width solid $secondary-color;
   }
   .brand-logo {
     // margin-left: $unit/4;
@@ -1420,7 +1420,7 @@ footer {
   a {
     color: white !important;
     text-decoration: none !important;
-    // border-bottom: $thick-line solid transparent;
+    // border-bottom: $brand-border-width solid transparent;
     transition: color $transition-speed;
   }
   a:hover,
@@ -1623,6 +1623,62 @@ footer {
   }
 }
 
+.accordion {
+  background-color: transparent;
+  cursor: pointer;
+  padding: $unit/2;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-radius: $brand-border-width;
+  position: relative;
+  color: $secondary-color-dark;
+}
+.accordion:before {
+  transition: opacity $transition-speed;
+  border-radius: $brand-border-width;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.222;
+}
+.accordion.active, .accordion:hover {
+  border: none;
+  background: transparent;
+  // background-color: $gray-color-light;
+}
+.accordion.active:before, .accordion:hover:before {
+  opacity: 0;
+}
+.accordion-content {
+  padding: 0 $unit/2;
+  margin-bottom: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height $transition-speed ease-in-out;
+  p:last-child,
+  ul:last-child {
+    margin-bottom: $unit;
+  }
+}
+.accordion:after {
+  content: '\f107';
+  font-family: 'Font Awesome\ 5 Pro';
+  font-weight: 600;
+  // color: $secondary-color;
+  float: right;
+  margin-left: 5px;
+}
+.accordion.active:after {
+  content: "\f106";
+}
+
 
 @media only screen and (max-width: 1245px) {
   .mdc-tab-bar .mdc-tab {
@@ -1767,6 +1823,8 @@ footer {
     }
   }
 }
+
+
 
 @media screen and (max-width: 900px) {
   .navbar {
@@ -2121,7 +2179,7 @@ blockquote {
       padding: 0 $unit/2;
     }
     .menu-item>a {
-      border-bottom: $thick-line solid transparent;
+      border-bottom: $brand-border-width solid transparent;
     }
     .menu-item>a:hover,
     .menu-item>a.active {
