@@ -1626,7 +1626,7 @@ footer {
 .accordion {
   background-color: transparent;
   cursor: pointer;
-  padding: $unit/2;
+  padding: $unit/2 0;
   width: 100%;
   text-align: left;
   border: none;
@@ -1634,7 +1634,7 @@ footer {
   transition: 0.4s;
   border-radius: $brand-border-width;
   position: relative;
-  color: $secondary-color-dark;
+  color: $brand-typography;
 }
 .accordion:before {
   transition: opacity $transition-speed;
@@ -1657,7 +1657,7 @@ footer {
   opacity: 0;
 }
 .accordion-content {
-  padding: 0 $unit/2;
+  padding: 0;
   margin-bottom: 0;
   max-height: 0;
   overflow: hidden;

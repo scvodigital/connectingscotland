@@ -4,17 +4,15 @@
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
     {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
     {{/if ~}}
-  </div>
-  <div class="column col-3 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
-    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img" />
-  </div>
-  <div class="column col-12">
+
     <hr />
 
     {{#compare (length @root.data.supplimentaryResponses.resources.aggregations.query.buckets) ">" 0 ~}}
     {{#each @root.data.supplimentaryResponses.resources.aggregations.query.buckets ~}}
     {{#unless (compare key "Connecting Scotland") ~}}
-    {{#unless (compare key "General")}}<h2>{{{key}}}</h2>{{/unless}}
+    {{#unless (compare key "General") ~}}
+    <h3 class="t-margin-full t-padding-full">{{{key}}}</h3>
+    {{/unless ~}}
     {{#each resources.hits.hits ~}}
     {{#with _source ~}}
     <h4 class="accordion">{{{title}}}</h4>
@@ -28,6 +26,9 @@
     {{/unless ~}}
     {{/each ~}}
     {{/compare ~}}
+  </div>
+  <div class="column col-3 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
+    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img" />
   </div>
 </div>
 

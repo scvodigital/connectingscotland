@@ -1,10 +1,6 @@
 {
   "size": 100,
-  "_source": [
-    "title",
-    "content",
-    "post_tags_slug"
-  ],
+  "_source": false,
   "query": {
     "bool": {
       "must": [
@@ -18,15 +14,12 @@
       ]
     }
   },
-  "sort": {
-    "weight": "asc"
-  },
   "aggs": {
     "query": {
       "terms": {
         "field": "post_tags",
         "order": {
-          "_term": "asc"
+          "_term": "desc"
         },
         "size": 1000
       },
@@ -35,7 +28,7 @@
           "top_hits": {
             "size": 1000,
             "sort": {
-              "title_sort": "asc"
+              "weight": "asc"
             },
             "_source": {
               "includes": [
