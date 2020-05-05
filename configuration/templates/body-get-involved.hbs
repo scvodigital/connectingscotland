@@ -358,20 +358,29 @@
         <div id="tfa_56" class="section">
           <h2 id="tfa_56-L" class="t-margin-full t-padding">Understanding the needs of the people you work with</h2>
           <div class="form-group field-container-D" id="tfa_57-D">
-            <label id="tfa_57-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_57">
-              Which priority group do you currently work with?
-              <p class="form-input-hint">Please select one. If you work with more than one of the groups, please complete a second expression of interest.</p>
-            </label>
-            <select id="tfa_57" name="tfa_57" title="Which priority group do you currently work with? Please select one. If you work with more than one of the groups, please complete a second expression of interest." class="form-select col-4 col-lg-4 col-md-6 col-sm-12 required" required>
-              <option value="" disabled selected>Please select...</option>
-              <option value="tfa_58" id="tfa_58" class="">The 'shielding' group</option>
-              <option value="tfa_59" id="tfa_59" class="">Vulnerable households with children</option>
-              <option value="tfa_60" id="tfa_60" data-conditionals="#tfa_61" class="">Other</option>
-            </select>
-          </div>
-          <div class="form-group field-container-D" id="tfa_61-D">
-            <div class="col-3 col-lg-5 col-md-6 col-sm-12"></div>
-            <input type="text" id="tfa_61" name="tfa_61" value="" maxlength="255" data-condition="`#tfa_60`" placeholder="Please describe" class="form-input col-7 col-lg-7 col-md-6 col-sm-12" autocomplete="nope" data-lpignore="true">
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+              <label id="tfa_57-L" class="r-padding-full form-label preField" for="tfa_57">
+                Which priority group do you currently work with?
+              </label>
+              <p>
+                <span class="form-input-hint">
+                  Please select one. If you work with more than one of the groups, please complete a second expression of interest.
+                </span>
+              </p>
+            </div>
+            <div class="col-4 col-lg-4 col-md-6 col-sm-12">
+              <div class="input-group">
+                <select id="tfa_57" name="tfa_57" title="Which priority group do you currently work with? Please select one. If you work with more than one of the groups, please complete a second expression of interest." class="form-select required" required>
+                  <option value="" disabled selected>Please select...</option>
+                  <option value="tfa_58" id="tfa_58" class="">The 'shielding' group</option>
+                  <option value="tfa_59" id="tfa_59" class="">Vulnerable households with children</option>
+                  <option value="tfa_60" id="tfa_60" data-conditionals="#tfa_61" class="">Other</option>
+                </select>
+              </div>
+              <div class="input-group field-container-D" id="tfa_61-D">
+                <input type="text" id="tfa_61" name="tfa_61" value="" maxlength="255" data-condition="`#tfa_60`" placeholder="Please describe" class="form-input" autocomplete="nope" data-lpignore="true">
+              </div>
+            </div>
           </div>
           <div class="form-group field-container-D" id="tfa_62-D">
             <label id="tfa_62-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_62">Please briefly describe how you currently work with these people and what their needs are in terms of digital exclusion.</label>
@@ -379,8 +388,8 @@
           </div>
           <div class="form-group field-container-D" id="tfa_63-D">
             <label id="tfa_63-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_63">How many people do you work with that you would consider to be digitally excluded?</label>
-            <div class="input-group col-2 col-lg-2 col-md-3 col-sm-6">
-              <input type="number" id="tfa_63" name="tfa_63" value="" min="0" max="5454000" title="How many people do you work with that you would consider to be digitally excluded?" class="form-input validate-integer" autocomplete="nope" data-lpignore="true">
+            <div class="input-group col-1 col-lg-2 col-md-3 col-sm-6">
+              <input type="number" id="tfa_63" name="tfa_63" value="" min="0" max="5500000" title="How many people do you work with that you would consider to be digitally excluded?" class="form-input text-right validate-integer" autocomplete="nope" data-lpignore="true">
             </div>
           </div>
           <div class="htmlSection" id="tfa_64">

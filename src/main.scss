@@ -680,7 +680,7 @@ main {
   }
   span.count-words {
     width: 100%;
-    margin-left: 0;
+    margin-left: 0 !important;
     margin-bottom: 1rem;
     font-size: 1.1rem;
   }
@@ -712,6 +712,13 @@ main {
   .form-checkbox input:checked+.form-icon::before {
     height: 14px;
     margin-top: -8px;
+  }
+  #tfa_61-D > div {
+    width: 100%;
+    margin-top: $unit;
+    input {
+      width: 100%;
+    }
   }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
