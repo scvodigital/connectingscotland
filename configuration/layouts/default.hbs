@@ -106,7 +106,7 @@
         </section>
         <section class="navbar-section pull-right">
           <div class="mobile-header-buttons show-lg" style="margin-top:1.75rem; margin-right:-0.4rem">
-            <a href="#" class="btn btn-link no-margin" aria-label="Menu" data-component="TasksTrigger"
+            <a href="javascript:void(0);" class="btn btn-link no-margin" aria-label="Menu" data-component="TasksTrigger"
               data-TasksTrigger='{
                 click: {
                   tasks: [
@@ -130,16 +130,16 @@
     </header>
 
     <div class="mobile-menu mobile-menu_closed">
-      <aside class="mobile-contents sidebar bg-primary">
+      <aside class="mobile-contents sidebar">
         <header class="navbar header">
-          <section class="navbar-section">
-            {{!-- <a href="/" class="navbar-brand" title="Scottish Council for Voluntary Organisations">
-              <img src="{{~>asset_url url='images/logos/scvo-white.svg'~}}" alt="Scottish Council for Voluntary Organisations" />
-            </a> --}}
+          <section class="navbar-section pull-left">
+            <span class="navbar__title h-padding catalog-title">
+              <a href="/" class="brand-logo">&nbsp;</a>
+            </span>
           </section>
           <section class="navbar-section">
-            <div class="mobile-header-buttons">
-              <a href="#" class="btn btn-link" aria-label="Menu" data-component="TasksTrigger" data-TasksTrigger='{
+            <div class="mobile-header-buttons" style="margin-top:1.75rem; margin-right:-0.4rem">
+              <a href="javascript:void(0);" class="btn btn-link" aria-label="Menu" data-component="TasksTrigger" data-TasksTrigger='{
                   click: {
                     tasks: [
                       {
@@ -170,7 +170,7 @@
                     ]
                   }
                 }'>
-                <span class="far fa-times fa-2x" aria-hidden="true"></span>
+                <span class="far fa-times text-white fa-2x" aria-hidden="true"></span>
               </a>
             </div>
           </section>
@@ -284,6 +284,7 @@
 
   <script type="text/javascript" src="{{~>asset_url url='component-manager.js'~}}"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.3/polyfill.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
   var $buoop = {required:{e:-3,f:-3,o:-3,s:-1,c:-3},insecure:true,unsupported:true,api:2018.07 };

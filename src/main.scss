@@ -2185,18 +2185,51 @@ blockquote {
   }
 }
 
+.text-white {
+  color: white;
+}
 
+.mobile-header-buttons {
+  .btn:hover,
+  .btn:focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
 .mobile-menu {
+  .mobile-contents {
+    padding-top: 0 !important;
+    background-color: $brand-typography;
+    .brand-logo {
+      background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland_reversed.svg') !important;
+    }
+    .navbar-section {
+      align-items: flex-start;
+    }
+  }
   .menu {
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
     .menu-item {
+      list-style-type: none;
       padding: 0 $unit/2;
     }
     .menu-item>a {
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: white;
+      display: inline-block;
+      margin-bottom: $unit/2;
+      padding: 0;
+      border: none;
+      border-radius: 0;
       border-bottom: $brand-border-width solid transparent;
     }
     .menu-item>a:hover,
     .menu-item>a.active {
       color: #fff !important;
+      background-color: transparent;
       border-bottom-color: #fff !important;
     }
   }
