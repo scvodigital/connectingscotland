@@ -572,6 +572,9 @@ main {
     background: transparent;
     transition: border $transition-speed, background $transition-speed;
     text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .active,
   .btn:focus,
