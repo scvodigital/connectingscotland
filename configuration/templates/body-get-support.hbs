@@ -1,6 +1,6 @@
 <div class="columns detail">
   <div class="column col-9 col-md-12 r-padding-full">
-    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
+    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
     {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
     {{/if ~}}
@@ -11,11 +11,11 @@
     {{#each @root.data.supplimentaryResponses.resources.aggregations.query.buckets ~}}
     {{#unless (compare key "Connecting Scotland") ~}}
     {{#unless (compare key "General") ~}}
-    <h3 class="t-margin-full t-padding-full">{{{key}}}</h3>
+    <h2 class="t-margin-full t-padding-full">{{{key}}}</h2>
     {{/unless ~}}
     {{#each resources.hits.hits ~}}
     {{#with _source ~}}
-    <h4 class="accordion">{{{title}}}</h4>
+    <h3 class="accordion">{{{title}}}</h3>
     <div class="accordion-content">
       <p>
         {{{replace content "\n" '<br />'}}}
@@ -28,7 +28,7 @@
     {{/compare ~}}
   </div>
   <div class="column col-3 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
-    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img" />
+    <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="" class="responsive-img" />
   </div>
 </div>
 

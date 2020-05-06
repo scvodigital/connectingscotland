@@ -6,7 +6,7 @@
       {{/if ~}}
     </div>
     <div class="column col-3 col-lg-4 col-md-6 col-sm-10 l-padding-full" style="margin: auto auto 0;">
-      <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="Illustration" class="responsive-img" />
+      <img src="{{~>asset_url url=(concat 'images/' (replace @root.request.url.pathname '/' '') '.png')~}}" alt="" class="responsive-img" />
     </div>
   </div>
   <hr style="margin-top:-.4rem;" />
@@ -103,7 +103,9 @@
           </div>
           <div class="form-group field-container-D" id="tfa_13-D">
             {{!-- <label id="tfa_13-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_13">Are you</label> --}}
-            <div class="col-3 col-lg-4 col-md-6 col-sm-12"></div>
+            <div class="col-3 col-lg-4 col-md-6 col-sm-12">
+              <label id="tfa_13-L" class="hidden form-label preField" for="tfa_13">Are you</label>
+            </div>
             <div class="input-group col-3 col-sm-6">
               <select id="tfa_13" name="tfa_13" data-condition="`#tfa_10`" title="Are you" class="form-select required" required>
                 <option value="" disabled selected>Are you...</option>
@@ -405,28 +407,28 @@
             <label id="tfa_72-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_72">Don't have a smartphone</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
               <input type="number" id="tfa_72" name="tfa_72" value="" min="0" max="100" title="Don't have a smartphone" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
-              <span class="form-icon fas fa-percent"></span>
+              <span class="form-icon fas fa-percent" aria-label="Percent" title="Percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_73-D">
             <label id="tfa_73-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_73">Don't have a tablet or laptop</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
               <input type="number" id="tfa_73" name="tfa_73" value="" min="0" max="100" title="Don't have a tablet or laptop" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
-              <span class="form-icon fas fa-percent"></span>
+              <span class="form-icon fas fa-percent" aria-label="Percent" title="Percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_74-D">
             <label id="tfa_74-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_74">Don't have home broadband</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
               <input type="number" id="tfa_74" name="tfa_74" value="" min="0" max="100" title="Don't have home broadband" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
-              <span class="form-icon fas fa-percent"></span>
+              <span class="form-icon fas fa-percent" aria-label="Percent" title="Percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_75-D">
             <label id="tfa_75-L" class="r-padding-full form-label col-3 col-lg-4 col-md-6 col-sm-12 preField" for="tfa_75">Have no or limited confidence to use the internet</label>
             <div class="input-group has-icon-right col-1 col-lg-2 col-md-3 col-sm-6">
               <input type="number" id="tfa_75" name="tfa_75" value="" min="0" max="100" title="Have no or limited confidence to use the internet" class="text-right form-input validate-integer" autocomplete="nope" data-lpignore="true">
-              <span class="form-icon fas fa-percent"></span>
+              <span class="form-icon fas fa-percent" aria-label="Percent" title="Percent"></span>
             </div>
           </div>
           <div class="form-group field-container-D" id="tfa_65-D">
@@ -495,15 +497,19 @@
             </div>
           </div>
         </div>
-        <div class="form-group actions v-margin-full v-padding-full" id="0-A">
+        <div class="form-group t-margin-full t-padding-full">
+          <div class="col-6 col-lg-7 col-md-12">
+            <p>
+              <span class="form-input-hint">By submitting this form you confirm that you understand and accept our obligations under the General Data Protection Regulation (GDPR) set out in our  <a href="/privacy" target="_blank">privacy notice (opens in new tab)</a>.</span>
+            </p>
+          </div>
+        </div>
+        <div class="form-group actions b-margin-full b-padding-full" id="0-A">
           <div class="col-3 col-lg-4 col-md-6 col-sm-12"></div>
           <div class="col-3 col-lg-3 col-md-3 col-sm-6">
             <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
           </div>
         </div>
-        <p>
-          <span class="form-input-hint">By submitting this form you confirm that you understand and accept our obligations under the General Data Protection Regulation (GDPR) set out in our  <a href="/privacy" target="_blank">privacy notice</a>.</span>
-        </p>
         <div style="clear:both"></div>
         <input type="hidden" value="4822520" name="tfa_dbFormId" id="tfa_dbFormId">
         <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">

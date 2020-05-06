@@ -92,21 +92,23 @@
   <main>
     <header class="navbar header">
       <div class="container">
-        <section class="navbar-section pull-left">
+        <div class="navbar-section pull-left">
           <span class="navbar__title catalog-title">
-            <a href="/" class="brand-logo">&nbsp;</a>
+            <a href="/" class="brand-logo" title="Connecting Scotland"><span class="hidden">Connecting Scotland</span></a>
           </span>
-        </section>
-        <section class="navbar-section hide-sm pull-right">
+        </div>
+        <div class="navbar-section hide-sm pull-right">
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
-            {{#each context.metaData.menus.main ~}}
-            <a class="mdc-tab{{#if (regexMatch @root.request.url.pathname route "gi")}} mdc-tab--active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a>
-            {{/each ~}}
+            <ul>
+              {{#each context.metaData.menus.main ~}}
+              <li><a class="mdc-tab{{#if (regexMatch @root.request.url.pathname route "gi")}} mdc-tab--active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
+              {{/each ~}}
+            </ul>
           </nav>
-        </section>
-        <section class="navbar-section pull-right">
+        </div>
+        <div class="navbar-section pull-right">
           <div class="mobile-header-buttons show-lg" style="margin-top:1.75rem; margin-right:-0.4rem">
-            <a href="javascript:void(0);" class="btn btn-link no-margin" aria-label="Menu" data-component="TasksTrigger"
+            <a href="javascript:void(0);" class="btn btn-link no-margin" aria-expanded="false" id="menu" onclick="toggle('mobile-menu', 'menu')" aria-label="Open navigation menu" title="Open navigation menu" data-component="TasksTrigger"
               data-TasksTrigger='{
                 click: {
                   tasks: [
@@ -125,21 +127,21 @@
               <span class="far fa-bars fa-2x" aria-hidden="true"></span>
             </a>
           </div>
-        </section>
+        </div>
       </div>
     </header>
 
-    <div class="mobile-menu mobile-menu_closed">
+    <div id="mobile-menu" class="mobile-menu mobile-menu_closed">
       <aside class="mobile-contents sidebar">
         <header class="navbar header">
-          <section class="navbar-section pull-left">
+          <div class="navbar-section pull-left">
             <span class="navbar__title h-padding catalog-title">
               <a href="/" class="brand-logo">&nbsp;</a>
             </span>
-          </section>
-          <section class="navbar-section">
+          </div>
+          <div class="navbar-section">
             <div class="mobile-header-buttons" style="margin-top:1.75rem; margin-right:0.3rem;">
-              <a href="javascript:void(0);" class="btn btn-link no-margin" aria-label="Menu" data-component="TasksTrigger" data-TasksTrigger='{
+              <a href="javascript:void(0);" class="btn btn-link no-margin" onclick="toggle('mobile-menu', 'menu')" aria-label="Close navigation menu" title="Close navigation menu" data-component="TasksTrigger" data-TasksTrigger='{
                   click: {
                     tasks: [
                       {
@@ -173,7 +175,7 @@
                 <span class="far fa-times text-white fa-2x" aria-hidden="true"></span>
               </a>
             </div>
-          </section>
+          </div>
         </header>
         <div class="b-margin-full v-padding-full">
           <ul class="menu b-padding-full">
@@ -196,16 +198,19 @@
 
     <div class="container">
       {{{layoutParts.header}}}
-      {{{layoutParts.body}}}
+      <section class="main">
+        {{{layoutParts.body}}}
+      </section>
     </div>
   </main>
 
   <footer>
     <div class="footer-main">
       <div class="container">
+        <h1 class="hidden">Footer</h1>
         <div class="columns">
           <div class="column col-3 col-md-6 col-sm-12">
-            <h3>Contact</h3>
+            <h2>Contact</h2>
             <ul class="fa-ul">
               <li>
                 <span class="fa-li"><span class="fas fa-envelope" aria-hidden="true"></span></span>
@@ -218,7 +223,7 @@
             </ul>
           </div>
           <div class="column col-3 col-md-6 col-sm-12">
-            <h3>Help</h3>
+            <h2>Help</h2>
             <ul>
               <li>
                 <a href="/accessibility">Accessibility</a>
@@ -235,7 +240,7 @@
             </ul>
           </div>
           <div class="column col-6 col-md-12">
-            <h3>About</h3>
+            <h2>About</h2>
             <p>
               Connecting Scotland is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>.
             </p>
@@ -287,14 +292,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.8.3/polyfill.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript">
-  var $buoop = {required:{e:-3,f:-3,o:-3,s:-1,c:-3},insecure:true,unsupported:true,api:2018.07 };
-  function $buo_f(){
-   var e = document.createElement("script");
-   e.src = "//browser-update.org/update.min.js";
-   document.body.appendChild(e);
-  };
-  try {document.addEventListener("DOMContentLoaded", $buo_f,false)}
-  catch(e){window.attachEvent("onload", $buo_f)}
+  function toggle(id, id2) {
+    var n = document.getElementById(id);
+  	if (n.classList.value == 'mobile-menu mobile-menu_closed') {
+      document.getElementById(id2).setAttribute('aria-expanded', 'true');
+    } else {
+      document.getElementById(id2).setAttribute('aria-expanded', 'false');
+	  }
+  }
   </script>
   <script type="text/javascript" id="cookieinfo" src="{{~>asset_url url='libraries/cookieinfo.min.js'~}}" data-message="We use cookies to track anonymous usage statistics and do not collect any personal information that can be used to identify you. By continuing to visit this site you agree to our use of cookies." data-font-family="'Ingra',Helvetica,Arial,sans-serif" data-bg="#fff" data-link="#022347" data-divlink="#fff" data-divlinkbg="#022347" data-position="bottom" data-accept-on-scroll="true" data-moreinfo="/cookies" data-cookie="CookieInfoScript" data-text-align="left"></script>
 
