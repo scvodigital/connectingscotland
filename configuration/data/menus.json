@@ -11,14 +11,14 @@
       "route": "^/about$"
     },
     {
-      "label": "Get involved",
-      "path": "/get-involved",
-      "route": "^/get-involved$"
+      "label": "For organisations",
+      "path": "/for-organisations",
+      "route": "^/for-organisations$"
     },
     {
-      "label": "Get support",
-      "path": "/get-support",
-      "route": "^/get-support$"
+      "label": "For individuals",
+      "path": "/for-individuals",
+      "route": "^/for-individuals$"
     },
     {
       "label": "Supporters",
