@@ -1697,6 +1697,11 @@ footer {
   border-radius: $brand-border-width;
   position: relative;
   color: $brand-typography;
+  a:active,
+  a:focus,
+  a:hover {
+    background: transparent;
+  }
 }
 .accordion:before {
   transition: opacity $transition-speed;

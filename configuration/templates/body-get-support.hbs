@@ -15,8 +15,8 @@
     {{/unless ~}}
     {{#each resources.hits.hits ~}}
     {{#with _source ~}}
-    <h3 class="accordion">{{{title}}}</h3>
-    <div class="accordion-content">
+    <h3 class="accordion" aria-expanded="false"><a href="javascript:void();">{{{title}}}</a></h3>
+    <div class="accordion-content" aria-hidden="true">
       <p>
         {{{replace content "\n" '<br />'}}}
       </p>
