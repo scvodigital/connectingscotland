@@ -506,7 +506,7 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
-.get-support {
+.for-individuals {
   main {
     background: $brand-pink;
     background: -moz-linear-gradient(200deg, $brand-pink 10%, $brand-yellow 70%);
@@ -515,7 +515,7 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-pink', endColorstr='$brand-yellow',GradientType=0 );
   }
 }
-.get-involved {
+.for-organisations {
   main {
     padding-bottom: 1rem;
     background: $brand-teal;
@@ -1615,7 +1615,21 @@ footer {
   float: right;
 }
 
-.hidden,
+button {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .mdc-temporary-drawer__header,
 .hide-on-med-and-up {
   display: none !important;
@@ -1690,7 +1704,8 @@ footer {
 .accordion {
   background-color: transparent;
   cursor: pointer;
-  padding: $unit/2;
+  padding: $unit/2 !important;
+  margin: $unit/2 0 0 !important;
   width: 100%;
   text-align: left;
   border: none;
@@ -1699,6 +1714,10 @@ footer {
   border-radius: $brand-border-width;
   position: relative;
   color: $brand-typography;
+  h3 {
+    display: inline-block;
+    margin: 0;
+  }
   a:active,
   a:focus,
   a:hover {
@@ -1743,6 +1762,8 @@ footer {
   // color: $secondary-color;
   float: right;
   margin-left: 5px;
+  font-size: 2rem;
+  line-height: 2.2rem;
 }
 .accordion.active:after {
   content: "\f106";
