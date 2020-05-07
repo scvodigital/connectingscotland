@@ -1553,7 +1553,7 @@ footer {
     // bottom: 0.7rem;
     right: 0;
   }
-  .logo.digital-scotland {
+  .logo.sg {
     width: 170px;
     margin-top: 8px;
     // height: 50px;
@@ -1672,6 +1672,8 @@ footer {
           color: white;
         }
         .mdc-tab:hover,
+        .mdc-tab:active,
+        .mdc-tab:focus,
         .mdc-tab--active {
           background-color: $brand-typography;
           border-color: white;
@@ -1886,7 +1888,7 @@ footer {
       text-align: center;
     }
     .logo.scvo,
-    .logo.digital-scotland {
+    .logo.sg {
       position: relative !important;
       bottom: 0;
       right: 0;
@@ -2169,7 +2171,7 @@ footer {
   }
   .footer .container {
     .logo.scvo,
-    .logo.digital-scotland {
+    .logo.sg {
       position: relative;
       margin-top: 1.5rem;
       bottom: auto;
