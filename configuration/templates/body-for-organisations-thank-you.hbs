@@ -1,0 +1,11 @@
+<div class="columns detail b-margin-full b-padding-full">
+  <div class="column col-8 col-md-12 r-padding-full">
+    <img src="{{~>asset_url url=(concat 'images/thank-you.png')~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
+    {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+    {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+    {{/if ~}}
+  </div>
+  <div class="column col-4 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
+    <img src="{{~>asset_url url=(concat 'images/thank-you.png')~}}" alt="" class="responsive-img" />
+  </div>
+</div>

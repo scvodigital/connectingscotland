@@ -53,7 +53,7 @@ $transition-speed: .3s;
 @import url('//fonts.googleapis.com/css?family=Roboto:300,400,700|Poppins:700|Open+Sans:400,600,700');
 
 $unit: 1rem;
-$brand-border-width: 5px;
+$brand-border-width: 3px;
 
 // Brand colours
 
@@ -301,7 +301,7 @@ body {
 }
 header {
   background-color: transparent;
-  margin-bottom: $unit*2;
+  margin-bottom: $unit*3;
 }
 .mdc-temporary-drawer__header-content,
 main {
@@ -370,7 +370,7 @@ header.navbar {
   background-color: transparent;
   box-shadow: none;
   .container {
-    border-bottom: 3px solid $brand-typography;
+    border-bottom: $brand-border-width solid $brand-typography;
   }
   .navbar__title {
     // max-width: 280px;
@@ -507,6 +507,7 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
+.getting-started,
 .for-individuals {
   main {
     background: $brand-pink;
@@ -1151,10 +1152,31 @@ main {
   }
 }
 
-.radarChartDesktop,
-.radarChartMobile {
-  margin: 0 auto;
+.apple,
+.google {
+  // background-color: white;
+  display: block;
+  border: $brand-border-width solid $brand-typography;
+  padding: 0 $unit;
+  margin-bottom: $unit;
+  margin-right: $unit;
 }
+.apple:before,
+.google:before {
+  content: '\f179';
+  font-family: 'Font Awesome\ 5 Brands';
+  font-weight: 400;
+  float: right;
+  margin-top: $unit;
+  margin-left: $unit;
+  margin-bottom: $unit;
+  font-size: $unit*2;
+  line-height: $unit*2;
+}
+.google:before {
+  content: '\f1a0';
+}
+
 
 // .btn {
 //     background-color: white !important;
@@ -1636,16 +1658,16 @@ button {
   display: none !important;
 }
 
-.accessibility,
-.privacy,
-.cookies,
-.terms,
-.contact-us {
+.page_accessibility,
+.page_privacy,
+.page_cookies,
+.page_terms,
+.page_contact-us {
   .navbar .navbar__title .brand-logo {
     background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland_reversed.svg');
   }
   .navbar .container {
-    border-bottom: 3px solid white;
+    border-bottom: $brand-border-width solid white;
   }
   main {
     background: $brand-typography;

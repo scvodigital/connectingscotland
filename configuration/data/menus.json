@@ -13,12 +13,12 @@
     {
       "label": "For organisations",
       "path": "/for-organisations",
-      "route": "^/for-organisations$"
+      "route": "^/for-organisations"
     },
     {
       "label": "For individuals",
       "path": "/for-individuals",
-      "route": "^/for-individuals$"
+      "route": "^/for-individuals|^/getting-started"
     },
     {
       "label": "Supporters",
