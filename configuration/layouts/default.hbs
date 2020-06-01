@@ -100,7 +100,7 @@
         <div class="navbar-section hide-sm pull-right">
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
-              {{#each context.metaData.menus.main ~}}
+              {{#each @root.context.metaData.menus.default ~}}
               <li><a class="mdc-tab{{#if (regexMatch @root.request.url.pathname route "gi")}} mdc-tab--active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
               {{/each ~}}
             </ul>

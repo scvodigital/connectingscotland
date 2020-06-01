@@ -5,6 +5,7 @@
     "title": "Accessibility – Connecting Scotland"
   },
   "tasks": [
+    "context.metaData.commonTasks.currentSite",
     {
       "name": "destination",
       "taskModule": "renderLayout",

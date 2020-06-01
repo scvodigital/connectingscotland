@@ -1,5 +1,5 @@
 {
-  "main": [
+  "default": [
     {
       "label": "Home",
       "path": "/",
@@ -18,12 +18,34 @@
     {
       "label": "For individuals",
       "path": "/for-individuals",
-      "route": "^/for-individuals|^/getting-started"
+      "route": "^/for-individuals"
     },
     {
       "label": "Supporters",
       "path": "/supporters",
       "route": "^/supporters$"
+    }
+  ],
+  "start": [
+    {
+      "label": "Home",
+      "path": "/",
+      "route": "^/$"
+    },
+    {
+      "label": "Getting started",
+      "path": "/getting-started",
+      "route": "^/getting-started"
+    },
+    {
+      "label": "Services",
+      "path": "/services",
+      "route": "^/services"
+    },
+    {
+      "label": "Staying safe",
+      "path": "/staying-safe",
+      "route": "^/staying-safe"
     }
   ]
 }

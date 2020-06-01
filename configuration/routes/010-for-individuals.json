@@ -6,6 +6,7 @@
     "title": "For individuals - Connecting Scotland"
   },
   "tasks": [
+    "context.metaData.commonTasks.currentSite",
     {
       "name": "primaryResponse",
       "taskModule": "elasticsearch",

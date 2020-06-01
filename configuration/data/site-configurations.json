@@ -1,0 +1,13 @@
+{
+  "default": {
+    "name": "default",
+    "title": "Connecting Scotland",
+    "url": "https://connecting.scot"
+  },
+  "start": {
+    "name": "start",
+    "title": "Connecting Scotland",
+    "description": "Getting started",
+    "url": "https://start.connecting.scot"
+  }
+}

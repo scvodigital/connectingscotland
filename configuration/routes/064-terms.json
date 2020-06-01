@@ -5,6 +5,7 @@
     "title": "Terms and conditions – Connecting Scotland"
   },
   "tasks": [
+    "context.metaData.commonTasks.currentSite",
     {
       "name": "destination",
       "taskModule": "renderLayout",
