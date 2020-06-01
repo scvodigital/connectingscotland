@@ -46,7 +46,7 @@
 
   gtag('config', 'UA-3467930-38', { 'send_page_view': true, 'anonymize_ip': true });
 
-  {{#ifAny request.params.query.debug (compare request.url.hostname "connectingscotland.local") ~}}
+  {{#ifAny request.params.query.debug (contains request.url.hostname "connectingscotland.local") ~}}
   console.log('#### DEBUG MODE ON ####');
   console.log('Request:', {{{regexReplace (regexReplace (stringify request) "(<\/script)" "gi" '</scr\" + \"ipt') "(\r|\n)" "gi" ""}}});
   console.log('Route:', {{{regexReplace (regexReplace (stringify route) "(<\/script)" "gi" '</scr\" + \"ipt') "(\r|\n)" "gi" ""}}});
@@ -100,7 +100,7 @@
         <div class="navbar-section hide-sm pull-right">
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
-              {{#each @root.context.metaData.menus.default ~}}
+              {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
               <li><a class="mdc-tab{{#if (regexMatch @root.request.url.pathname route "gi")}} mdc-tab--active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
               {{/each ~}}
             </ul>
@@ -226,7 +226,7 @@
             <h2>Help</h2>
             <ul>
               <li>
-                <a href="/accessibility">Accessibility</a>
+                <a href="/site-accessibility">Accessibility</a>
               </li>
               <li>
                 <a href="/privacy">Privacy</a>
@@ -242,7 +242,12 @@
           <div class="column col-6 col-md-12">
             <h2>About</h2>
             <p>
-              Connecting Scotland is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>.
+              {{#compare @root.data.currentSite.name "start" ~}}
+              <a href="https://connecting.scot">Connecting Scotland</a> 
+              {{else}}
+              Connecting Scotland
+              {{/compare ~}}
+              is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>.
             </p>
           </div>
         </div>

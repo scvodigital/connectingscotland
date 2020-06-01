@@ -1,7 +1,12 @@
 {
-  "name": "page_getting-started",
+  "name": "page_start_getting-started",
   "debug": true,
-  "pattern": "/getting-started(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
+  "pattern": {
+    "health": "/health-wellbeing(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
+    "accessibility": "/accessibility(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
+    "services": "/services(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
+    "staying-safe": "/staying-safe-online(/:level_1)(/:level_2)(/:level_3)(/:level_4)"
+  },
   "metaData": {
     "title": "Getting started - Connecting Scotland"
   },

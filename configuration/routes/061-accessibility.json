@@ -1,6 +1,6 @@
 {
-  "name": "page_accessibility",
-  "pattern": "/accessibility",
+  "name": "page_site-accessibility",
+  "pattern": "/site-accessibility",
   "metaData": {
     "title": "Accessibility – Connecting Scotland"
   },

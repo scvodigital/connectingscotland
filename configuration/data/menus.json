@@ -33,9 +33,14 @@
       "route": "^/$"
     },
     {
-      "label": "Getting started",
-      "path": "/getting-started",
-      "route": "^/getting-started"
+      "label": "Health & wellbeing",
+      "path": "/health-wellbeing",
+      "route": "^/health-wellbeing"
+    },
+    {
+      "label": "Accessibility",
+      "path": "/accessibility",
+      "route": "^/accessibility"
     },
     {
       "label": "Services",
@@ -44,8 +49,8 @@
     },
     {
       "label": "Staying safe",
-      "path": "/staying-safe",
-      "route": "^/staying-safe"
+      "path": "/staying-safe-online",
+      "route": "^/staying-safe-online"
     }
   ]
 }
