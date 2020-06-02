@@ -1161,7 +1161,7 @@ main {
 
 .apple,
 .google {
-  // background-color: white;
+  background-color: $brand-teal;
   display: block;
   border: $brand-border-width solid $brand-typography;
   padding: 0 $unit;
@@ -1182,6 +1182,9 @@ main {
 }
 .google:before {
   content: '\f1a0';
+}
+.google {
+  background-color: $brand-pink;
 }
 
 
