@@ -507,11 +507,6 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
-.getting-started,
-.health-wellbeing,
-.accessibility,
-.services,
-.staying-safe-online,
 .for-individuals {
   main {
     background: $brand-pink;
@@ -531,9 +526,6 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-teal', endColorstr='$brand-purple',GradientType=0 );
   }
 }
-.skills.foundation main {
-  background: $brand-purple !important;
-}
 .about,
 .supporters {
   main {
@@ -551,6 +543,17 @@ main {
     background: -webkit-linear-gradient(200deg, $brand-yellow 10%, $brand-green 70%);
     background: linear-gradient(200deg, $brand-yellow 10%, $brand-green 70%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-yellow', endColorstr='$brand-green',GradientType=0 );
+  }
+}
+.page_start_home,
+.skills.foundation,
+.getting-started,
+.health-wellbeing,
+.accessibility,
+.services,
+.staying-safe-online {
+  main {
+    background: $brand-purple !important;
   }
 }
 
