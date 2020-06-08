@@ -179,7 +179,7 @@
         </header>
         <div class="b-margin-full v-padding-full">
           <ul class="menu b-padding-full">
-            {{#each @root.context.metaData.menus.main ~}}
+            {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
             <li class="menu-item">
               <a href="{{stripTrailingSlash path}}" class="{{#if (regexMatch @root.request.url.pathname route 'gi')}} active{{/if}}">
                 {{#if icon ~}}
@@ -243,7 +243,7 @@
             <h2>About</h2>
             <p>
               {{#compare @root.data.currentSite.name "start" ~}}
-              <a href="https://connecting.scot">Connecting Scotland</a> 
+              <a href="https://connecting.scot">Connecting Scotland</a>
               {{else}}
               Connecting Scotland
               {{/compare ~}}
