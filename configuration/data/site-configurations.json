@@ -9,5 +9,11 @@
     "title": "Connecting Scotland",
     "description": "Getting started",
     "url": "https://start.connecting.scot"
+  },
+  "apply": {
+    "name": "apply",
+    "title": "Connecting Scotland",
+    "description": "Apply",
+    "url": "https://apply.connecting.scot"
   }
 }

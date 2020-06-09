@@ -1,9 +1,9 @@
 {
-  "name": "page_start_home",
+  "name": "page_apply_form",
   "debug": true,
-  "pattern": "/home_start",
+  "pattern": "/apply",
   "metaData": {
-    "title": "Connecting Scotland"
+    "title": "Apply - Connecting Scotland"
   },
   "tasks": [
     "context.metaData.commonTasks.currentSite",
@@ -41,7 +41,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-getting-started",
+              "body": ">context.metaData.handlebars.templates.body-apply",
               "foot": ""
             },
             "contentType": "text/html"

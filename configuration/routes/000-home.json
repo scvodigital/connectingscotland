@@ -21,6 +21,39 @@
             ]
           },
           "page_start_home",
+          null
+        ]
+      }
+    },
+    {
+      "name": "reroute",
+      "taskModule": "reroute",
+      "config": {
+        "if": [
+          {
+            "==": [
+              "apply",
+              {
+                "var": "data.currentSite.name"
+              }
+            ]
+          },
+          "page_apply_home",
+          null
+        ]
+      }
+    },
+    {
+      "name": "reroute",
+      "taskModule": "reroute",
+      "config": {
+        "if": [
+          {
+            "==": [
+              1,
+              1
+            ]
+          },
           "page_home"
         ]
       }

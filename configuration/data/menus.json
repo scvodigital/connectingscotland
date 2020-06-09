@@ -52,5 +52,17 @@
       "path": "/staying-safe-online",
       "route": "^/staying-safe-online"
     }
+  ],
+  "apply": [
+    {
+      "label": "Guidance",
+      "path": "/",
+      "route": "^/$"
+    },
+    {
+      "label": "Apply",
+      "path": "/apply",
+      "route": "^/apply"
+    }
   ]
 }

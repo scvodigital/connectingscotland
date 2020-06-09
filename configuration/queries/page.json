@@ -25,7 +25,7 @@
   ],
   "query": {
     "term": {
-      "path": "{{#if @root.request.params.path}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/getting-started{{/compare}}/{{replace @root.request.params.path '_' '/'}}{{else}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/getting-started{{/compare}}{{/if}}"
+      "path": "{{#if @root.request.params.path}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/getting-started{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/apply{{/compare}}/{{replace @root.request.params.path '_' '/'}}{{else}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/getting-started{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/apply{{/compare}}{{/if}}"
     }
   }
 }
