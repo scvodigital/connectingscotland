@@ -242,10 +242,10 @@
           <div class="column col-6 col-md-12">
             <h2>About</h2>
             <p>
-              {{#compare @root.data.currentSite.name "start" ~}}
-              <a href="https://connecting.scot">Connecting Scotland</a>
-              {{else}}
+              {{#compare @root.data.currentSite.name "default" ~}}
               Connecting Scotland
+              {{else}}
+              <a href="https://connecting.scot">Connecting Scotland</a>
               {{/compare ~}}
               is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>.
             </p>
