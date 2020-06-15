@@ -1168,6 +1168,9 @@ main {
   padding: 0 $unit;
   margin-bottom: $unit;
   margin-right: $unit;
+  h2,h3,h4 {
+    margin-top: $unit;
+  }
 }
 .apple:before,
 .google:before {
@@ -1191,7 +1194,21 @@ body.chromebook main,
 .google {
   background-color: $brand-green;
 }
-
+.wp-block-file {
+  .wp-block-file__button {
+    margin: 0 $unit/2;
+    text-decoration: none;
+    padding: $unit/5 $unit/2;
+    background: $brand-typography;
+    color: white;
+    border-radius: 1rem;
+    font-size: 90%;
+  }
+  .wp-block-file__button:hover {
+    background: white;
+    color: $brand-typography;
+  }
+}
 
 // .btn {
 //     background-color: white !important;
