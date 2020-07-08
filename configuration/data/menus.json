@@ -21,6 +21,11 @@
       "route": "^/for-individuals"
     },
     {
+      "label": "Digital Champions",
+      "path": "/digital-champions",
+      "route": "^/digital-champions$"
+    },
+    {
       "label": "Supporters",
       "path": "/supporters",
       "route": "^/supporters$"
