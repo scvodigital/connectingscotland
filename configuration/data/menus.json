@@ -33,6 +33,11 @@
       "route": "^/$"
     },
     {
+      "label": "Communication",
+      "path": "/communication",
+      "route": "^/communication"
+    },
+    {
       "label": "Health & wellbeing",
       "path": "/health-wellbeing",
       "route": "^/health-wellbeing"
