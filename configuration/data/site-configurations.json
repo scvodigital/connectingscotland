@@ -10,6 +10,12 @@
     "description": "Getting started",
     "url": "https://start.connecting.scot"
   },
+  "helpline": {
+    "name": "helpline",
+    "title": "Connecting Scotland",
+    "description": "Helpline",
+    "url": "https://helpline.connecting.scot"
+  },
   "apply": {
     "name": "apply",
     "title": "Connecting Scotland",
