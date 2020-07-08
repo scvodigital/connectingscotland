@@ -33,6 +33,11 @@
       "route": "^/$"
     },
     {
+      "label": "Accessibility",
+      "path": "/accessibility",
+      "route": "^/accessibility"
+    },
+    {
       "label": "Communication",
       "path": "/communication",
       "route": "^/communication"
@@ -41,11 +46,6 @@
       "label": "Health & wellbeing",
       "path": "/health-wellbeing",
       "route": "^/health-wellbeing"
-    },
-    {
-      "label": "Accessibility",
-      "path": "/accessibility",
-      "route": "^/accessibility"
     },
     {
       "label": "Skills",
