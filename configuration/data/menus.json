@@ -33,9 +33,19 @@
       "route": "^/$"
     },
     {
-      "label": "Subjects",
-      "path": "/subjects",
-      "route": "^/subjects"
+      "label": "Health & wellbeing",
+      "path": "/health-wellbeing",
+      "route": "^/health-wellbeing"
+    },
+    {
+      "label": "Accessibility",
+      "path": "/accessibility",
+      "route": "^/accessibility"
+    },
+    {
+      "label": "Skills",
+      "path": "/skills",
+      "route": "^/skills"
     },
     {
       "label": "Staying safe",
