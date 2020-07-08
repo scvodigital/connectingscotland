@@ -63,6 +63,28 @@
       "route": "^/staying-safe-online"
     }
   ],
+  "helpline": [
+    {
+      "label": "Home",
+      "path": "/",
+      "route": "^/$"
+    },
+    {
+      "label": "Key information",
+      "path": "/key-information",
+      "route": "^/key-information"
+    },
+    {
+      "label": "FAQs",
+      "path": "/faqs",
+      "route": "^/faqs"
+    },
+    {
+      "label": "Referral",
+      "path": "/referral",
+      "route": "^/referral"
+    }
+  ],
   "apply": [
     {
       "label": "Guidance",

@@ -1,15 +1,9 @@
 {
-  "name": "page_start_getting-started",
+  "name": "page_helpline_home",
   "debug": true,
-  "pattern": {
-    "accessibility": "/accessibility(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
-    "communication": "/communication(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
-    "health": "/health-wellbeing(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
-    "skills": "/skills(/:level_1)(/:level_2)(/:level_3)(/:level_4)",
-    "staying-safe": "/staying-safe-online(/:level_1)(/:level_2)(/:level_3)(/:level_4)"
-  },
+  "pattern": "/home_helpline",
   "metaData": {
-    "title": "Getting started - Connecting Scotland"
+    "title": "Helpline - Connecting Scotland"
   },
   "tasks": [
     "context.metaData.commonTasks.currentSite",
@@ -47,7 +41,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-getting-started",
+              "body": ">context.metaData.handlebars.templates.body-helpline",
               "foot": ""
             },
             "contentType": "text/html"
