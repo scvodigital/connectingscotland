@@ -353,7 +353,7 @@ a {
 }
 
 #main-tab-bar {
-  margin-top: 2.5rem !important;
+  margin: 0 0 2rem !important;
   ul {
     margin:0;
     li {
@@ -371,6 +371,9 @@ header.navbar {
   box-shadow: none;
   .container {
     border-bottom: $brand-border-width solid $brand-typography;
+  }
+  .navbar .navbar-section {
+    display: block;
   }
   .navbar__title {
     // max-width: 280px;
@@ -440,7 +443,7 @@ header.navbar {
     min-height: auto;
     .mdc-tab {
       // transition: 0.2s;
-      margin: 0 0 0 .4rem;
+      margin: 0 $unit/2 0 0;
       display: inline-block;
       height: auto;
       min-height: auto;
@@ -2328,6 +2331,9 @@ blockquote {
 }
 
 .mobile-header-buttons {
+  top: 1.75rem;
+  right: .75rem;
+  position: absolute;
   .btn:hover,
   .btn:focus {
     background-color: white;

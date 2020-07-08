@@ -92,12 +92,12 @@
   <main>
     <header class="navbar header">
       <div class="container">
-        <div class="navbar-section pull-left">
+        <div class="navbar-section">
           <span class="navbar__title catalog-title">
             <a href="/" class="brand-logo" title="Connecting Scotland"><span class="hidden">Connecting Scotland</span></a>
           </span>
         </div>
-        <div class="navbar-section hide-sm pull-right">
+        <div class="navbar-section hide-sm">
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
               {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
@@ -107,7 +107,7 @@
           </nav>
         </div>
         <div class="navbar-section pull-right">
-          <div class="mobile-header-buttons show-lg" style="margin-top:1.75rem; margin-right:-0.4rem">
+          <div class="mobile-header-buttons show-lg">
             <a href="javascript:void(0);" class="btn btn-link no-margin" aria-expanded="false" id="menu" onclick="toggle('mobile-menu', 'menu')" aria-label="Open navigation menu" title="Open navigation menu" data-component="TasksTrigger"
               data-TasksTrigger='{
                 click: {
@@ -140,7 +140,7 @@
             </span>
           </div>
           <div class="navbar-section">
-            <div class="mobile-header-buttons" style="margin-top:1.75rem; margin-right:0.3rem;">
+            <div class="mobile-header-buttons">
               <a href="javascript:void(0);" class="btn btn-link no-margin" onclick="toggle('mobile-menu', 'menu')" aria-label="Close navigation menu" title="Close navigation menu" data-component="TasksTrigger" data-TasksTrigger='{
                   click: {
                     tasks: [
