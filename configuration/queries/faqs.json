@@ -1,0 +1,44 @@
+{
+  "size": 100,
+  "_source": false,
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "project_slug": [
+              "connectingscotland-helpline"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "aggs": {
+    "query": {
+      "terms": {
+        "field": "category",
+        "order": {
+          "_term": "desc"
+        },
+        "size": 1000
+      },
+      "aggs": {
+        "faqs": {
+          "top_hits": {
+            "size": 1000,
+            "sort": {
+              "weight": "asc"
+            },
+            "_source": {
+              "includes": [
+                "title",
+                "description"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
