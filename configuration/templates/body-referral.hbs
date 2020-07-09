@@ -1,0 +1,102 @@
+<div class="detail">
+  <div class="columns">
+    <div class="column col-9 col-md-12 b-padding-full r-padding-full">
+      {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+      {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+      {{/if ~}}
+
+      <!-- FORM: HEAD SECTION -->
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function(){
+        const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+        let formElement = document.getElementById("tfa_0");
+        if (null === formElement) {
+          formElement = document.getElementById("0");
+        }
+        let appendJsTimerElement = function(){
+          let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+          let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+          if (null !== cumulatedTimeElement) {
+            let cumulatedTime = parseInt(cumulatedTimeElement.value);
+            if (null !== cumulatedTime && cumulatedTime > 0) {
+              formTimeDiff += cumulatedTime;
+            }
+          }
+          let jsTimeInput = document.createElement("input");
+          jsTimeInput.setAttribute("type", "hidden");
+          jsTimeInput.setAttribute("value", formTimeDiff.toString());
+          jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+          jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+          jsTimeInput.setAttribute("autocomplete", "off");
+          if (null !== formElement) {
+            formElement.appendChild(jsTimeInput);
+          }
+        };
+        if (null !== formElement) {
+          if(formElement.addEventListener){
+            formElement.addEventListener('submit', appendJsTimerElement, false);
+          } else if(formElement.attachEvent){
+            formElement.attachEvent('onsubmit', appendJsTimerElement);
+          }
+        }
+      });
+      </script>
+
+      <link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=6f91c8646a08f59c8b9ea7156918a1c1c7594e43" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+      <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=6f91c8646a08f59c8b9ea7156918a1c1c7594e43"></script>
+      <script type="text/javascript">
+      wFORMS.behaviors.prefill.skip = false;
+      </script>
+      <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=6f91c8646a08f59c8b9ea7156918a1c1c7594e43"></script>
+
+      <!-- FORM: BODY SECTION -->
+      <div class="wFormContainer" >
+        <div class="wFormHeader"></div>
+        <div class="wForm" id="4837738-WRPR" dir="ltr">
+          <div class="codesection" id="code-4837738"></div>
+          <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove" id="4837738" role="form">
+            <div class="form-group field-container-D    " id="tfa_1-D">
+              <label id="tfa_1-L" class="preField " for="tfa_1">Your name</label>
+              <input type="text" id="tfa_1" name="tfa_1" value="" title="Your name" class="form-input">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_2-D">
+              <label id="tfa_2-L" class="preField " for="tfa_2">Your email</label>
+              <input type="text" id="tfa_2" name="tfa_2" value="" title="Your email" class="validate-email">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_3-D">
+              <label id="tfa_3-L" class="preField " for="tfa_3">Your phone</label>
+              <input type="text" id="tfa_3" name="tfa_3" value="" title="Your phone" class="form-input">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_4-D">
+              <label id="tfa_4-L" class="preField " for="tfa_4">User's name</label>
+              <input type="text" id="tfa_4" name="tfa_4" value="" title="User's name" class="form-input">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_5-D">
+              <label id="tfa_5-L" class="preField " for="tfa_5">User's email</label>
+              <input type="text" id="tfa_5" name="tfa_5" value="" title="User's email" class="validate-email">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_6-D">
+              <label id="tfa_6-L" class="preField " for="tfa_6">User's phone</label>
+              <input type="text" id="tfa_6" name="tfa_6" value="" title="User's phone" class="form-input">
+            </div>
+            <div class="form-group field-container-D    " id="tfa_7-D">
+              <label id="tfa_7-L" class="preField " for="tfa_7">Description of the issue</label>
+              <textarea id="tfa_7" name="tfa_7" title="Description of the issue" class="form-input"></textarea>
+            </div>
+            <div class="actions" id="4837738-A">
+              <input type="submit" data-label="Submit" class="primaryAction btn" id="submit_button" value="Submit">
+            </div>
+            <div style="clear:both"></div>
+            <input type="hidden" value="4837738" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="cb9d830228be4c5dd77ad3f0bccd2758" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="2" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+          </form>
+        </div>
+        <div class="wFormFooter"></div>
+      </div>
+
+    </div>
+    <div class="column col-3 col-lg-4 col-md-6 col-sm-10 l-padding-full">
+      <img src="{{~>asset_url url=(concat 'images/' (itemAt (arrayify (split @root.request.url.pathname '/')) 1) '.png')~}}" alt="" class="responsive-img" />
+    </div>
+  </div>
+</div>
