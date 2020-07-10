@@ -40,6 +40,16 @@
             formElement.attachEvent('onsubmit', appendJsTimerElement);
           }
         }
+        $("#4837738").submit(function(e){
+          e.preventDefault();
+          var user_name = $('#tfa_4').val();
+          var user_email = $('#tfa_5').val();
+          var user_phone = $('#tfa_6').val();
+          var description = $('#tfa_7').val();
+          $('#tfa_7').val("User's name: "+user_name+" \n\n"+"User's email: "+user_email+" \n\n"+"User's phone: "+user_phone+" \n\n"+"Description of the issue:\n"+description);
+          var form = this;
+          form.submit();
+        });
       });
       </script>
 
