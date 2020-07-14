@@ -1,0 +1,5 @@
+<div class="detail">
+  {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+  {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+  {{/if ~}}
+</div>

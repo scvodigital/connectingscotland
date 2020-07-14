@@ -41,7 +41,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-getting-started",
+              "body": ">context.metaData.handlebars.templates.body-getting-started-home",
               "foot": ""
             },
             "contentType": "text/html"
