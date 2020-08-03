@@ -7,5 +7,22 @@
   </div>
   <div class="column col-4 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
     <img src="{{~>asset_url url=(concat 'images/' (itemAt (arrayify (split @root.request.url.pathname '/')) 1) '.png')~}}" alt="" class="responsive-img" />
+    {{!--
+      @calum Please forgive this massive hack. Aaron wanted to turn /digital-champions into one
+      enormous accordion. I said that it should really be separate pages which means I've had to
+      quickly implement side navigation. I don't want to invest too much time in making a nice
+      generic solution.
+    --}}
+    {{#if (regexMatch @root.request.url.pathname "^/digital-champions" "gi")}}
+      <ul>
+        <li><a href="/digital-champions/supporting-a-new-learner" class="">Supporting a new learner</a></li>
+        <li><a href="/digital-champions/delivering-remote-support" class="">Delivering remote support</a></li>
+        <li><a href="/digital-champions/preparing-for-support-sessions-with-your-learner" class="">Preparing for support sessions with your learner</a></li>
+        <li><a href="/digital-champions/getting-your-learner-online" class="">Getting your learner online</a></li>
+        <li><a href="/digital-champions/foundation-digital-skills" class="">Foundation digital skills</a></li>
+        <li><a href="/digital-champions/essential-digital-skills" class="">Essential digital skills</a></li>
+        <li><a href="/digital-champions/explaining-common-digital-terms" class="">Explaining common digital terms</a></li>
+      </ul>
+    {{/if}}
   </div>
 </div>
