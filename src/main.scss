@@ -498,6 +498,22 @@ header.navbar {
   background-color: transparent;
 }
 
+.side-nav {
+  margin-left: 0;
+  li {
+    list-style-type: none;
+    a {
+      display: inline-block;
+      padding-left: .33rem;
+      padding-right: .33rem;
+      border: .2rem solid transparent;
+    }
+    a.active {
+      border-color: $brand-typography;
+    }
+  }
+}
+
 main {
   background: $brand-purple;
 }

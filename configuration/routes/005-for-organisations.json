@@ -41,7 +41,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-for-organisations",
+              "body": ">context.metaData.handlebars.templates.body-page",
               "foot": ""
             },
             "contentType": "text/html"

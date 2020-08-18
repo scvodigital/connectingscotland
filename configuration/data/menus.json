@@ -31,6 +31,65 @@
       "route": "^/supporters$"
     }
   ],
+  "for-organisations": [
+    {
+      "label": "Application guidance",
+      "path": "/for-organisations/application-guidance",
+      "route": "^/for-organisations/application-guidance$"
+    },
+    {
+      "label": "Application form",
+      "path": "/for-organisations/apply",
+      "route": "^/for-organisations/apply"
+    },
+    {
+      "label": "FAQs",
+      "path": "/for-organisations/faqs",
+      "route": "^/for-organisations/faqs"
+    }
+  ],
+  "digital-champions": [
+    {
+      "label": "Supporting a new learner",
+      "path": "/digital-champions/supporting-a-new-learner",
+      "route": "^/digital-champions/supporting-a-new-learner$"
+    },
+    {
+      "label": "Delivering remote support",
+      "path": "/digital-champions/delivering-remote-support",
+      "route": "^/digital-champions/delivering-remote-support$"
+    },
+    {
+      "label": "Preparing for support sessions with your learner",
+      "path": "/digital-champions/preparing-for-support-sessions-with-your-learner",
+      "route": "^/digital-champions/preparing-for-support-sessions-with-your-learner$"
+    },
+    {
+      "label": "Getting your learner online",
+      "path": "/digital-champions/getting-your-learner-online",
+      "route": "^/digital-champions/getting-your-learner-online$"
+    },
+    {
+      "label": "Foundation Digital Skills",
+      "path": "/digital-champions/foundation-digital-skills",
+      "route": "^/digital-champions/foundation-digital-skills$"
+    },
+    {
+      "label": "Essential Digital Skills",
+      "path": "/digital-champions/essential-digital-skills",
+      "route": "^/digital-champions/essential-digital-skills$"
+    },
+    {
+      "label": "Explaining common digital terms",
+      "path": "/digital-champions/explaining-common-digital-terms",
+      "route": "^/digital-champions/explaining-common-digital-terms$"
+    },
+    {
+      "label": "Top tips from Mhor Collective",
+      "path": "/digital-champions/top-tips-from-mhor-collective",
+      "route": "^/digital-champions/top-tips-from-mhor-collective$"
+    }
+  ],
   "start": [
     {
       "label": "Home",
