@@ -60,6 +60,11 @@
       "route": "^/digital-champions/delivering-remote-support$"
     },
     {
+      "label": "Resources for Digital Champions",
+      "path": "/digital-champions/resources",
+      "route": "^/digital-champions/resources$"
+    },
+    {
       "label": "Preparing for support sessions with your learner",
       "path": "/digital-champions/preparing-for-support-sessions-with-your-learner",
       "route": "^/digital-champions/preparing-for-support-sessions-with-your-learner$"
@@ -83,11 +88,6 @@
       "label": "Explaining common digital terms",
       "path": "/digital-champions/explaining-common-digital-terms",
       "route": "^/digital-champions/explaining-common-digital-terms$"
-    },
-    {
-      "label": "Top tips from Mhor Collective",
-      "path": "/digital-champions/top-tips-from-mhor-collective",
-      "route": "^/digital-champions/top-tips-from-mhor-collective$"
     }
   ],
   "start": [
