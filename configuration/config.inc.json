@@ -18,7 +18,7 @@
     "assetsBase": "https://storage.googleapis.com/scvo-assets/test/connectingscotland/",
     "title": "Connecting Scotland",
     "menus": "{:./data/menus.json}",
-    "elasticsearchUrl": "{$./data/elasticsearch-url.txt}",
+    "elasticsearchUrl": "{$./data/elasticsearch-legacy-url.txt}",
     "domain-map": "{:./data/domain-map.json}",
     "site-configurations": "{:./data/site-configurations.json}",
     "commonTasks": "{:./data/common-tasks.json}",
