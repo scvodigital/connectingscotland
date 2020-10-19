@@ -1,4 +1,9 @@
 <div class="columns detail">
+  {{#if (regexMatch @root.request.url.pathname "^/digital-champions/training" "gi")}}
+  {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+  {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+  {{/if ~}}
+  {{else}}
   <div class="column col-8 col-md-12 r-padding-full">
     <img src="{{~>asset_url url=(concat 'images/' (itemAt (arrayify (split @root.request.url.pathname '/')) 1) '.png')~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
@@ -16,4 +21,5 @@
       <img src="{{~>asset_url url=(concat 'images/' (itemAt (arrayify (split @root.request.url.pathname '/')) 1) '.png')~}}" alt="" class="responsive-img" />
     {{/if}}
   </div>
+  {{/if}}
 </div>
