@@ -23,7 +23,7 @@
     {
       "label": "Digital Champions",
       "path": "/digital-champions",
-      "route": "^/digital-champions$"
+      "route": "^/digital-champions"
     },
     {
       "label": "Supporters",
@@ -88,6 +88,11 @@
       "label": "Explaining common digital terms",
       "path": "/digital-champions/explaining-common-digital-terms",
       "route": "^/digital-champions/explaining-common-digital-terms$"
+    },
+    {
+      "label": "Training",
+      "path": "/digital-champions/training-2020",
+      "route": "^/digital-champions/training-2020$"
     }
   ],
   "start": [
