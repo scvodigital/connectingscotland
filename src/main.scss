@@ -1287,7 +1287,7 @@ blockquote {
   border: none;
 }
 
-p, li, div, blockquote, cite, td, th {
+p, li, div, blockquote, cite, td, th, label {
   font-family: $base-font-family;
   font-weight: $base-font-weight;
   font-size: $base-font-size;
@@ -1953,6 +1953,7 @@ button {
         font-size: 2rem;
         margin: 0;
       }
+      label,
       p {
         font-size: 1.25rem;
       }
