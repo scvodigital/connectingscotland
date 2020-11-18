@@ -1,0 +1,567 @@
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+  let formElement = document.getElementById("tfa_0");
+  if (null === formElement) {
+    formElement = document.getElementById("0");
+  }
+  let appendJsTimerElement = function(){
+    let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+    let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+    if (null !== cumulatedTimeElement) {
+      let cumulatedTime = parseInt(cumulatedTimeElement.value);
+      if (null !== cumulatedTime && cumulatedTime > 0) {
+        formTimeDiff += cumulatedTime;
+      }
+    }
+    let jsTimeInput = document.createElement("input");
+    jsTimeInput.setAttribute("type", "hidden");
+    jsTimeInput.setAttribute("value", formTimeDiff.toString());
+    jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("autocomplete", "off");
+    if (null !== formElement) {
+      formElement.appendChild(jsTimeInput);
+    }
+  };
+  if (null !== formElement) {
+    if(formElement.addEventListener){
+      formElement.addEventListener('submit', appendJsTimerElement, false);
+    } else if(formElement.attachEvent){
+      formElement.attachEvent('onsubmit', appendJsTimerElement);
+    }
+  }
+});
+</script>
+
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=82d5a95104920de97db207ba606ec03573ed599c" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=82d5a95104920de97db207ba606ec03573ed599c"></script>
+<script type="text/javascript">
+wFORMS.behaviors.prefill.skip = false;
+</script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=82d5a95104920de97db207ba606ec03573ed599c"></script>
+
+<!-- FORM: BODY SECTION -->
+<div class="wFormContainer detail">
+  <div class="wForm" id="4866604-WRPR" dir="ltr">
+    <div class="codesection" id="code-4866604"></div>
+    <div class="columns">
+      <div class="col-9 col-xl-8 col-md-12">
+        <h1 class="wFormTitle" id="4866604-T">Residential care application</h1>
+
+        <h2>Introduction</h2>
+        <p>
+          This application form is for registered care homes in Scotland applying for an iPad and internet connectivity as part of the Digital Inclusion - Connecting Residents in Scotland’s Care Homes initiative.
+        </p>
+        <p>
+          The Digital Inclusion - Connecting Residents in Scotland’s Care Homes initiative is a programme of work led by Scottish Government and delivered with Connecting Scotland, in collaboration with COSLA, the Care Inspectorate, Scottish Care and the Scottish Social Services Council.
+        </p>
+        <p>
+          Please apply by completing the short questionnaire below. Further information and guidance is available on the <a href="https://tec.scot/care-homes/care-home-application/">Technology Enabled Care website</a>.
+        </p>
+        <p>
+          If you have any problems applying, please email <a href="mailto:nss.DigiCareHome@nhs.scot">nss.DigiCareHome@nhs.scot</a>.
+        </p>
+      </div>
+      <div class="col-3 col-xl-4 col-md-6 col-sm-10 text-center">
+        <a href="https://www.digihealthcare.scot" target="_blank" class="brand-logo"><img src="{{~>asset_url url=(concat 'images/residential-care-application.png')~}}" alt="" class="responsive-img" /></a>
+      </div>
+    </div>
+
+    <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="4866604" role="form">
+      <h2>About you</h2>
+      <div class="form-group oneField field-container-D" id="tfa_1-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_1-L" class="form-label preField " for="tfa_1">First name</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_1" name="tfa_1" value="" title="First name" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_90-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_90-L" class="form-label preField " for="tfa_90">Last name</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_90" name="tfa_90" value="" title="Last name" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_2-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_2-L" class="form-label preField " for="tfa_2">Job title</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_2" name="tfa_2" value="" title="Job title" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_3-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_3-L" class="form-label preField " for="tfa_3">Email address</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_3" name="tfa_3" value="" title="Email address" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_4-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_4-L" class="form-label preField " for="tfa_4">Phone number</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_4" name="tfa_4" value="" title="Phone number" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_5-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_5-L" class="form-label preField " for="tfa_5">Organisation name</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_5" name="tfa_5" value="" title="Organisation name" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_6-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_6-L" class="form-label preField " for="tfa_6">Care home name (if different)</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_6" name="tfa_6" value="" title="Care home name (if different)" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_7-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_7-L" class="form-label preField " for="tfa_7">Address line 1</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_7" name="tfa_7" value="" title="Address line 1" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_8-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_8-L" class="form-label preField " for="tfa_8">Address line 2</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_8" name="tfa_8" value="" title="Address line 2" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_9-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_9-L" class="form-label preField " for="tfa_9">Address line 3</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_9" name="tfa_9" value="" title="Address line 3" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_10-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_10-L" class="form-label preField " for="tfa_10">Postcode</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_10" name="tfa_10" value="" title="Address postcode" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_11-D" role="radiogroup" aria-labelledby="tfa_11-L" data-tfa-labelledby="-L tfa_11-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_11-L" class="form-label preField ">Sector</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_11" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_12-L" for="tfa_12">
+                <input type="radio" value="tfa_12" id="tfa_12" name="tfa_11" aria-labelledby="tfa_12-L" data-tfa-labelledby="tfa_11-L tfa_12-L">
+                <span class="form-icon"></span>
+                Public sector
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_13-L" for="tfa_13">
+                <input type="radio" value="tfa_13" id="tfa_13" name="tfa_11" aria-labelledby="tfa_13-L" data-tfa-labelledby="tfa_11-L tfa_13-L">
+                <span class="form-icon"></span>
+                Private sector
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_14-L" for="tfa_14">
+                <input type="radio" value="tfa_14" id="tfa_14" name="tfa_11" aria-labelledby="tfa_14-L" data-tfa-labelledby="tfa_11-L tfa_14-L">
+                <span class="form-icon"></span>
+                Third sector
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_15-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_15-L" class="form-label preField " for="tfa_15">Which local council area is your care home in?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <select id="tfa_15" name="tfa_15" title="Which local council area is your care home in?" class="form-select">
+            <option value="" disabled selected>Please select&hellip;</option>
+            <option value="tfa_16" id="tfa_16">Aberdeen</option>
+            <option value="tfa_17" id="tfa_17">Aberdeenshire</option>
+            <option value="tfa_18" id="tfa_18">Angus</option>
+            <option value="tfa_19" id="tfa_19">Argyll &amp; Bute</option>
+            <option value="tfa_20" id="tfa_20">Clackmannanshire</option>
+            <option value="tfa_21" id="tfa_21">Dumfries &amp; Galloway</option>
+            <option value="tfa_22" id="tfa_22">Dundee</option>
+            <option value="tfa_23" id="tfa_23">East Ayrshire</option>
+            <option value="tfa_24" id="tfa_24">East Dunbartonshire</option>
+            <option value="tfa_25" id="tfa_25">East Lothian</option>
+            <option value="tfa_26" id="tfa_26">East Renfrewshire</option>
+            <option value="tfa_27" id="tfa_27">Edinburgh</option>
+            <option value="tfa_28" id="tfa_28">Falkirk</option>
+            <option value="tfa_29" id="tfa_29">Fife</option>
+            <option value="tfa_30" id="tfa_30">Glasgow</option>
+            <option value="tfa_31" id="tfa_31">Highland</option>
+            <option value="tfa_32" id="tfa_32">Inverclyde</option>
+            <option value="tfa_33" id="tfa_33">Midlothian</option>
+            <option value="tfa_34" id="tfa_34">Moray</option>
+            <option value="tfa_35" id="tfa_35">Na h-Eileanan Siar</option>
+            <option value="tfa_36" id="tfa_36">North Ayrshire</option>
+            <option value="tfa_37" id="tfa_37">North Lanarkshire</option>
+            <option value="tfa_38" id="tfa_38">Orkney</option>
+            <option value="tfa_39" id="tfa_39">Perth &amp; Kinross</option>
+            <option value="tfa_40" id="tfa_40">Renfrewshire</option>
+            <option value="tfa_41" id="tfa_41">Scottish Borders</option>
+            <option value="tfa_42" id="tfa_42">Shetland</option>
+            <option value="tfa_43" id="tfa_43">South Ayrshire</option>
+            <option value="tfa_44" id="tfa_44">South Lanarkshire</option>
+            <option value="tfa_45" id="tfa_45">Stirling</option>
+            <option value="tfa_46" id="tfa_46">West Dunbartonshire</option>
+            <option value="tfa_47" id="tfa_47">West Lothian</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_48-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_48-L" class="form-label preField " for="tfa_48">How many residents do you support?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_48" name="tfa_48" value="" title="How many residents do you support?" autocomplete="nope" data-lpignore="true" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_49-D" role="group" aria-labelledby="tfa_49-L" data-tfa-labelledby="-L tfa_49-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_49-L" class="form-label preField ">Please select the client groups that your care home is registered to support (select all that apply)</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_49" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_50-L" for="tfa_50">
+                <input type="checkbox" value="tfa_50" id="tfa_50" name="tfa_50" aria-labelledby="tfa_50-L" data-tfa-labelledby="tfa_49-L tfa_50-L">
+                <span class="form-icon"></span>
+                Older people
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_51-L" for="tfa_51">
+                <input type="checkbox" value="tfa_51" id="tfa_51" name="tfa_51" aria-labelledby="tfa_51-L" data-tfa-labelledby="tfa_49-L tfa_51-L">
+                <span class="form-icon"></span>
+                People with mental health problems
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_52-L" for="tfa_52">
+                <input type="checkbox" value="tfa_52" id="tfa_52" name="tfa_52" aria-labelledby="tfa_52-L" data-tfa-labelledby="tfa_49-L tfa_52-L">
+                <span class="form-icon"></span>
+                People with physical and sensory impairment
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_53-L" for="tfa_53">
+                <input type="checkbox" value="tfa_53" id="tfa_53" name="tfa_53" aria-labelledby="tfa_53-L" data-tfa-labelledby="tfa_49-L tfa_53-L">
+                <span class="form-icon"></span>
+                People with learning disabilities
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_54-L" for="tfa_54">
+                <input type="checkbox" value="tfa_54" id="tfa_54" name="tfa_54" aria-labelledby="tfa_54-L" data-tfa-labelledby="tfa_49-L tfa_54-L">
+                <span class="form-icon"></span>
+                People with drug and alcohol misuse problems
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_55-L" for="tfa_55">
+                <input type="checkbox" value="tfa_55" id="tfa_55" name="tfa_55" aria-labelledby="tfa_55-L" data-tfa-labelledby="tfa_49-L tfa_55-L">
+                <span class="form-icon"></span>
+                People needing short breaks and respite services
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_56-L" for="tfa_56">
+                <input type="checkbox" value="tfa_56" id="tfa_56" name="tfa_56" aria-labelledby="tfa_56-L" data-tfa-labelledby="tfa_49-L tfa_56-L">
+                <span class="form-icon"></span>
+                Children and young people
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_57-D" role="radiogroup" aria-labelledby="tfa_57-L" data-tfa-labelledby="-L tfa_57-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_57-L" class="form-label preField ">Does your care home currently have equipment that residents can use to connect to the internet?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_57" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_58-L" for="tfa_58">
+                <input type="radio" value="tfa_58" id="tfa_58" name="tfa_57" data-conditionals="#tfa_60" aria-labelledby="tfa_58-L" data-tfa-labelledby="tfa_57-L tfa_58-L">
+                <span class="form-icon"></span>
+                Yes
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_59-L" for="tfa_59">
+                <input type="radio" value="tfa_59" id="tfa_59" name="tfa_57" aria-labelledby="tfa_59-L" data-tfa-labelledby="tfa_57-L tfa_59-L">
+                <span class="form-icon"></span>
+                No
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_60-D" role="group" aria-labelledby="tfa_60-L" data-tfa-labelledby="-L tfa_60-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_60-L" class="form-label preField ">If yes, please specify what type of equipment is currently available for residents to use (select all that apply)</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_60" class="choices vertical " data-condition="`#tfa_58`">
+            <span class="oneChoice">
+              <label class="form-label postField" id="tfa_61-L" for="tfa_61">
+                <input type="checkbox" value="tfa_61" class="form-input" id="tfa_61" name="tfa_61" aria-labelledby="tfa_61-L" data-tfa-labelledby="tfa_60-L tfa_61-L">
+                <span class="form-icon"></span>
+                Tablet device (e.g., iPad, Android etc.)
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-label postField" id="tfa_62-L" for="tfa_62">
+                <input type="checkbox" value="tfa_62" class="form-input" id="tfa_62" name="tfa_62" aria-labelledby="tfa_62-L" data-tfa-labelledby="tfa_60-L tfa_62-L">
+                <span class="form-icon"></span>
+                Mobile phone
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-label postField" id="tfa_63-L" for="tfa_63">
+                <input type="checkbox" value="tfa_63" class="form-input" id="tfa_63" name="tfa_63" aria-labelledby="tfa_63-L" data-tfa-labelledby="tfa_60-L tfa_63-L">
+                <span class="form-icon"></span>
+                Laptop
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-label postField" id="tfa_64-L" for="tfa_64">
+                <input type="checkbox" value="tfa_64" class="form-input" id="tfa_64" name="tfa_64" data-conditionals="#tfa_65" aria-labelledby="tfa_64-L" data-tfa-labelledby="tfa_60-L tfa_64-L">
+                <span class="form-icon"></span>
+                Other (please specify)
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_65-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_65-L" class="form-label preField " for="tfa_65">Type of equipment other</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_65" name="tfa_65" value="" data-condition="`#tfa_64`" title="Type of equipment other" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_66-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_66-L" class="form-label preField " for="tfa_66">How many devices do you have for residents’ use?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_66" name="tfa_66" value="" title="How many devices do you have for residents’ use?" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_67-D" role="group" aria-labelledby="tfa_67-L" data-tfa-labelledby="-L tfa_67-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_67-L" class="form-label preField ">Has your care home received any devices from any of the following programmes? (please select all that apply)</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_67" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_68-L" for="tfa_68">
+                <input type="checkbox" value="tfa_68" id="tfa_68" name="tfa_68" aria-labelledby="tfa_68-L" data-tfa-labelledby="tfa_67-L tfa_68-L">
+                <span class="form-icon"></span>
+                Connecting Scotland
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_69-L" for="tfa_69">
+                <input type="checkbox" value="tfa_69" id="tfa_69" name="tfa_69" aria-labelledby="tfa_69-L" data-tfa-labelledby="tfa_67-L tfa_69-L">
+                <span class="form-icon"></span>
+                Pupil Equity Funding
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_70-L" for="tfa_70">
+                <input type="checkbox" value="tfa_70" id="tfa_70" name="tfa_70" aria-labelledby="tfa_70-L" data-tfa-labelledby="tfa_67-L tfa_70-L">
+                <span class="form-icon"></span>
+                Tech Connection Network (Tech Device Network) via Scottish Care
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_71-L" for="tfa_71">
+                <input type="checkbox" value="tfa_71" id="tfa_71" name="tfa_71" aria-labelledby="tfa_71-L" data-tfa-labelledby="tfa_67-L tfa_71-L">
+                <span class="form-icon"></span>
+                vCreate project
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-checkbox postField" id="tfa_72-L" for="tfa_72">
+                <input type="checkbox" value="tfa_72" id="tfa_72" name="tfa_72" data-conditionals="#tfa_73" aria-labelledby="tfa_72-L" data-tfa-labelledby="tfa_67-L tfa_72-L">
+                <span class="form-icon"></span>
+                Other programme (please specify)
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_73-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_73-L" class="form-label preField " for="tfa_73">Programmes other</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_73" name="tfa_73" value="" data-condition="`#tfa_72`" title="Programmes other" class="form-input">
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_74-D" role="radiogroup" aria-labelledby="tfa_74-L" data-tfa-labelledby="-L tfa_74-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_74-L" class="form-label preField ">Does your care home currently have wifi installed that can be accessed throughout the home including residents’ rooms?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_74" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_75-L" for="tfa_75">
+                <input type="radio" value="tfa_75" id="tfa_75" name="tfa_74" aria-labelledby="tfa_75-L" data-tfa-labelledby="tfa_74-L tfa_75-L">
+                <span class="form-icon"></span>
+                No
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_76-L" for="tfa_76">
+                <input type="radio" value="tfa_76" id="tfa_76" name="tfa_74" aria-labelledby="tfa_76-L" data-tfa-labelledby="tfa_74-L tfa_76-L">
+                <span class="form-icon"></span>
+                Only partial coverage
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_77-L" for="tfa_77">
+                <input type="radio" value="tfa_77" id="tfa_77" name="tfa_74" aria-labelledby="tfa_77-L" data-tfa-labelledby="tfa_74-L tfa_77-L">
+                <span class="form-icon"></span>
+                Yes - full coverage
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_78-D" role="radiogroup" aria-labelledby="tfa_78-L" data-tfa-labelledby="-L tfa_78-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_78-L" class="form-label preField ">If yes, does your care home permit residents to access the wifi?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_78" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_79-L" for="tfa_79">
+                <input type="radio" value="tfa_79" id="tfa_79" name="tfa_78" aria-labelledby="tfa_79-L" data-tfa-labelledby="tfa_78-L tfa_79-L">
+                <span class="form-icon"></span>
+                Yes
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_80-L" for="tfa_80">
+                <input type="radio" value="tfa_80" id="tfa_80" name="tfa_78" aria-labelledby="tfa_80-L" data-tfa-labelledby="tfa_78-L tfa_80-L">
+                <span class="form-icon"></span>
+                No
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_81-D" role="radiogroup" aria-labelledby="tfa_81-L" data-tfa-labelledby="-L tfa_81-L">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_81-L" class="form-label preField ">Do you get 4G Vodafone signal at the care home?</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <span id="tfa_81" class="choices vertical ">
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_82-L" for="tfa_82">
+                <input type="radio" value="tfa_82" id="tfa_82" name="tfa_81" aria-labelledby="tfa_82-L" data-tfa-labelledby="tfa_81-L tfa_82-L">
+                <span class="form-icon"></span>
+                Yes
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_83-L" for="tfa_83">
+                <input type="radio" value="tfa_83" id="tfa_83" name="tfa_81" aria-labelledby="tfa_83-L" data-tfa-labelledby="tfa_81-L tfa_83-L">
+                <span class="form-icon"></span>
+                No
+              </label>
+            </span>
+            <span class="oneChoice">
+              <label class="form-radio postField" id="tfa_84-L" for="tfa_84">
+                <input type="radio" value="tfa_84" id="tfa_84" name="tfa_81" aria-labelledby="tfa_84-L" data-tfa-labelledby="tfa_81-L tfa_84-L">
+                <span class="form-icon"></span>
+                Don't know
+              </label>
+            </span>
+          </span>
+        </div>
+      </div>
+      <fieldset class="section col-9 col-xl-12">
+        <legend>Digital Champion</legend>
+        <div class="form-group oneField field-container-D" id="tfa_85-D">
+          <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_85-L" class="form-label preField " for="tfa_85">Name</label>
+          </div>
+          <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_85" name="tfa_85" value="" title="DC name" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_86-D">
+          <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_86-L" class="form-label preField " for="tfa_86">Job title</label>
+          </div>
+          <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_86" name="tfa_86" value="" title="DC job title" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_87-D">
+          <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_87-L" class="form-label preField " for="tfa_87">Email address</label>
+          </div>
+          <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_87" name="tfa_87" value="" title="DC email address" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_88-D">
+          <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_88-L" class="form-label preField " for="tfa_88">Phone number</label>
+          </div>
+          <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_88" name="tfa_88" value="" title="DC phone number" class="form-input">
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group oneField field-container-D" id="tfa_89-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_89-L" class="form-label preField " for="tfa_89">What difference would it make to your residents if your care home receives an iPad?&nbsp; How would you intend to use it? *</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <textarea data-maxwords="200" id="tfa_89" name="tfa_89" title="What difference would it make to your residents if your care home receives an iPad?  How would you intend to use it? *" class="count-words"></textarea>
+        </div>
+      </div>
+      <div class="actions form-group" id="0-A">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
+        </div>
+      </div>
+      <input type="hidden" value="4866604" name="tfa_dbFormId" id="tfa_dbFormId">
+      <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">
+      <input type="hidden" value="0753fda57a7b1848c403868a4cca43bb" name="tfa_dbControl" id="tfa_dbControl">
+      <input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid">
+      <input type="hidden" value="5" name="tfa_dbVersionId" id="tfa_dbVersionId">
+      <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+    </form>
+  </div>
+</div>

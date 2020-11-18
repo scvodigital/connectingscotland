@@ -1,6 +1,6 @@
 {
   "name": "page_home",
-  "debug": true,
+  "debug": false,
   "pattern": "/home",
   "metaData": {
     "title": "Connecting Scotland"

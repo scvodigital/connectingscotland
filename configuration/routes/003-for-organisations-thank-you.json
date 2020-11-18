@@ -1,6 +1,6 @@
 {
   "name": "org_thank_you",
-  "debug": true,
+  "debug": false,
   "pattern": "/for-organisations/thank-you",
   "metaData": {
     "title": "Connecting Scotland"

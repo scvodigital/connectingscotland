@@ -13,7 +13,7 @@
     {
       "label": "For organisations",
       "path": "/for-organisations",
-      "route": "^/for-organisations"
+      "route": "^/for-organisations|^/forms"
     },
     {
       "label": "For individuals",

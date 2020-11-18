@@ -1,6 +1,6 @@
 {
   "name": "page_helpline",
-  "debug": true,
+  "debug": false,
   "pattern": {
     "info": "/key-information(/:level_1)(/:level_2)(/:level_3)(/:level_4)"
   },

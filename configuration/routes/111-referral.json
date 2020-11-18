@@ -1,6 +1,6 @@
 {
   "name": "page_referral",
-  "debug": true,
+  "debug": false,
   "pattern": "/referral",
   "metaData": {
     "title": "Referral - Connecting Scotland"

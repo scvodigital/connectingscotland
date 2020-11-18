@@ -1,7 +1,7 @@
 {
-  "name": "page_upload-user-data",
-  "debug": true,
-  "pattern": "/upload-user-data",
+  "name": "page_apply-residential-care",
+  "debug": false,
+  "pattern": "/forms/residential-care-application",
   "metaData": {
     "title": "Upload user data - Connecting Scotland"
   },
@@ -24,7 +24,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-upload-user-data",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-residential-care",
               "foot": ""
             },
             "contentType": "text/html"

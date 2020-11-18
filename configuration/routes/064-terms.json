@@ -1,5 +1,6 @@
 {
   "name": "page_terms",
+  "debug": false,
   "pattern": "/terms",
   "metaData": {
     "title": "Terms and conditions – Connecting Scotland"

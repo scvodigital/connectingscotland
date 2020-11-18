@@ -1,6 +1,6 @@
 {
   "name": "page_helpline-faqs",
-  "debug": true,
+  "debug": false,
   "pattern": "/faqs",
   "metaData": {
     "title": "FAQs - Connecting Scotland"

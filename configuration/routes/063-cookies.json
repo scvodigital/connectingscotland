@@ -1,5 +1,6 @@
 {
   "name": "page_cookies",
+  "debug": false,
   "pattern": "/cookies",
   "metaData": {
     "title": "Cookies policy – Connecting Scotland"

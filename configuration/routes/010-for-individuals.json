@@ -1,6 +1,6 @@
 {
   "name": "page_for-individuals",
-  "debug": true,
+  "debug": false,
   "pattern": "/for-individuals",
   "metaData": {
     "title": "For individuals - Connecting Scotland"

@@ -93,7 +93,7 @@ $footer-font-family:                "Ingra", Helvetica, Arial, sans-serif;
 
 .scvo-link-bar,
 footer {
-  p, li, div, h2, h3, a, strong {
+  p, li, div, h2, .h2, h3, .h3, a, strong {
     font-family: $footer-font-family;
   }
 }
@@ -159,7 +159,7 @@ body {
   background-color: $secondary-color;
 }
 
-h1, h2, h3, h4, h5 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
 }
@@ -267,6 +267,12 @@ hr {
 }
 .margin-bottom-none {
   margin-bottom: 0 !important;
+}
+.mr {
+  margin-right: $unit;
+}
+.pr {
+  padding-right: $unit;
 }
 
 .button-collapse {
@@ -707,9 +713,19 @@ main {
     }
   }
 
+  fieldset {
+    border: $brand-border-width solid $brand-typography;
+    padding: 0 $unit $unit;
+    legend {
+      padding: 0 $unit/2;
+    }
+  }
+
   .form-group {
     input[type=text],
     input[type=number],
+    input[type=file],
+    input[type=password],
     input[type=email],
     input[type=search],
     textarea,
@@ -725,6 +741,7 @@ main {
       padding: 0.2rem 0.5rem;
       outline: none;
       height: $unit*3;
+      line-height: $unit*2;
       // height: 2rem;
       -ms-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -743,6 +760,7 @@ main {
   .form-group textarea {
     height: $unit*8;
     line-height: 2;
+    width: 100%;
   }
   span.count-words {
     width: 100%;
@@ -784,13 +802,13 @@ main {
     height: 14px;
     margin-top: -8px;
   }
-  #tfa_61-D > div {
-    width: 100%;
-    margin-top: $unit;
-    input {
-      width: 100%;
-    }
-  }
+  // #tfa_61-D > div {
+  //   width: 100%;
+  //   margin-top: $unit;
+  //   input {
+  //     width: 100%;
+  //   }
+  // }
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -901,6 +919,7 @@ main {
     .sg-instructions,
     .sg-page-description,
     blockquote cite,
+    legend,
     td,
     th,
     p {
@@ -1195,7 +1214,7 @@ main {
   iframe {
     width: 100%;
   }
-  h2,h3,h4 {
+  h2, .h2,h3, .h3,h4 {
     margin-top: $unit;
   }
 }
@@ -1269,9 +1288,9 @@ body.chromebook main,
 button, input, optgroup, select, textarea,
 .mdc-tab,
 .btn,
-h1,
-h2,
-h3,
+h1, .h1,
+h2, .h2,
+h3, .h3,
 h4 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
@@ -1549,7 +1568,7 @@ footer {
     color: white;
     font-size: 1.05rem;
   }
-  h2, h3, a, strong {
+  h2, .h2, h3, .h3, a, strong {
     font-family: $footer-font-family;
     font-weight: 600;
   }
@@ -1560,7 +1579,7 @@ footer {
     padding: $unit*1.5 0 $unit/2;
     background-color: $secondary-color;
   }
-  h2,
+  h2, .h2,
   h3 {
     font-size: 1.5rem;
     margin: $unit 0;
@@ -1711,6 +1730,11 @@ footer {
   float: right;
 }
 
+fieldset {
+  margin: $unit 0;
+  width: 100%;
+}
+
 button {
   border: none;
   background: none;
@@ -1756,7 +1780,7 @@ button {
     #menu_button,
     .navbar .mdc-tab-bar .mdc-tab,
     .navbar .mdc-tab-bar .mdc-tab:hover,
-    h1, h2, h3, h4, p, p a, a, li, td, th {
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, p, p a, a, li, td, th {
       color: white;
     }
     p a {
@@ -2167,7 +2191,7 @@ button {
     }
     .detail,
     .pledge {
-      h3,
+      h3, .h3,
       p {
         margin: 0;
       }
@@ -2629,6 +2653,9 @@ figure,
   .pull-centre-sm { margin-left: auto !important; margin-right: auto !important; display: block; }
 }
 
+.kalendae .k-days span {
+  width: auto !important;
+}
 // @media (min-width: 480px) and (max-width: 839px) {
 //   .hide-md { display: none !important; }
 // }

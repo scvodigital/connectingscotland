@@ -1,6 +1,6 @@
 {
   "name": "page_apply_form",
-  "debug": true,
+  "debug": false,
   "pattern": "/apply",
   "metaData": {
     "title": "Apply - Connecting Scotland"

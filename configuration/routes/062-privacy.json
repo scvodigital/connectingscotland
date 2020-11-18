@@ -1,5 +1,6 @@
 {
   "name": "page_privacy",
+  "debug": false,
   "pattern": "/privacy",
   "metaData": {
     "title": "Privacy – Connecting Scotland"

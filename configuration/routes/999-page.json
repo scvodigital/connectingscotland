@@ -1,6 +1,6 @@
 {
   "name": "page",
-  "debug": true,
+  "debug": false,
   "pattern": "/*path",
   "metaData": {
     "title": "Connecting Scotland"

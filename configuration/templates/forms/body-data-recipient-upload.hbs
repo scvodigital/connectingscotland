@@ -1,0 +1,151 @@
+<!-- FORM: HEAD SECTION -->
+
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+  let formElement = document.getElementById("tfa_0");
+  if (null === formElement) {
+    formElement = document.getElementById("0");
+  }
+  let appendJsTimerElement = function(){
+    let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+    let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+    if (null !== cumulatedTimeElement) {
+      let cumulatedTime = parseInt(cumulatedTimeElement.value);
+      if (null !== cumulatedTime && cumulatedTime > 0) {
+        formTimeDiff += cumulatedTime;
+      }
+    }
+    let jsTimeInput = document.createElement("input");
+    jsTimeInput.setAttribute("type", "hidden");
+    jsTimeInput.setAttribute("value", formTimeDiff.toString());
+    jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("autocomplete", "off");
+    if (null !== formElement) {
+      formElement.appendChild(jsTimeInput);
+    }
+  };
+  if (null !== formElement) {
+    if(formElement.addEventListener){
+      formElement.addEventListener('submit', appendJsTimerElement, false);
+    } else if(formElement.attachEvent){
+      formElement.attachEvent('onsubmit', appendJsTimerElement);
+    }
+  }
+
+  var fileFields = $('input[type="file"]');
+  fileFields.on('change', function(event){
+    validateFileSize(event.currentTarget);
+  });
+
+  function validateFileSize(target) {
+    var total = 0;
+    fileFields.each(function(i, fileField) {
+      if (fileField.files && fileField.files[0]) {
+        total += fileField.files[0].size;
+      }
+    });
+
+    var megs = total / 1024 / 1024;
+    if (megs > 20 && target) {
+      alert('The filesize upload limit is 20MB. The file you are trying to attach exceeds this limit, please choose a smaller file.');
+      $(target).val('');
+
+      total -= target.files[0].size;
+    }
+
+    var megsWithDecimal = Math.round(((total / 1024 / 1024) + Number.EPSILON) * 100) / 100;
+    $('#file-upload-limit-total').html('' + megsWithDecimal);
+    $('#file-upload-limit-progress').attr('value', ''+total);
+  }
+
+  validateFileSize();
+});
+</script>
+
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=b32da48fb5359ae5263737f3eafe9b6a4ec85f81" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=b32da48fb5359ae5263737f3eafe9b6a4ec85f81"></script>
+<script type="text/javascript">
+wFORMS.behaviors.prefill.skip = false;
+</script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=b32da48fb5359ae5263737f3eafe9b6a4ec85f81"></script>
+
+<div class="wFormContainer detail">
+  <div class="wForm" id="0-WRPR" dir="ltr">
+    <h1>Upload user data</h1>
+
+    <p>
+      Projects supported by Connecting Scotland should complete a <a href="https://connectingscotland.powerappsportals.com/upload-recipient-data/">user data upload form</a> for each person who has been provided a device and/or connectivity through your organisation.
+      {{!-- Projects supported by Connecting Scotland should complete a <a href="/forms/recipient-data">recipient data form</a> for each person who has been provided a device and/or connectivity through your organisation. --}}
+    </p>
+
+    <h3>Bulk Excel uploads</h3>
+    <p>
+      For organisations who have already completed user data entry using the Excel templates, you can upload these spreadsheets securely below.
+    </p>
+
+    <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="0" role="form" enctype="multipart/form-data">
+      <div class="form-group" id="tfa_1-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_1-L" class="form-label preField reqMark" for="tfa_1">
+            Your name
+          </label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_1" name="tfa_1" value="" title="Your name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+        </div>
+      </div>
+      <div class="form-group" id="tfa_2-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_2-L" class="form-label preField reqMark" for="tfa_2">
+            Your email
+          </label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_2" name="tfa_2" value="" title="Your email" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+        </div>
+      </div>
+      <div class="form-group" id="tfa_3-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_3-L" class="form-label preField reqMark" for="tfa_3">
+            Your project ID reference number (e.g. CS-999)
+          </label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_3" name="tfa_3" value="" title="Your project ID reference number (e.g. CS-999)" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+        </div>
+      </div>
+      <div class="form-group" id="tfa_4-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_4-L" class="form-label preField reqMark" for="tfa_4">
+            Please upload your Excel file here
+          </label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="file" id="tfa_4" name="tfa_4" size="" title="Please upload your Excel file here" class="form-input required" required>
+        </div>
+      </div>
+      <div class="form-group v-margin-full">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <progress class="progress" id="file-upload-limit-progress" value="0" max="20971520" style="width: 100%;"></progress>
+          <p class="text-secondary">
+            You have selected <span id="file-upload-limit-total">0</span>MB of a maximum 20MB
+          </p>
+        </div>
+      </div>
+      <div class="actions form-group" id="0-A">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
+        </div>
+      </div>
+      <input type="hidden" value="4865168" name="tfa_dbFormId" id="tfa_dbFormId">
+      <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">
+      <input type="hidden" value="d725e1e5923a268cb3573579f67edb8f" name="tfa_dbControl" id="tfa_dbControl">
+      <input type="hidden" value="1" name="tfa_dbVersionId" id="tfa_dbVersionId">
+      <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+    </form>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 {
   "name": "page_for-organisations",
-  "debug": true,
+  "debug": false,
   "pattern": "/for-organisations",
   "metaData": {
     "title": "For organisations - Connecting Scotland"
