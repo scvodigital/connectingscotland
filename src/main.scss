@@ -801,6 +801,12 @@ main {
   .form-checkbox input:checked+.form-icon::before {
     height: 14px;
     margin-top: -8px;
+    border: .2rem solid white;
+    border-left-width: 0;
+    border-top-width: 0;
+  }
+  .form-radio input:checked+.form-icon::before {
+    border-radius: 0;
   }
   // #tfa_61-D > div {
   //   width: 100%;

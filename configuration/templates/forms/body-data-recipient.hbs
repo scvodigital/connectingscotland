@@ -55,34 +55,34 @@ wFORMS.behaviors.prefill.skip = false;
       <h2>Your details</h2>
       <div class="form-group oneField field-container-D" id="tfa_1-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_1-L" class="form-label preField " for="tfa_1">Your first name</label>
+          <label id="tfa_1-L" class="form-label preField reqMark" for="tfa_1">Your first name</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_1" name="tfa_1" value="" title="Your first name" autocomplete="nope" data-lpignore="true" class="form-input">
+          <input type="text" id="tfa_1" name="tfa_1" value="" title="Your first name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_276-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_276-L" class="form-label preField " for="tfa_276">Your last name</label>
+          <label id="tfa_276-L" class="form-label preField reqMark" for="tfa_276">Your last name</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_276" name="tfa_276" value="" title="Your last name" autocomplete="nope" data-lpignore="true" class="form-input">
+          <input type="text" id="tfa_276" name="tfa_276" value="" title="Your last name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_2-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_2-L" class="form-label preField " for="tfa_2">Your organisation</label>
+          <label id="tfa_2-L" class="form-label preField reqMark" for="tfa_2">Your organisation</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_2" name="tfa_2" value="" title="Your organisation" autocomplete="nope" data-lpignore="true" class="form-input">
+          <input type="text" id="tfa_2" name="tfa_2" value="" title="Your organisation" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_3-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_3-L" class="form-label preField " for="tfa_3">Your email address</label>
+          <label id="tfa_3-L" class="form-label preField reqMark" for="tfa_3">Your email address</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_3" name="tfa_3" value="" title="Your email address" autocomplete="nope" data-lpignore="true" class="form-input">
+          <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_3" name="tfa_3" value="" title="Your email address" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_4-D">
@@ -97,18 +97,18 @@ wFORMS.behaviors.prefill.skip = false;
         <h2 id="tfa_277-L h3">Recipient details</h2>
         <div class="form-group oneField field-container-D" id="tfa_5-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_5-L" class="form-label preField " for="tfa_5">First name</label>
+            <label id="tfa_5-L" class="form-label preField reqMark" for="tfa_5">First name</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_5" name="tfa_5" value="" title="First name" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_5" name="tfa_5" value="" title="First name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_6-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_6-L" class="form-label preField " for="tfa_6">Last name</label>
+            <label id="tfa_6-L" class="form-label preField reqMark" for="tfa_6">Last name</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_6" name="tfa_6" value="" title="Last name" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_6" name="tfa_6" value="" title="Last name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_7-D">
@@ -123,8 +123,9 @@ wFORMS.behaviors.prefill.skip = false;
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
             <label id="tfa_8-L" class="form-label preField " for="tfa_8">Date of birth</label>
           </div>
-          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_8" name="tfa_8" value="" autocomplete="off" title="Date of birth" class="validate-datecal">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+            <input type="text" id="tfa_8" name="tfa_8" value="" autocomplete="off" data-lpignore="true" title="Date of birth" class="validate-datecal c-hand form-input">
+            <i class="form-icon far fa-calendar-alt r-margin-full"></i>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_9-D">
@@ -132,28 +133,26 @@ wFORMS.behaviors.prefill.skip = false;
             <label id="tfa_9-L" class="form-label preField " for="tfa_9">Email address</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_9" name="tfa_9" value="" title="Email address" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_9" name="tfa_9" value="" title="Email address" autocomplete="nope" data-lpignore="true" class="form-input">
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_10-D" role="radiogroup" aria-labelledby="tfa_10-L" data-tfa-labelledby="-L tfa_10-L">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_10-L" class="form-label preField ">Support for Individual or Household</label>
+            <label id="tfa_10-L" class="form-label preField reqMark">Support for Individual or Household</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
             <span id="tfa_10" class="choices vertical ">
               <span class="oneChoice">
                 <label class="form-radio postField" id="tfa_11-L" for="tfa_11">
                   <input type="radio" value="tfa_11" id="tfa_11" name="tfa_10" aria-labelledby="tfa_11-L" data-tfa-labelledby="tfa_10-L tfa_11-L">
-                  <span class="form-icon">
-                  </span>
+                  <span class="form-icon"></span>
                   Individual
                 </label>
               </span>
               <span class="oneChoice">
                 <label class="form-radio postField" id="tfa_12-L" for="tfa_12">
                   <input type="radio" value="tfa_12" id="tfa_12" name="tfa_10" aria-labelledby="tfa_12-L" data-tfa-labelledby="tfa_10-L tfa_12-L">
-                  <span class="form-icon">
-                  </span>
+                  <span class="form-icon"></span>
                   Household
                 </label>
               </span>
@@ -162,10 +161,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_13-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_13-L" class="form-label preField " for="tfa_13">Does the recipient have a disability?</label>
+            <label id="tfa_13-L" class="form-label preField reqMark" for="tfa_13">Does the recipient have a disability?</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_13" name="tfa_13" title="Does the recipient have a disability?" class="form-select">
+            <select id="tfa_13" name="tfa_13" title="Does the recipient have a disability?" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_14" id="tfa_14">Yes</option>
               <option value="tfa_15" id="tfa_15">No</option>
@@ -175,10 +174,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_17-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_17-L" class="form-label preField " for="tfa_17">Which project criteria group does the individual meet?</label>
+            <label id="tfa_17-L" class="form-label preField reqMark" for="tfa_17">Which project criteria group does the individual meet?</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_17" name="tfa_17" title="Which project criteria group does the individual meet?" class="form-select">
+            <select id="tfa_17" name="tfa_17" title="Which project criteria group does the individual meet?" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_18" id="tfa_18">Extremely high vulnerability to coronavirus (shielding group)</option>
               <option value="tfa_19" id="tfa_19">High risk to coronavirus</option>
@@ -191,10 +190,10 @@ wFORMS.behaviors.prefill.skip = false;
         <h2>Recipient address</h2>
         <div class="form-group oneField field-container-D" id="tfa_23-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_23-L" class="form-label preField " for="tfa_23">Address line 1</label>
+            <label id="tfa_23-L" class="form-label preField reqMark" for="tfa_23">Address line 1</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_23" name="tfa_23" value="" title="Address line 1" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_23" name="tfa_23" value="" title="Address line 1" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_24-D">
@@ -215,26 +214,26 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_26-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_26-L" class="form-label preField " for="tfa_26">Town/city</label>
+            <label id="tfa_26-L" class="form-label preField reqMark" for="tfa_26">Town/city</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_26" name="tfa_26" value="" title="Address town/city" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_26" name="tfa_26" value="" title="Address town/city" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_27-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_27-L" class="form-label preField " for="tfa_27">Postcode</label>
+            <label id="tfa_27-L" class="form-label preField reqMark" for="tfa_27">Postcode</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_27" name="tfa_27" value="" title="Address postcode" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_27" name="tfa_27" value="" title="Address postcode" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <div class="form-group oneField field-container-D" id="tfa_28-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_28-L" class="form-label preField " for="tfa_28">Local authority</label>
+            <label id="tfa_28-L" class="form-label preField reqMark" for="tfa_28">Local authority</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_28" name="tfa_28" title="Address local authority" class="form-select">
+            <select id="tfa_28" name="tfa_28" title="Address local authority" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_29" id="tfa_29">Aberdeen</option>
               <option value="tfa_30" id="tfa_30">Aberdeenshire</option>
@@ -274,10 +273,10 @@ wFORMS.behaviors.prefill.skip = false;
         <h2>Does the household have existing access to</h2>
         <div class="form-group oneField field-container-D" id="tfa_61-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_61-L" class="form-label preField " for="tfa_61">Mobile phone with access to the internet</label>
+            <label id="tfa_61-L" class="form-label preField reqMark" for="tfa_61">Mobile phone with access to the internet</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_61" name="tfa_61" title="Mobile phone with access to the internet" class="form-select">
+            <select id="tfa_61" name="tfa_61" title="Mobile phone with access to the internet" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_62" id="tfa_62">Yes</option>
               <option value="tfa_63" id="tfa_63">No</option>
@@ -287,10 +286,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_65-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_65-L" class="form-label preField " for="tfa_65">Home broadband</label>
+            <label id="tfa_65-L" class="form-label preField reqMark" for="tfa_65">Home broadband</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_65" name="tfa_65" title="Home broadband" class="form-select">
+            <select id="tfa_65" name="tfa_65" title="Home broadband" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_66" id="tfa_66">Yes</option>
               <option value="tfa_67" id="tfa_67">No</option>
@@ -300,10 +299,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_69-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_69-L" class="form-label preField " for="tfa_69">A tablet computer</label>
+            <label id="tfa_69-L" class="form-label preField reqMark" for="tfa_69">A tablet computer</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_69" name="tfa_69" title="A tablet computer" class="form-select">
+            <select id="tfa_69" name="tfa_69" title="A tablet computer" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_70" id="tfa_70">Yes</option>
               <option value="tfa_71" id="tfa_71">No</option>
@@ -313,10 +312,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_73-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_73-L" class="form-label preField " for="tfa_73">A laptop or PC</label>
+            <label id="tfa_73-L" class="form-label preField reqMark" for="tfa_73">A laptop or PC</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_73" name="tfa_73" title="A laptop or PC" class="form-select">
+            <select id="tfa_73" name="tfa_73" title="A laptop or PC" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_74" id="tfa_74">Yes</option>
               <option value="tfa_75" id="tfa_75">No</option>
@@ -326,10 +325,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_77-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_77-L" class="form-label preField " for="tfa_77">Estimated level of digital skills and confidence</label>
+            <label id="tfa_77-L" class="form-label preField reqMark" for="tfa_77">Estimated level of digital skills and confidence</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_77" name="tfa_77" title="Estimated level of digital skills and confidence" class="form-select">
+            <select id="tfa_77" name="tfa_77" title="Estimated level of digital skills and confidence" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_78" id="tfa_78">None</option>
               <option value="tfa_79" id="tfa_79">Low</option>
@@ -341,10 +340,10 @@ wFORMS.behaviors.prefill.skip = false;
         <h2>Household members - adults</h2>
         <div class="form-group oneField field-container-D" id="tfa_82-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_82-L" class="form-label preField " for="tfa_82">Number of Adults aged 16-25</label>
+            <label id="tfa_82-L" class="form-label preField reqMark" for="tfa_82">Number of Adults aged 16-25</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_82" name="tfa_82" title="Number of Adults aged 16-25" class="form-select">
+            <select id="tfa_82" name="tfa_82" title="Number of Adults aged 16-25" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_282" id="tfa_282">0</option>
               <option value="tfa_83" id="tfa_83">1</option>
@@ -359,10 +358,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_98-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_98-L" class="form-label preField " for="tfa_98">Number of Adults aged 26-40</label>
+            <label id="tfa_98-L" class="form-label preField reqMark" for="tfa_98">Number of Adults aged 26-40</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_98" name="tfa_98" title="Number of Adults aged 26-40" class="form-select">
+            <select id="tfa_98" name="tfa_98" title="Number of Adults aged 26-40" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_283" id="tfa_283">0</option>
               <option value="tfa_99" id="tfa_99">1</option>
@@ -377,10 +376,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_114-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_114-L" class="form-label preField " for="tfa_114">Number of Adults aged 41-60</label>
+            <label id="tfa_114-L" class="form-label preField reqMark" for="tfa_114">Number of Adults aged 41-60</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_114" name="tfa_114" title="Number of Adults aged 41-60" class="form-select">
+            <select id="tfa_114" name="tfa_114" title="Number of Adults aged 41-60" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_280" id="tfa_280">0</option>
               <option value="tfa_115" id="tfa_115">1</option>
@@ -395,10 +394,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_130-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_130-L" class="form-label preField " for="tfa_130">Number of Adults aged 61-70</label>
+            <label id="tfa_130-L" class="form-label preField reqMark" for="tfa_130">Number of Adults aged 61-70</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_130" name="tfa_130" title="Number of Adults aged 61-70" class="form-select">
+            <select id="tfa_130" name="tfa_130" title="Number of Adults aged 61-70" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_281" id="tfa_281">0</option>
               <option value="tfa_131" id="tfa_131">1</option>
@@ -413,10 +412,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_146-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_146-L" class="form-label preField " for="tfa_146">Number of Adults aged 71-80</label>
+            <label id="tfa_146-L" class="form-label preField reqMark" for="tfa_146">Number of Adults aged 71-80</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_146" name="tfa_146" title="Number of Adults aged 71-80" class="form-select">
+            <select id="tfa_146" name="tfa_146" title="Number of Adults aged 71-80" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_279" id="tfa_279">0</option>
               <option value="tfa_147" id="tfa_147">1</option>
@@ -431,10 +430,10 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
         <div class="form-group oneField field-container-D" id="tfa_162-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_162-L" class="form-label preField " for="tfa_162">Number of Adults aged 81+</label>
+            <label id="tfa_162-L" class="form-label preField reqMark" for="tfa_162">Number of Adults aged 81+</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_162" name="tfa_162" title="Number of Adults aged 81+" class="form-select">
+            <select id="tfa_162" name="tfa_162" title="Number of Adults aged 81+" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_278" id="tfa_278">0</option>
               <option value="tfa_163" id="tfa_163">1</option>
@@ -450,10 +449,10 @@ wFORMS.behaviors.prefill.skip = false;
         <h2>Household members - children</h2>
         <div class="form-group oneField field-container-D" id="tfa_170-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_170-L" class="form-label preField " for="tfa_170">Total number of children in household</label>
+            <label id="tfa_170-L" class="form-label preField reqMark" for="tfa_170">Total number of children in household</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <input type="text" id="tfa_170" name="tfa_170" value="" title="Total number of children in household" autocomplete="nope" data-lpignore="true" class="form-input">
+            <input type="text" id="tfa_170" name="tfa_170" value="" title="Total number of children in household" autocomplete="nope" data-lpignore="true" class="form-input required" required>
           </div>
         </div>
         <h2>Device(s)</div>
@@ -461,10 +460,10 @@ wFORMS.behaviors.prefill.skip = false;
           <legend id="tfa_187-L h3">Device 1</legend>
           <div class="form-group oneField field-container-D" id="tfa_172-D">
             <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_172-L" class="form-label preField " for="tfa_172">Type</label>
+              <label id="tfa_172-L" class="form-label preField reqMark" for="tfa_172">Type</label>
             </div>
             <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <select id="tfa_172" name="tfa_172" title="Device 1 - Type" class="form-select">
+              <select id="tfa_172" name="tfa_172" title="Device 1 - Type" class="form-select required" required>
                 <option value="" disabled selected>Please select&hellip;</option>
                 <option value="tfa_173" id="tfa_173">Chromebook</option>
                 <option value="tfa_174" id="tfa_174">Tablet</option>
@@ -473,10 +472,10 @@ wFORMS.behaviors.prefill.skip = false;
           </div>
           <div class="form-group oneField field-container-D" id="tfa_176-D">
             <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_176-L" class="form-label preField " for="tfa_176">Connectivity</label>
+              <label id="tfa_176-L" class="form-label preField reqMark" for="tfa_176">Connectivity</label>
             </div>
             <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <select id="tfa_176" name="tfa_176" title="Device 1 - Connectivity" class="form-select">
+              <select id="tfa_176" name="tfa_176" title="Device 1 - Connectivity" class="form-select required" required>
                 <option value="" disabled selected>Please select&hellip;</option>
                 <option value="tfa_177" id="tfa_177">None</option>
                 <option value="tfa_178" id="tfa_178">SIM only</option>
@@ -489,17 +488,18 @@ wFORMS.behaviors.prefill.skip = false;
             <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
               <label id="tfa_171-L" class="form-label preField " for="tfa_171">Date Delivered to Recipient</label>
             </div>
-            <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <input type="text" id="tfa_171" name="tfa_171" value="" autocomplete="off" title="Device 1 - Date Delivered to Recipient" class="validate-datecal">
+            <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+              <input type="text" id="tfa_171" name="tfa_171" value="" autocomplete="off" data-lpignore="true" title="Device 1 - Date Delivered to Recipient" class="validate-datecal c-hand form-input">
+              <i class="form-icon far fa-calendar-alt r-margin-full"></i>
             </div>
           </div>
         </fieldset>
         <div class="form-group oneField field-container-D" id="tfa_181-D">
           <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-            <label id="tfa_181-L" class="form-label preField " for="tfa_181">How many additional devices do you wish to add for the same household?</label>
+            <label id="tfa_181-L" class="form-label preField reqMark" for="tfa_181">How many additional devices do you wish to add for the same household?</label>
           </div>
           <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-            <select id="tfa_181" name="tfa_181" title="How many additional devices do you wish to add for the same household?" class="form-select">
+            <select id="tfa_181" name="tfa_181" title="How many additional devices do you wish to add for the same household?" class="form-select required" required>
               <option value="" disabled selected>Please select&hellip;</option>
               <option value="tfa_182" id="tfa_182">None</option>
               <option value="tfa_183" id="tfa_183" data-conditionals="#tfa_199">1</option>
@@ -512,10 +512,10 @@ wFORMS.behaviors.prefill.skip = false;
             <legend id="tfa_199-L h3">Device 2</legend>
             <div class="form-group oneField field-container-D" id="tfa_200-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_200-L" class="form-label preField " for="tfa_200">Type</label>
+                <label id="tfa_200-L" class="form-label preField reqMark" for="tfa_200">Type</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_200" name="tfa_200" title="Device 2 - Type" class="form-select">
+                <select id="tfa_200" name="tfa_200" title="Device 2 - Type" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_201" id="tfa_201">Chromebook</option>
                   <option value="tfa_202" id="tfa_202">Tablet</option>
@@ -524,10 +524,10 @@ wFORMS.behaviors.prefill.skip = false;
             </div>
             <div class="form-group oneField field-container-D" id="tfa_204-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_204-L" class="form-label preField " for="tfa_204">Connectivity</label>
+                <label id="tfa_204-L" class="form-label preField reqMark" for="tfa_204">Connectivity</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_204" name="tfa_204" title="Device 2 - Connectivity" class="form-select">
+                <select id="tfa_204" name="tfa_204" title="Device 2 - Connectivity" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_205" id="tfa_205">None</option>
                   <option value="tfa_206" id="tfa_206">SIM only</option>
@@ -540,8 +540,9 @@ wFORMS.behaviors.prefill.skip = false;
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
                 <label id="tfa_209-L" class="form-label preField " for="tfa_209">Date Delivered to Recipient</label>
               </div>
-              <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <input type="text" id="tfa_209" name="tfa_209" value="" autocomplete="off" title="Device 2 - Date Delivered to Recipient" class="validate-datecal">
+              <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+                <input type="text" id="tfa_209" name="tfa_209" value="" autocomplete="off" data-lpignore="true" title="Device 2 - Date Delivered to Recipient" class="validate-datecal c-hand form-input">
+                <i class="form-icon far fa-calendar-alt r-margin-full"></i>
               </div>
             </div>
           </fieldset>
@@ -549,10 +550,10 @@ wFORMS.behaviors.prefill.skip = false;
             <legend id="tfa_221-L h3">Device 3</legend>
             <div class="form-group oneField field-container-D" id="tfa_222-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_222-L" class="form-label preField " for="tfa_222">Type</label>
+                <label id="tfa_222-L" class="form-label preField reqMark" for="tfa_222">Type</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_222" name="tfa_222" title="Device 3 - Type" class="form-select">
+                <select id="tfa_222" name="tfa_222" title="Device 3 - Type" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_223" id="tfa_223">Chromebook</option>
                   <option value="tfa_224" id="tfa_224">Tablet</option>
@@ -561,10 +562,10 @@ wFORMS.behaviors.prefill.skip = false;
             </div>
             <div class="form-group oneField field-container-D" id="tfa_226-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_226-L" class="form-label preField " for="tfa_226">Connectivity</label>
+                <label id="tfa_226-L" class="form-label preField reqMark" for="tfa_226">Connectivity</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_226" name="tfa_226" title="Device 3 - Connectivity" class="form-select">
+                <select id="tfa_226" name="tfa_226" title="Device 3 - Connectivity" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_227" id="tfa_227">None</option>
                   <option value="tfa_228" id="tfa_228">SIM only</option>
@@ -577,8 +578,9 @@ wFORMS.behaviors.prefill.skip = false;
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
                 <label id="tfa_231-L" class="form-label preField " for="tfa_231">Date Delivered to Recipient</label>
               </div>
-              <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <input type="text" id="tfa_231" name="tfa_231" value="" autocomplete="off" title="Device 3 - Date Delivered to Recipient" class="validate-datecal">
+              <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+                <input type="text" id="tfa_231" name="tfa_231" value="" autocomplete="off" data-lpignore="true" title="Device 3 - Date Delivered to Recipient" class="validate-datecal c-hand form-input">
+                <i class="form-icon far fa-calendar-alt r-margin-full"></i>
               </div>
             </div>
           </fieldset>
@@ -586,10 +588,10 @@ wFORMS.behaviors.prefill.skip = false;
             <legend id="tfa_243-L h3">Device 4</legend>
             <div class="form-group oneField field-container-D" id="tfa_244-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_244-L" class="form-label preField " for="tfa_244">Type</label>
+                <label id="tfa_244-L" class="form-label preField reqMark" for="tfa_244">Type</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_244" name="tfa_244" title="Device 4 - Type" class="form-select">
+                <select id="tfa_244" name="tfa_244" title="Device 4 - Type" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_245" id="tfa_245">Chromebook</option>
                   <option value="tfa_246" id="tfa_246">Tablet</option>
@@ -598,10 +600,10 @@ wFORMS.behaviors.prefill.skip = false;
             </div>
             <div class="form-group oneField field-container-D" id="tfa_248-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_248-L" class="form-label preField " for="tfa_248">Connectivity</label>
+                <label id="tfa_248-L" class="form-label preField reqMark" for="tfa_248">Connectivity</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_248" name="tfa_248" title="Device 4 - Connectivity" class="form-select">
+                <select id="tfa_248" name="tfa_248" title="Device 4 - Connectivity" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_249" id="tfa_249">None</option>
                   <option value="tfa_250" id="tfa_250">SIM only</option>
@@ -614,8 +616,9 @@ wFORMS.behaviors.prefill.skip = false;
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
                 <label id="tfa_253-L" class="form-label preField " for="tfa_253">Date Delivered to Recipient</label>
               </div>
-              <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <input type="text" id="tfa_253" name="tfa_253" value="" autocomplete="off" title="Device 4 - Date Delivered to Recipient" class="validate-datecal">
+              <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+                <input type="text" id="tfa_253" name="tfa_253" value="" autocomplete="off" data-lpignore="true" title="Device 4 - Date Delivered to Recipient" class="validate-datecal c-hand form-input">
+                <i class="form-icon far fa-calendar-alt r-margin-full"></i>
               </div>
             </div>
           </fieldset>
@@ -623,10 +626,10 @@ wFORMS.behaviors.prefill.skip = false;
             <legend id="tfa_265-L h3">Device 5</legend>
             <div class="form-group oneField field-container-D" id="tfa_266-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_266-L" class="form-label preField " for="tfa_266">Type</label>
+                <label id="tfa_266-L" class="form-label preField reqMark" for="tfa_266">Type</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_266" name="tfa_266" title="Device 5 - Type" class="form-select">
+                <select id="tfa_266" name="tfa_266" title="Device 5 - Type" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_267" id="tfa_267">Chromebook</option>
                   <option value="tfa_268" id="tfa_268">Tablet</option>
@@ -635,10 +638,10 @@ wFORMS.behaviors.prefill.skip = false;
             </div>
             <div class="form-group oneField field-container-D" id="tfa_270-D">
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-                <label id="tfa_270-L" class="form-label preField " for="tfa_270">Connectivity</label>
+                <label id="tfa_270-L" class="form-label preField reqMark" for="tfa_270">Connectivity</label>
               </div>
               <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <select id="tfa_270" name="tfa_270" title="Device 5 - Connectivity" class="form-select">
+                <select id="tfa_270" name="tfa_270" title="Device 5 - Connectivity" class="form-select required" required>
                   <option value="" disabled selected>Please select&hellip;</option>
                   <option value="tfa_271" id="tfa_271">None</option>
                   <option value="tfa_272" id="tfa_272">SIM only</option>
@@ -651,8 +654,9 @@ wFORMS.behaviors.prefill.skip = false;
               <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
                 <label id="tfa_275-L" class="form-label preField " for="tfa_275">Date Delivered to Recipient</label>
               </div>
-              <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-                <input type="text" id="tfa_275" name="tfa_275" value="" autocomplete="off" title="Device 5 - Date Delivered to Recipient" class="validate-datecal">
+              <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+                <input type="text" id="tfa_275" name="tfa_275" value="" autocomplete="off" data-lpignore="true" title="Device 5 - Date Delivered to Recipient" class="validate-datecal c-hand form-input">
+                <i class="form-icon far fa-calendar-alt r-margin-full"></i>
               </div>
             </div>
           </fieldset>
