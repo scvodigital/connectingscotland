@@ -238,7 +238,7 @@ wFORMS.behaviors.prefill.skip = false;
           <label id="tfa_48-L" class="form-label preField " for="tfa_48">How many residents do you support?</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_48" name="tfa_48" value="" title="How many residents do you support?" autocomplete="nope" data-lpignore="true" class="form-input">
+          <textarea data-maxwords="200" id="tfa_48" name="tfa_48" title="How many residents do you support?" autocomplete="nope" data-lpignore="true" class="form-input count-words"></textarea>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_49-D" role="group" aria-labelledby="tfa_49-L" data-tfa-labelledby="-L tfa_49-L">
@@ -329,29 +329,29 @@ wFORMS.behaviors.prefill.skip = false;
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
           <span id="tfa_60" class="choices vertical " data-condition="`#tfa_58`">
             <span class="oneChoice">
-              <label class="form-label postField" id="tfa_61-L" for="tfa_61">
-                <input type="checkbox" value="tfa_61" class="form-input" id="tfa_61" name="tfa_61" aria-labelledby="tfa_61-L" data-tfa-labelledby="tfa_60-L tfa_61-L">
+              <label class="form-checkbox postField" id="tfa_61-L" for="tfa_61">
+                <input type="checkbox" value="tfa_61" id="tfa_61" name="tfa_61" aria-labelledby="tfa_61-L" data-tfa-labelledby="tfa_60-L tfa_61-L">
                 <span class="form-icon"></span>
                 Tablet device (e.g., iPad, Android etc.)
               </label>
             </span>
             <span class="oneChoice">
-              <label class="form-label postField" id="tfa_62-L" for="tfa_62">
-                <input type="checkbox" value="tfa_62" class="form-input" id="tfa_62" name="tfa_62" aria-labelledby="tfa_62-L" data-tfa-labelledby="tfa_60-L tfa_62-L">
+              <label class="form-checkbox postField" id="tfa_62-L" for="tfa_62">
+                <input type="checkbox" value="tfa_62" id="tfa_62" name="tfa_62" aria-labelledby="tfa_62-L" data-tfa-labelledby="tfa_60-L tfa_62-L">
                 <span class="form-icon"></span>
                 Mobile phone
               </label>
             </span>
             <span class="oneChoice">
-              <label class="form-label postField" id="tfa_63-L" for="tfa_63">
-                <input type="checkbox" value="tfa_63" class="form-input" id="tfa_63" name="tfa_63" aria-labelledby="tfa_63-L" data-tfa-labelledby="tfa_60-L tfa_63-L">
+              <label class="form-checkbox postField" id="tfa_63-L" for="tfa_63">
+                <input type="checkbox" value="tfa_63" id="tfa_63" name="tfa_63" aria-labelledby="tfa_63-L" data-tfa-labelledby="tfa_60-L tfa_63-L">
                 <span class="form-icon"></span>
                 Laptop
               </label>
             </span>
             <span class="oneChoice">
-              <label class="form-label postField" id="tfa_64-L" for="tfa_64">
-                <input type="checkbox" value="tfa_64" class="form-input" id="tfa_64" name="tfa_64" data-conditionals="#tfa_65" aria-labelledby="tfa_64-L" data-tfa-labelledby="tfa_60-L tfa_64-L">
+              <label class="form-checkbox postField" id="tfa_64-L" for="tfa_64">
+                <input type="checkbox" value="tfa_64" id="tfa_64" name="tfa_64" data-conditionals="#tfa_65" aria-labelledby="tfa_64-L" data-tfa-labelledby="tfa_60-L tfa_64-L">
                 <span class="form-icon"></span>
                 Other (please specify)
               </label>
@@ -360,9 +360,7 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_65-D">
-        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_65-L" class="form-label preField " for="tfa_65">Type of equipment other</label>
-        </div>
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
           <input type="text" id="tfa_65" name="tfa_65" value="" data-condition="`#tfa_64`" title="Type of equipment other" class="form-input">
         </div>
@@ -372,7 +370,7 @@ wFORMS.behaviors.prefill.skip = false;
           <label id="tfa_66-L" class="form-label preField " for="tfa_66">How many devices do you have for residents’ use?</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_66" name="tfa_66" value="" title="How many devices do you have for residents’ use?" class="form-input">
+          <textarea data-maxwords="200" id="tfa_66" name="tfa_66" value="" title="How many devices do you have for residents’ use?" class="form-input count-words"></textarea>
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_67-D" role="group" aria-labelledby="tfa_67-L" data-tfa-labelledby="-L tfa_67-L">
@@ -420,9 +418,7 @@ wFORMS.behaviors.prefill.skip = false;
         </div>
       </div>
       <div class="form-group oneField field-container-D" id="tfa_73-D">
-        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_73-L" class="form-label preField " for="tfa_73">Programmes other</label>
-        </div>
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
           <input type="text" id="tfa_73" name="tfa_73" value="" data-condition="`#tfa_72`" title="Programmes other" class="form-input">
         </div>
