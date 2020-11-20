@@ -438,14 +438,14 @@ wFORMS.behaviors.prefill.skip = false;
             </span>
             <span class="oneChoice">
               <label class="form-radio postField" id="tfa_76-L" for="tfa_76">
-                <input type="radio" value="tfa_76" id="tfa_76" name="tfa_74" aria-labelledby="tfa_76-L" data-tfa-labelledby="tfa_74-L tfa_76-L">
+                <input type="radio" value="tfa_76" id="tfa_76" name="tfa_74" aria-labelledby="tfa_76-L" data-tfa-labelledby="tfa_74-L tfa_76-L" data-conditionals="#tfa_78-D">
                 <span class="form-icon"></span>
                 Only partial coverage
               </label>
             </span>
             <span class="oneChoice">
               <label class="form-radio postField" id="tfa_77-L" for="tfa_77">
-                <input type="radio" value="tfa_77" id="tfa_77" name="tfa_74" aria-labelledby="tfa_77-L" data-tfa-labelledby="tfa_74-L tfa_77-L">
+                <input type="radio" value="tfa_77" id="tfa_77" name="tfa_74" aria-labelledby="tfa_77-L" data-tfa-labelledby="tfa_74-L tfa_77-L" data-conditionals="#tfa_78-D">
                 <span class="form-icon"></span>
                 Yes - full coverage
               </label>
@@ -453,7 +453,7 @@ wFORMS.behaviors.prefill.skip = false;
           </span>
         </div>
       </div>
-      <div class="form-group oneField field-container-D" id="tfa_78-D" role="radiogroup" aria-labelledby="tfa_78-L" data-tfa-labelledby="-L tfa_78-L">
+      <div class="form-group oneField field-container-D" id="tfa_78-D" role="radiogroup" aria-labelledby="tfa_78-L" data-tfa-labelledby="-L tfa_78-L" data-condition="`#tfa_76` OR `#tfa_77`">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
           <label id="tfa_78-L" class="form-label preField ">If yes, does your care home permit residents to access the wifi?</label>
         </div>
