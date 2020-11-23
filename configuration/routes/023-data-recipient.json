@@ -1,7 +1,7 @@
 {
   "name": "page_recipient-data",
   "debug": false,
-  "pattern": "/forms/recipient-data",
+  "pattern": "/forms/recipient-data/:project_id",
   "metaData": {
     "title": "Recipient data - Connecting Scotland"
   },

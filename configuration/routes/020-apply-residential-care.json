@@ -1,0 +1,36 @@
+{
+  "name": "page_apply-residential-care",
+  "debug": false,
+  "pattern": "/forms/residential-care-application",
+  "metaData": {
+    "title": "Residential care application - Connecting Scotland"
+  },
+  "tasks": [
+    "context.metaData.commonTasks.currentSite",
+    {
+      "name": "destination",
+      "taskModule": "renderLayout",
+      "renderer": "handlebars",
+      "config": {
+        "logic": {
+          "if": [
+            "default"
+          ]
+        },
+        "output": "body",
+        "layouts": {
+          "default": {
+            "layout": ">context.metaData.handlebars.layouts.default",
+            "parts": {
+              "head": ">context.metaData.handlebars.templates.head-tags",
+              "header": ">context.metaData.handlebars.templates.header-page",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-residential-care",
+              "foot": ""
+            },
+            "contentType": "text/html"
+          }
+        }
+      }
+    }
+  ]
+}
