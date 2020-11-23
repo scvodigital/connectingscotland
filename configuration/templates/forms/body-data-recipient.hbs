@@ -46,6 +46,8 @@ wFORMS.behaviors.prefill.skip = false;
 
 <!-- FORM: BODY SECTION -->
 <div class="wFormContainer detail">
+  {{#withExtend this project=@root.data.project_data.request.data.data_object.get_data.records.[0]}}
+  {{#if project}}
   <div class="wFormHeader"></div>
   <div class="wForm" id="4866619-WRPR" dir="ltr">
     <div class="codesection" id="code-4866619"></div>
@@ -57,6 +59,25 @@ wFORMS.behaviors.prefill.skip = false;
 
     <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="4866619" role="form">
       <h2>Your details</h2>
+      <div class="form-group oneField field-container-D" id="tfa_4-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_4-L" class="form-label preField reqMark" for="tfa_4">Project reference number {{#unless @root.request.params.project_ref}}(e.g. CS-0001){{/unless}}</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_4" name="tfa_4" value="{{@root.request.params.project_ref}}" title="Project reference number (e.g. CS-0001)" autocomplete="nope" data-lpignore="true" class="form-input required" required {{#if @root.request.params.project_ref}}readonly{{/if}}>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_2-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_2-L" class="form-label preField reqMark" for="tfa_2">Your organisation</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_2" name="tfa_2" value="{{project.Name_of_Organisation__c}}" title="Your organisation" autocomplete="nope" data-lpignore="true" class="form-input required" required {{#if project.Name_of_Organisation__c}}readonly{{/if}}>
+          <p class="caption">
+            If these details are incorrect, please go back and <a href="/forms/recipient-data">enter your correct project reference number</a> or <a href="mailto:digital@scvo.org.uk">contact us</a> if the issue persists
+          </p>
+        </div>
+      </div>
       <div class="form-group oneField field-container-D" id="tfa_1-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
           <label id="tfa_1-L" class="form-label preField reqMark" for="tfa_1">Your first name</label>
@@ -73,28 +94,12 @@ wFORMS.behaviors.prefill.skip = false;
           <input type="text" id="tfa_276" name="tfa_276" value="" title="Your last name" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
-      <div class="form-group oneField field-container-D" id="tfa_2-D">
-        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_2-L" class="form-label preField reqMark" for="tfa_2">Your organisation</label>
-        </div>
-        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_2" name="tfa_2" value="" title="Your organisation" autocomplete="nope" data-lpignore="true" class="form-input required" required>
-        </div>
-      </div>
       <div class="form-group oneField field-container-D" id="tfa_3-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
           <label id="tfa_3-L" class="form-label preField reqMark" for="tfa_3">Your email address</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
           <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_3" name="tfa_3" value="" title="Your email address" autocomplete="nope" data-lpignore="true" class="form-input required" required>
-        </div>
-      </div>
-      <div class="form-group oneField field-container-D" id="tfa_4-D">
-        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_4-L" class="form-label preField reqMark" for="tfa_4">Project reference number (e.g. CS-0001)</label>
-        </div>
-        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="tfa_4" name="tfa_4" value="" title="Project reference number (e.g. CS-0001)" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div id="tfa_277" class="section">
@@ -679,5 +684,12 @@ wFORMS.behaviors.prefill.skip = false;
         <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
       </form>
     </div>
+    {{else}}
+    <h2>Error</h2>
+    <p>
+      The project reference number could not be recognised, please try again or <a href="mailto:digital@scvo.org.uk">contact us</a> quoting the web address of this page.
+    </p>
+    {{/if}}
+    {{/withExtend}}
   </div>
 </div>

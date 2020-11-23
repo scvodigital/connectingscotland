@@ -8,37 +8,33 @@
       <span class="text-error">*</span> Required field
     </p>
 
-    <form method="post" action="/" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" role="form">
+    <div class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" role="form">
       <h2>Your details</h2>
-      <div class="form-group oneField field-container-D" id="project_id-D">
+      <div class="form-group oneField field-container-D" id="project_ref-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-          <label id="tfa_4-L" class="form-label preField reqMark" for="project_id">Project reference number (e.g. CS-0001)</label>
+          <label id="tfa_4-L" class="form-label preField reqMark" for="project_ref">Project reference number (e.g. CS-0001)</label>
         </div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="text" id="project_id" name="project_id" value="" title="Project reference number (e.g. CS-0001)" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          <input type="text" id="project_ref" name="project_ref" value="" title="Project reference number (e.g. CS-0001)" maxlength="8" autocomplete="nope" data-lpignore="true" class="form-input required" required>
         </div>
       </div>
       <div class="actions form-group">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
+          <button href="#" class="btn" id="submit_button" disabled>Submit</button>
         </div>
       </div>
-    </form>
+    </div>
   </div>
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
   var valid = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 67, 83, 99, 115, 37, 39, 111, 79, 46, 35, 36, 45];
-  $('#project_id')
+  $('#project_ref')
   .on('keydown', function(evt) {
     if (evt.ctrlKey) {
       return;
-    }
-
-    if (valid.indexOf(evt.which) === -1 && evt.which > 45) {
-      evt.preventDefault();
     }
   })
   .on('keyup', checkProject)
@@ -51,14 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
   .select();
 
   function checkProject(evt) {
-    var matches = evt.target.value.replace(/CS-[0-9]{3,5}/img, '');
-    var projectId = evt.target.value = (matches || '').toUpperCase();
-
-    if (evt.ctrlKey || projectId.match(/CS-[0-9]{3,5}/)) {
+    var projectId = evt.target.value = evt.target.value.toUpperCase();
+    if (evt.ctrlKey || projectId.match(/^CS-[0-9]{3}/)) {
       var url = '/forms/recipient-data/' + projectId;
       $('#submit_button')
-      .removeAttr('disabled', false)
-      .attr('href', url);
+        .removeAttr('disabled', false)
+        .attr('href', url);
       if (evt.which === 13) {
         window.location.href = url;
       }

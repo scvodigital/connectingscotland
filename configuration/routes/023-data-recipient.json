@@ -1,12 +1,22 @@
 {
   "name": "page_recipient-data",
-  "debug": false,
-  "pattern": "/forms/recipient-data/:project_id",
+  "debug": true,
+  "pattern": "/forms/recipient-data/:project_ref",
   "metaData": {
     "title": "Recipient data - Connecting Scotland"
   },
   "tasks": [
     "context.metaData.commonTasks.currentSite",
+    {
+      "name": "project_data",
+      "taskModule": "request",
+      "config": {
+        "optionsTemplates": {
+          "request": ">context.metaData.handlebars.templates.utilities_scvo-connecting-scotland-project"
+        }
+      },
+      "renderer": "handlebars"
+    },
     {
       "name": "destination",
       "taskModule": "renderLayout",
