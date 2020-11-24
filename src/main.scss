@@ -625,6 +625,7 @@ main {
       list-style-type: decimal;
     }
   }
+  input[type=button].wfPagePreviousButton,
   input[type=button].wfPageNextButton,
   .btn {
     height: auto;
@@ -644,12 +645,17 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  input[type=button].wfPagePreviousButton,
   input[type=button].wfPageNextButton {
     margin-top: $unit;
     cursor: pointer;
   }
+  input[type=button].wfPageNextButton {
+    margin-right: $unit*1.5;
+  }
   .active,
   .btn:focus,
+  input[type=button].wfPagePreviousButton:hover,
   input[type=button].wfPageNextButton:hover,
   .btn:hover {
     border: $brand-border-width solid $brand-typography;
@@ -898,6 +904,7 @@ main {
       font-size: 1.3rem;
       font-weight: 400;
     }
+    input[type=button].wfPagePreviousButton,
     input[type=button].wfPageNextButton,
     .btn.btn-primary {
       position: relative;
@@ -918,6 +925,7 @@ main {
       min-width: 26rem;
       max-width: 60%;
     }
+    input[type=button].wfPagePreviousButton:hover,
     input[type=button].wfPageNextButton:hover,
     .btn:hover {
       color: $brand-typography;
