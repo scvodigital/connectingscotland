@@ -625,6 +625,7 @@ main {
       list-style-type: decimal;
     }
   }
+  input[type=button].wfPageNextButton,
   .btn {
     height: auto;
     min-height: auto;
@@ -643,8 +644,13 @@ main {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+  input[type=button].wfPageNextButton {
+    margin-top: $unit;
+    cursor: pointer;
+  }
   .active,
   .btn:focus,
+  input[type=button].wfPageNextButton:hover,
   .btn:hover {
     border: $brand-border-width solid $brand-typography;
     background: white;
@@ -892,6 +898,7 @@ main {
       font-size: 1.3rem;
       font-weight: 400;
     }
+    input[type=button].wfPageNextButton,
     .btn.btn-primary {
       position: relative;
       margin: 3rem auto 6rem;
@@ -911,6 +918,7 @@ main {
       min-width: 26rem;
       max-width: 60%;
     }
+    input[type=button].wfPageNextButton:hover,
     .btn:hover {
       color: $brand-typography;
     }
