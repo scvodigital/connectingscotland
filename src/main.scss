@@ -2444,22 +2444,23 @@ blockquote {
   padding: 0;
   .menu-item {
     list-style-type: none;
-    padding: 0 $unit/2;
   }
   .menu-item>a {
+    padding: 0 $unit/2;
     font-size: 1.2rem;
     color: $brand-typography;
     display: inline-block;
     margin-bottom: $unit/2;
-    padding: 0;
     border-radius: 0;
     border: $brand-border-width solid transparent;
   }
+  .menu-item>a:focus,
+  .menu-item>a:active,
   .menu-item>a:hover,
   .menu-item>a.active {
     color: $brand-typography !important;
     background-color: white;
-    border-bottom-color: $brand-typography !important;
+    border-color: $brand-typography !important;
   }
 }
 
@@ -2496,8 +2497,9 @@ blockquote {
     }
     .menu-item>a:hover,
     .menu-item>a.active {
-      color: #fff !important;
-      border-bottom-color: #fff !important;
+      color: white !important;
+      border-color: transparent !important;
+      border-bottom-color: white !important;
     }
   }
   .scvo-link-bar {

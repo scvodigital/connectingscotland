@@ -50,7 +50,39 @@
         {
           "label": "Resources for Digital Champions",
           "path": "/digital-champions/resources",
-          "route": "^/digital-champions/resources$"
+          "route": "^/digital-champions/resources$",
+          "children": [
+            {
+              "label": "iPad videos",
+              "path": "/digital-champions/resources/ipad-videos",
+              "route": "^/digital-champions/resources/ipad-videos$"
+            },
+            {
+              "label": "Chromebook videos",
+              "path": "/digital-champions/resources/chromebook-videos",
+              "route": "^/digital-champions/resources/chromebook-videos$"
+            },
+            {
+              "label": "Information videos",
+              "path": "/digital-champions/resources/information-videos",
+              "route": "^/digital-champions/resources/information-videos$"
+            },
+            {
+              "label": "Webinar recordings",
+              "path": "/digital-champions/resources/webinars",
+              "route": "^/digital-champions/resources/webinars$"
+            },
+            {
+              "label": "Blogs",
+              "path": "/digital-champions/resources/blogs",
+              "route": "^/digital-champions/resources/blogs$"
+            },
+            {
+              "label": "SCQF Level 4 Certificate in Digital Inclusion Support",
+              "path": "/digital-champions/resources/digital-inclusion-qualification",
+              "route": "^/digital-champions/resources/digital-inclusion-qualification$"
+            }
+          ]
         },
         {
           "label": "Preparing for support sessions with your learner",
