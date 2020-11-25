@@ -1,6 +1,6 @@
 {
   "name": "redirect_residential-care",
-  "pattern": "/residential-care-application-old",
+  "pattern": "/residential-care-application",
   "tasks": [
     {
       "name": "url",
