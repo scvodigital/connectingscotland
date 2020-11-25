@@ -246,6 +246,23 @@ header .container {
   display: block;
 }
 
+.breadcrumb {
+  margin-bottom: $unit*2;
+  .breadcrumb-item {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .breadcrumb-item,
+  .breadcrumb-item:not(:last-child) a,
+  .breadcrumb-item:not(:first-child)::before {
+    color: $brand-typography;
+  }
+  .breadcrumb-item a {
+    padding-left: .33rem;
+    padding-right: .33rem;
+  }
+}
+
 hr {
   background: transparent;
   border: none;
@@ -2421,6 +2438,31 @@ blockquote {
   color: white;
 }
 
+.menu {
+  box-shadow: none;
+  background: transparent;
+  padding: 0;
+  .menu-item {
+    list-style-type: none;
+    padding: 0 $unit/2;
+  }
+  .menu-item>a {
+    font-size: 1.2rem;
+    color: $brand-typography;
+    display: inline-block;
+    margin-bottom: $unit/2;
+    padding: 0;
+    border-radius: 0;
+    border: $brand-border-width solid transparent;
+  }
+  .menu-item>a:hover,
+  .menu-item>a.active {
+    color: $brand-typography !important;
+    background-color: white;
+    border-bottom-color: $brand-typography !important;
+  }
+}
+
 .mobile-header-buttons {
   top: 1.75rem;
   right: .75rem;
@@ -2446,28 +2488,15 @@ blockquote {
     }
   }
   .menu {
-    box-shadow: none;
-    background: transparent;
-    padding: 0;
-    .menu-item {
-      list-style-type: none;
-      padding: 0 $unit/2;
-    }
     .menu-item>a {
-      font-size: 1.2rem;
-      text-transform: uppercase;
       color: white;
-      display: inline-block;
-      margin-bottom: $unit/2;
-      padding: 0;
       border: none;
-      border-radius: 0;
+      text-transform: uppercase;
       border-bottom: $brand-border-width solid transparent;
     }
     .menu-item>a:hover,
     .menu-item>a.active {
       color: #fff !important;
-      background-color: transparent;
       border-bottom-color: #fff !important;
     }
   }

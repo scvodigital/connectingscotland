@@ -1,11 +1,6 @@
 {
   "default": [
     {
-      "label": "Home",
-      "path": "/",
-      "route": "^/$"
-    },
-    {
       "label": "About",
       "path": "/about",
       "route": "^/about$"
@@ -13,86 +8,86 @@
     {
       "label": "For organisations",
       "path": "/for-organisations",
-      "route": "^/for-organisations|^/forms"
+      "route": "^/for-organisations$|^/forms",
+      "children": [
+        {
+          "label": "Application guidance",
+          "path": "/for-organisations/application-guidance",
+          "route": "^/for-organisations/application-guidance$"
+        },
+        {
+          "label": "Application form",
+          "path": "/for-organisations/apply",
+          "route": "^/for-organisations/apply"
+        },
+        {
+          "label": "FAQs",
+          "path": "/for-organisations/faqs",
+          "route": "^/for-organisations/faqs"
+        }
+      ]
     },
     {
       "label": "For individuals",
       "path": "/for-individuals",
-      "route": "^/for-individuals"
+      "route": "^/for-individuals$"
     },
     {
       "label": "Digital Champions",
       "path": "/digital-champions",
-      "route": "^/digital-champions"
+      "route": "^/digital-champions$",
+      "children": [
+        {
+          "label": "Supporting a new learner",
+          "path": "/digital-champions/supporting-a-new-learner",
+          "route": "^/digital-champions/supporting-a-new-learner$"
+        },
+        {
+          "label": "Delivering remote support",
+          "path": "/digital-champions/delivering-remote-support",
+          "route": "^/digital-champions/delivering-remote-support$"
+        },
+        {
+          "label": "Resources for Digital Champions",
+          "path": "/digital-champions/resources",
+          "route": "^/digital-champions/resources$"
+        },
+        {
+          "label": "Preparing for support sessions with your learner",
+          "path": "/digital-champions/preparing-for-support-sessions-with-your-learner",
+          "route": "^/digital-champions/preparing-for-support-sessions-with-your-learner$"
+        },
+        {
+          "label": "Getting your learner online",
+          "path": "/digital-champions/getting-your-learner-online",
+          "route": "^/digital-champions/getting-your-learner-online$"
+        },
+        {
+          "label": "Foundation Digital Skills",
+          "path": "/digital-champions/foundation-digital-skills",
+          "route": "^/digital-champions/foundation-digital-skills$"
+        },
+        {
+          "label": "Essential Digital Skills",
+          "path": "/digital-champions/essential-digital-skills",
+          "route": "^/digital-champions/essential-digital-skills$"
+        },
+        {
+          "label": "Explaining common digital terms",
+          "path": "/digital-champions/explaining-common-digital-terms",
+          "route": "^/digital-champions/explaining-common-digital-terms$"
+        },
+        {
+          "label": "Training",
+          "path": "/digital-champions/training-2020",
+          "route": "^/digital-champions/training-2020$"
+        }
+      ]
     },
     {
       "label": "Supporters",
       "path": "/supporters",
       "route": "^/supporters$"
-    }
-  ],
-  "for-organisations": [
-    {
-      "label": "Application guidance",
-      "path": "/for-organisations/application-guidance",
-      "route": "^/for-organisations/application-guidance$"
-    },
-    {
-      "label": "Application form",
-      "path": "/for-organisations/apply",
-      "route": "^/for-organisations/apply"
-    },
-    {
-      "label": "FAQs",
-      "path": "/for-organisations/faqs",
-      "route": "^/for-organisations/faqs"
-    }
-  ],
-  "digital-champions": [
-    {
-      "label": "Supporting a new learner",
-      "path": "/digital-champions/supporting-a-new-learner",
-      "route": "^/digital-champions/supporting-a-new-learner$"
-    },
-    {
-      "label": "Delivering remote support",
-      "path": "/digital-champions/delivering-remote-support",
-      "route": "^/digital-champions/delivering-remote-support$"
-    },
-    {
-      "label": "Resources for Digital Champions",
-      "path": "/digital-champions/resources",
-      "route": "^/digital-champions/resources$"
-    },
-    {
-      "label": "Preparing for support sessions with your learner",
-      "path": "/digital-champions/preparing-for-support-sessions-with-your-learner",
-      "route": "^/digital-champions/preparing-for-support-sessions-with-your-learner$"
-    },
-    {
-      "label": "Getting your learner online",
-      "path": "/digital-champions/getting-your-learner-online",
-      "route": "^/digital-champions/getting-your-learner-online$"
-    },
-    {
-      "label": "Foundation Digital Skills",
-      "path": "/digital-champions/foundation-digital-skills",
-      "route": "^/digital-champions/foundation-digital-skills$"
-    },
-    {
-      "label": "Essential Digital Skills",
-      "path": "/digital-champions/essential-digital-skills",
-      "route": "^/digital-champions/essential-digital-skills$"
-    },
-    {
-      "label": "Explaining common digital terms",
-      "path": "/digital-champions/explaining-common-digital-terms",
-      "route": "^/digital-champions/explaining-common-digital-terms$"
-    },
-    {
-      "label": "Training",
-      "path": "/digital-champions/training-2020",
-      "route": "^/digital-champions/training-2020$"
     }
   ],
   "start": [

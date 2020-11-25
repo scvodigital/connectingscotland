@@ -4,30 +4,6 @@
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
     {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
     {{/if ~}}
-
-    {{!-- {{#compare (length @root.data.supplimentaryResponses.resources.aggregations.query.buckets) ">" 0 ~}}
-    <hr />
-
-    {{#each @root.data.supplimentaryResponses.resources.aggregations.query.buckets ~}}
-    {{#unless (compare key "Connecting Scotland") ~}}
-    {{#unless (compare key "General") ~}}
-    <h2 class="t-margin-full t-padding-full">{{{key}}}</h2>
-    {{/unless ~}}
-    {{#each resources.hits.hits ~}}
-    {{#with _source ~}}
-    <button class="accordion" aria-expanded="false">
-      <h3><a href="javascript:void();">{{{title}}}</a></h3>
-    </button>
-    <div class="accordion-content hidden" aria-hidden="true">
-      <p>
-        {{{replace content "\n" '<br />'}}}
-      </p>
-    </div>
-    {{/with ~}}
-    {{/each ~}}
-    {{/unless ~}}
-    {{/each ~}}
-    {{/compare ~}} --}}
   </div>
   <div class="column col-3 col-md-6 hide-sm l-padding-full" style="margin:1rem auto;">
     {{#compare @root.request.url.pathname '/'}}
