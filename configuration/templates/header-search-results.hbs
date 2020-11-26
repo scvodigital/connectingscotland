@@ -1,0 +1,16 @@
+<ul class="breadcrumb breadcrumb-length-1" aria-hidden="true">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item">
+    {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+    Search results
+    {{else}}
+    Search
+    {{/if ~}}
+  </li>
+</ul>
+
+{{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+<h1>Search results</h1>
+{{else}}
+<h1>Search</h1>
+{{/if ~}}

@@ -98,6 +98,10 @@ footer {
   }
 }
 
+.bg-gray {
+  background: $gray-color !important;
+}
+
 .scvo-link-bar {
   background-color: $gray-color;
   height: 40px;
@@ -479,7 +483,7 @@ header.navbar {
       text-transform: uppercase;
       border: $brand-border-width solid transparent;
       background: transparent;
-      transition: border $transition-speed, background $transition-speed;
+      // transition: border $transition-speed, background $transition-speed;
     }
     .mdc-tab--active,
     .mdc-tab:focus,
@@ -1613,7 +1617,7 @@ footer {
   p, li, div {
     font-family: $footer-font-family;
     font-weight: $footer-font-weight;
-    color: white;
+    color: $secondary-color;
     font-size: 1.05rem;
   }
   h2, .h2, h3, .h3, a, strong {
@@ -1624,31 +1628,31 @@ footer {
     position: relative;
   }
   .footer-main {
-    padding: $unit*1.5 0 $unit/2;
-    background-color: $secondary-color;
-  }
-  h2, .h2,
-  h3, .h3 {
-    font-size: 1.5rem;
-    margin: $unit 0;
-    padding-bottom: $unit/2;
-    color: white;
-    font-weight: $heading-font-weight;
-    text-transform: none;
-  }
-  a {
-    color: white !important;
-    text-decoration: none !important;
-    // border-bottom: $brand-border-width solid transparent;
-    transition: color $transition-speed;
-  }
-  a:hover,
-  a:active,
-  a:focus {
-    color: $primary-color;
-    // border-bottom-color: white;
-    text-decoration: underline !important;
-    // text-decoration: underline;
+    padding: $unit*1.5 0;
+    background-color: $gray-color;
+    h2, .h2,
+    h3, .h3 {
+      font-size: 1.5rem;
+      margin: $unit 0;
+      padding-bottom: $unit/2;
+      color: $secondary-color;
+      font-weight: $heading-font-weight;
+      text-transform: none;
+    }
+    a {
+      color: $secondary-color !important;
+      text-decoration: none !important;
+      // border-bottom: $brand-border-width solid transparent;
+      transition: color $transition-speed;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+      color: $secondary-color-light !important;
+      // border-bottom-color: white;
+      // text-decoration: underline !important;
+      // text-decoration: underline;
+    }
   }
   // .mdc-list .mdc-list-item a:hover {
   //   text-decoration: underline !important;
@@ -1677,7 +1681,8 @@ footer {
       text-decoration: none;
     }
     li a:hover {
-      text-decoration: underline;
+      color: $primary-color;
+      // text-decoration: underline;
     }
   }
   ul {
@@ -1697,18 +1702,23 @@ footer {
     }
   }
   .footer-copyright {
-    padding-bottom: $unit/2;
+    // padding-bottom: $unit/2;
+    padding: $unit*3 0;
     p {
       font-size: 1rem;
       margin: 0;
+      color: white;
     }
-    // p,
-    // a,
-    // a:hover,
-    // a:active,
-    // a:focus {
-    //   color: $secondary-color;
-    // }
+    p,
+    a,
+    a:hover,
+    a:active,
+    a:focus {
+      color: white;
+    }
+    a {
+      text-decoration: none;
+    }
   }
   .logo.scvo {
     position: absolute;
@@ -2074,7 +2084,7 @@ button {
   footer {
     .footer-copyright a.brand {
       display: block;
-      margin: $unit 0;
+      margin: $unit*3 0;
       text-align: center;
     }
     .logo.scvo,
@@ -2438,6 +2448,10 @@ blockquote {
   color: white;
 }
 
+iframe {
+  max-width: 100%;
+}
+
 .menu {
   box-shadow: none;
   background: transparent;
@@ -2462,6 +2476,15 @@ blockquote {
     background-color: white;
     border-color: $brand-typography !important;
   }
+}
+
+.menu-level-1 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  text-transform: uppercase;
+  font-size: 1.4rem !important;
+  padding: 0.1rem 0.5rem !important;
+  line-height: 1.5rem;
 }
 
 .mobile-header-buttons {
@@ -2500,6 +2523,7 @@ blockquote {
       color: white !important;
       border-color: transparent !important;
       border-bottom-color: white !important;
+      background-color: transparent !important;
     }
   }
   .scvo-link-bar {

@@ -1,0 +1,31 @@
+<div class="card card-no-padding search-result {{_type}} {{_type}}-{{_id}} b-margin-full v-padding">
+  {{#with _source ~}}
+  <div class="card-header">
+    <div class="card-title h4">
+      {{#if url ~}}
+      {{#if (contains url 'https://scvo.scot') ~}}
+      <a href="{{replace url 'https://scvo.scot' ''}}">{{{truncate (trim title) 140}}}</a>
+      {{else}}
+      <a href="{{url}}?utm_source=scvo&utm_campaign=search&utm_medium=website">{{{truncate (trim title) 140}}}</a>
+      {{/if ~}}
+      {{else}}
+      {{{truncate (trim title) 140}}}
+      {{/if ~}}
+    </div>
+  </div>
+  {{#ifAny description content ~}}
+  <p class="card-body">
+    {{{truncate (striptags (default description content)) 280}}}
+  </p>
+  {{/ifAny ~}}
+  {{#if url ~}}
+  <p class="card-footer">
+    {{#if (contains url 'https://scvo.scot') ~}}
+    <a href="{{replace url 'https://scvo.scot' ''}}">Read more</a>
+    {{else}}
+    <a href="{{url}}?utm_source=scvo&utm_campaign=search&utm_medium=website">Read more</a>
+    {{/if ~}}
+  </p>
+  {{/if ~}}
+  {{/with ~}}
+</div>

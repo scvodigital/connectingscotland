@@ -1,0 +1,18 @@
+<div class="columns detail">
+  <div class="column col-9 col-md-12 r-padding-full">
+    <img src="{{~>asset_url url=(concat 'images/for-individuals.png')~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
+
+    {{> search_info paging=@root.data.search_results.pagination}}
+
+    {{#each @root.data.search_results.hits.hits ~}}
+    {{#with this ~}}
+    {{> search_result}}
+    {{/with ~}}
+    {{/each ~}}
+
+    {{> pagination paging=@root.data.search_results.pagination}}
+  </div>
+  <div class="column col-3 col-md-6 hide-sm l-padding-full" style="margin: 0 auto;">
+    <img src="{{~>asset_url url=(concat 'images/for-individuals.png')~}}" alt="" class="responsive-img" />
+  </div>
+</div>

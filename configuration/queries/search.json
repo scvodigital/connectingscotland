@@ -1,0 +1,79 @@
+{
+  "size": 10,
+  "from": {{multiply (subtract (default request.params.query.page 1) 1) 10}},
+  "_source": [
+    "Id",
+    "wpid",
+    "title",
+    "description",
+    "url",
+    "is_press_release",
+    "author_name_full",
+    "author_slug",
+    "author_avatar",
+    "og_image",
+    "staff_profile",
+    "categories",
+    "categories_slug",
+    "post_tags",
+    "post_tags_slug",
+    "publish_on",
+    "updated"
+  ],
+  "highlight" : {
+    "fields" : {
+      "text_bag": {}
+    }
+  },
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "exists": {
+            "field": "title"
+          }
+        },
+        {
+          "prefix": {
+            "url": "https://scvo.scot/connecting-scotland"
+          }
+        }
+      ],
+      "must": [
+        {{#if request.params.query.q}}
+        {
+          "bool": {
+            "should": [
+              {
+                "query_string": {
+                  "query": {{{stringify (default request.params.query.q "")}}},
+                  "fields": ["text_bag_boost^10", "text_bag"],
+                  "default_operator": "AND",
+                  "analyzer": "snowball"
+                }
+              },
+              {
+                "match_phrase": {
+                  "title": {
+                    "query": {{{stringify (default request.params.query.q "")}}}
+                  }
+                }
+              }
+            ]
+          }
+        }
+        {{else}}
+        {
+          "bool": {
+            "should": [
+              {
+                "match_none": {}
+              }
+            ]
+          }
+        }
+        {{/if}}
+      ]
+    }
+  }
+}
