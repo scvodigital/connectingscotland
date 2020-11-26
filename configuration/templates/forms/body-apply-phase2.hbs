@@ -45,6 +45,11 @@ wFORMS.behaviors.prefill.skip = false;
 <div class="wFormContainer detail">
   <div class="wForm" id="4869180-WRPR" dir="ltr">
     <div class="codesection" id="code-4869180"></div>
+    <ul class="breadcrumb breadcrumb-length-2" aria-hidden="true">
+      <li class="breadcrumb-item"><a href="/">Home</a></li>
+      <li class="breadcrumb-item"><a href="/for-organisations">For organisations</a></li>
+      <li class="breadcrumb-item">Application form</li>
+    </ul>
     <div class="columns">
       <div class="column col-8 col-md-12 r-padding-full">
         <h1 class="wFormTitle" id="4869180-T">Apply</h1>
@@ -82,11 +87,7 @@ wFORMS.behaviors.prefill.skip = false;
       </div>
       <div class="column col-4 col-md-6 hide-sm l-padding-full">
         <h1>&nbsp;</h1>
-        <ul class="side-nav t-padding">
-          {{#each (getProperty @root.context.metaData.menus (itemAt (split @root.request.params.path '_') 0)) ~}}
-          <li><a class="{{#if (regexMatch @root.request.url.pathname route 'gi')}}active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
-          {{/each ~}}
-        </ul>
+        {{>sidebars_menu}}
       </div>
     </div>
 
