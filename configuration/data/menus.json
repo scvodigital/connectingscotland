@@ -113,6 +113,11 @@
           "label": "Training",
           "path": "/digital-champions/training-2020",
           "route": "^/digital-champions/training-2020$"
+        },
+        {
+          "label": "Share your stories",
+          "path": "/digital-champions/share-your-stories",
+          "route": "^/digital-champions/share-your-stories$"
         }
       ]
     },
