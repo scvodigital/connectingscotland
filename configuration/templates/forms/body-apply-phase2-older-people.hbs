@@ -34,25 +34,20 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 </script>
 
-<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=b3dbb0b0a161d7f4393e5dfd183388645a8230bd" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
-<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=b3dbb0b0a161d7f4393e5dfd183388645a8230bd"></script>
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=4d49ee2103665a04a171efe7ef8d8ab7addaa74a" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=4d49ee2103665a04a171efe7ef8d8ab7addaa74a"></script>
 <script type="text/javascript">
 wFORMS.behaviors.prefill.skip = false;
 </script>
-<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=b3dbb0b0a161d7f4393e5dfd183388645a8230bd"></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=4d49ee2103665a04a171efe7ef8d8ab7addaa74a"></script>
 
 <!-- FORM: BODY SECTION -->
 <div class="wFormContainer detail">
-  <div class="wForm" id="4869180-WRPR" dir="ltr">
-    <div class="codesection" id="code-4869180"></div>
-    <ul class="breadcrumb breadcrumb-length-2" aria-hidden="true">
-      <li class="breadcrumb-item"><a href="/">Home</a></li>
-      <li class="breadcrumb-item"><a href="/for-organisations">For organisations</a></li>
-      <li class="breadcrumb-item">Application form</li>
-    </ul>
+  <div class="wForm" id="4870495-WRPR" dir="ltr">
+    <div class="codesection" id="code-4870495"></div>
     <div class="columns">
       <div class="column col-8 col-md-12 r-padding-full">
-        <h1 class="wFormTitle" id="4869180-T">Apply</h1>
+        <h1 class="wFormTitle" id="4870495-T">Application Form for Organisations – Older & Disabled People</h1>
 
         <h2>Introduction</h2>
         <p>
@@ -75,9 +70,9 @@ wFORMS.behaviors.prefill.skip = false;
             what happens after you submit your application
           </li>
         </ul>
-        <p>
+        {{!-- <p>
           Applications will be assessed after the closing date on <strong>18th January 2021</strong> (at 11am). We would expect decisions on awards to be made by the end of February and devices to be distributed from early March.
-        </p>
+        </p> --}}
         <p>
           If you have any problems applying, please email <a href="mailto:help@connecting.scot">help@connecting.scot</a>
         </p>
@@ -85,13 +80,13 @@ wFORMS.behaviors.prefill.skip = false;
           <span class="text-error">*</span> Required field
         </p>
       </div>
-      <div class="column col-4 col-md-6 hide-sm l-padding-full">
+      {{!-- <div class="column col-4 col-md-6 hide-sm l-padding-full">
         <h1>&nbsp;</h1>
         {{>sidebars_menu}}
-      </div>
+      </div> --}}
     </div>
 
-    <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="4869180" role="form">
+    <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="4870495" role="form">
       <div class="wfPage" id="wfPgIndex-1">
         <div class="section pageSection" id="tfa_110">
           <h2>About you</h2>
@@ -234,34 +229,38 @@ wFORMS.behaviors.prefill.skip = false;
           <div class="column col-9 col-xl-8 col-md-12">
             <h2>Users</h2>
             <h3>About the people you want to support</h3>
-            <p class="reqMark">
-              How many people or households do you need devices for in each of the following categories? You should only count one person / household in one category.
-            </p>
           </div>
         </div>
         <div class="section pageSection" id="tfa_111">
-          <div class="form-group oneField field-container-D" id="tfa_112-D">
+          <div class="form-group oneField field-container-D" id="tfa_158-D">
             <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_112-L" class="form-label preField reqMark" for="tfa_112">Families with children (including pregnant women)</label>
+              <label id="tfa_158-L" class="form-label preField reqMark" for="tfa_158">How many people in total do you need devices for?</label>
             </div>
             <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <input type="number" id="tfa_112" name="tfa_112" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
+              <input type="number" id="tfa_158" name="tfa_158" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
             </div>
           </div>
-          <div class="form-group oneField field-container-D" id="tfa_114-D">
-            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_114-L" class="form-label preField reqMark" for="tfa_114">Care leavers</label>
-            </div>
-            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <input type="number" id="tfa_114" name="tfa_114" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
+          <div class="columns">
+            <div class="column col-9 col-xl-8 col-md-12">
+              <p>
+                Of these people, how many are older people (aged 60+) and how many have a disability? All those supported must be in one category, but we recognise some people may be identified in both categories.
+              </p>
             </div>
           </div>
-          <div class="form-group oneField field-container-D" id="tfa_113-D">
+          <div class="form-group oneField field-container-D" id="tfa_159-D">
             <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_113-L" class="form-label preField reqMark" for="tfa_113">Other vulnerable people</label>
+              <label id="tfa_159-L" class="form-label preField reqMark" for="tfa_159">Number of older people</label>
             </div>
             <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <input type="number" id="tfa_113" name="tfa_113" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
+              <input type="number" id="tfa_159" name="tfa_159" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
+            </div>
+          </div>
+          <div class="form-group oneField field-container-D" id="tfa_160-D">
+            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_160-L" class="form-label preField reqMark" for="tfa_160">Number of people with a disability</label>
+            </div>
+            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <input type="number" id="tfa_160" name="tfa_160" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
             </div>
           </div>
           <div class="form-group oneField field-container-D" id="tfa_115-D">
@@ -297,19 +296,11 @@ wFORMS.behaviors.prefill.skip = false;
               <h2>Devices and connecting to the internet</h2>
               <h3>Devices</h3>
               <p>
-                People can be provided with either an iPad or Chromebook laptop. There’s more information on the benefits of each device in the <a href="/for-organisations/application-guidance" target="_blank">application guidance</a>. 
+                People supported through this round will be provided with an iPad. If they do not have an existing internet connection at home, they will also receive a Vodafone MiFi device with unlimited data to enable them to connect to the internet.
               </p>
               <p class="reqMark">
-                How many of each type of device do you need? The total should not exceed the total number of people you will be supporting.
+                Of the total number of people you have asked to support, how many need:
               </p>
-            </div>
-          </div>
-          <div class="form-group oneField field-container-D" id="tfa_120-D">
-            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_120-L" class="form-label preField " for="tfa_120">Chromebooks</label>
-            </div>
-            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-              <input type="number" id="tfa_120" name="tfa_120" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
             </div>
           </div>
           <div class="form-group oneField field-container-D" id="tfa_121-D">
@@ -320,10 +311,9 @@ wFORMS.behaviors.prefill.skip = false;
               <input type="number" id="tfa_121" name="tfa_121" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
             </div>
           </div>
-          <h3>Connecting to the internet</h3>
           <div class="form-group oneField field-container-D" id="tfa_122-D">
             <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
-              <label id="tfa_122-L" class="form-label preField reqMark" for="tfa_122">People can also be provided with internet connectivity through a MiFi device with a data allowance. How many do you need?</label>
+              <label id="tfa_122-L" class="form-label preField reqMark" for="tfa_122">MiFi devices for internet connections</label>
             </div>
             <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
               <input type="number" id="tfa_122" name="tfa_122" value="0" step="1" min="0" class="form-input required" required autocomplete="nope" data-lpignore="true">
@@ -419,17 +409,17 @@ wFORMS.behaviors.prefill.skip = false;
           </div>
         </div>
       </div>
-      <div class="actions form-group t-margin-full" id="4869180-A">
+      <div class="actions form-group t-margin-full" id="4870495-A">
         <div class="col-12">
           <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
         </div>
       </div>
       <div style="clear:both"></div>
-      <input type="hidden" value="4869180" name="tfa_dbFormId" id="tfa_dbFormId">
+      <input type="hidden" value="4870495" name="tfa_dbFormId" id="tfa_dbFormId">
       <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">
       <input type="hidden" value="d9c2661dc700791e6b807fb2addb32b1" name="tfa_dbControl" id="tfa_dbControl">
       <input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid">
-      <input type="hidden" value="6" name="tfa_dbVersionId" id="tfa_dbVersionId">
+      <input type="hidden" value="2" name="tfa_dbVersionId" id="tfa_dbVersionId">
       <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
     </form>
   </div>

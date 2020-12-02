@@ -1,0 +1,36 @@
+{
+  "name": "page_apply-phase2-older-people",
+  "debug": false,
+  "pattern": "/forms/phase-2-older-people",
+  "metaData": {
+    "title": "Application form - Connecting Scotland"
+  },
+  "tasks": [
+    "context.metaData.commonTasks.currentSite",
+    {
+      "name": "destination",
+      "taskModule": "renderLayout",
+      "renderer": "handlebars",
+      "config": {
+        "logic": {
+          "if": [
+            "default"
+          ]
+        },
+        "output": "body",
+        "layouts": {
+          "default": {
+            "layout": ">context.metaData.handlebars.layouts.default",
+            "parts": {
+              "head": ">context.metaData.handlebars.templates.head-tags",
+              "header": ">context.metaData.handlebars.templates.header-page",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase2-older-people",
+              "foot": ""
+            },
+            "contentType": "text/html"
+          }
+        }
+      }
+    }
+  ]
+}
