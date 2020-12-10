@@ -33,6 +33,41 @@
       "route": "^/for-individuals$"
     },
     {
+      "label": "For citizens",
+      "path": "/citizens",
+      "route": "^/citizens$",
+      "children": [
+        {
+          "label": "How to choose",
+          "label_full": "How to choose the device/data bundle/internet connection",
+          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
+          "path": "/citizens/how-to-choose-bundle",
+          "route": "^/citizens/how-to-choose-bundle$"
+        },
+        {
+          "label": "How to set up",
+          "label_full": "How to set up the device and internet connection",
+          "description": "Information on how to set up the device and how to set up the mi-fi",
+          "path": "/citizens/how-to-set-up-device-and-internet",
+          "route": "^/citizens/how-to-set-up-device-and-internet$"
+        },
+        {
+          "label": "How to use",
+          "label_full": "Basics on how to use the device",
+          "description": "Information on how to switch on and use the device",
+          "path": "/citizens/basics-on-how-to-use-device",
+          "route": "^/citizens/basics-on-how-to-use-device$"
+        },
+        {
+          "label": "How to do things",
+          "label_full": "How to do things",
+          "description": "Information on how to use the internet, make video calls, use email, etc.",
+          "path": "/citizens/how-to-use-tools",
+          "route": "^/citizens/how-to-use-tools$"
+        }
+      ]
+    },
+    {
       "label": "Digital Champions",
       "path": "/digital-champions",
       "route": "^/digital-champions$",
