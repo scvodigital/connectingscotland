@@ -244,19 +244,19 @@
             {
               "label": "Foundation Digital Skills",
               "description": " ",
-              "path": "/digital-champions/digital-skills/foundation"
+              "path": "/digital-champions/digital-skills/foundation",
               "route": "^/digital-champions/digital-skills/foundation$"
             },
             {
               "label": "Essential Digital Skills",
               "description": " ",
-              "path": "/digital-champions/digital-skills/essential"
+              "path": "/digital-champions/digital-skills/essential",
               "route": "^/digital-champions/digital-skills/essential$"
             },
             {
               "label": "Families, Children and Young People",
               "description": " ",
-              "path": "/digital-champions/digital-skills/families-children-and-young-people"
+              "path": "/digital-champions/digital-skills/families-children-and-young-people",
               "route": "^/digital-champions/digital-skills/families-children-and-young-people$"
             }
           ]
