@@ -65,6 +65,8 @@ $brand-teal:                        #6dede5;
 $brand-yellow:                      #fee972; // Templates-Desktop PDF
 $brand-green:                       #6beda0;
 
+$brand-purple-light: lighten($brand-purple, 15%);
+
 $toolbar-shadow-reverse: 0px -3px 5px -1px rgba(0, 0, 0, 0.2), 0px -5px 8px 0px rgba(0, 0, 0, 0.14), 0px -1px 14px 0px rgba(0, 0, 0, 0.12);
 
 // Base variables
@@ -328,7 +330,7 @@ body {
 }
 header {
   background-color: transparent;
-  margin-bottom: $unit*3;
+  margin-bottom: $unit*2;
 }
 .mdc-temporary-drawer__header-content,
 main {
@@ -396,9 +398,9 @@ a {
 header.navbar {
   background-color: transparent;
   box-shadow: none;
-  .container {
-    border-bottom: $brand-border-width solid $brand-typography;
-  }
+  // .container {
+  //   border-bottom: $brand-border-width solid $brand-typography;
+  // }
   .navbar .navbar-section {
     display: block;
   }
@@ -542,10 +544,14 @@ header.navbar {
 }
 
 main {
+  background: $brand-purple-light;
+}
+
+main header {
   background: $brand-purple;
 }
 .home {
-  main {
+  main header {
     background: $brand-purple;
     background: -moz-linear-gradient(200deg, $brand-yellow 10%, $brand-pink 50%, $brand-purple 90%);
     background: -webkit-linear-gradient(200deg, $brand-yellow 10%, $brand-pink 50%, $brand-purple 90%);
@@ -553,8 +559,9 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
+.citizens,
 .for-individuals {
-  main {
+  main header {
     background: $brand-pink;
     background: -moz-linear-gradient(200deg, $brand-pink 10%, $brand-yellow 70%);
     background: -webkit-linear-gradient(200deg, $brand-pink 10%, $brand-yellow 70%);
@@ -562,9 +569,10 @@ main {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-pink', endColorstr='$brand-yellow',GradientType=0 );
   }
 }
+.forms,
 .for-organisations {
-  main {
-    padding-bottom: 1rem;
+  main header {
+    // padding-bottom: 1rem;
     background: $brand-teal;
     background: -moz-linear-gradient(200deg, $brand-teal 10%, $brand-purple 90%);
     background: -webkit-linear-gradient(200deg, $brand-teal 10%, $brand-purple 90%);
@@ -574,7 +582,7 @@ main {
 }
 .about,
 .supporters {
-  main {
+  main header {
     background: $brand-green;
     background: -moz-linear-gradient(200deg, $brand-green 10%, $brand-purple 80%);
     background: -webkit-linear-gradient(200deg, $brand-green 10%, $brand-purple 80%);
@@ -584,7 +592,7 @@ main {
 }
 .digital-champions,
 .contact {
-  main {
+  main header {
     background: $brand-yellow;
     background: -moz-linear-gradient(200deg, $brand-yellow 10%, $brand-green 70%);
     background: -webkit-linear-gradient(200deg, $brand-yellow 10%, $brand-green 70%);
@@ -606,7 +614,7 @@ main {
 }
 
 main {
-  padding: 0 $unit $unit*4;
+  padding: 0 0 $unit*4;
   h1, .h1 {
     font-size: 3rem;
     line-height: 3.4rem;
