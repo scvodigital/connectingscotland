@@ -1,35 +1,42 @@
-{{#*inline "childMenu" ~}}
-{{#ifAll path icon ~}}
-{{#unless menu_hidden}}
-<div class="column col-4 col-lg-6 col-md-12 v-margin-full">
-  {{#ifAny label label_full ~}}
-  <div class="text-center">{{#if icon}}<span class="fal fa-fw fa-{{icon}} fa-4x">&nbsp;</span>{{/if}}</div>
-  <h2>
-    <a href="{{path}}" style="text-decoration:none;">{{#if label_full}}{{{label_full}}}{{else}}{{{label}}}{{/if}}</a>
-  </h2>
-  {{/ifAny ~}}
-  {{#if description ~}}
-  <p>{{{description}}}</p>
-  {{/if ~}}
-  <p class="card-footer">
-    <a href="{{path}}">{{default link_label "Find out more"}}</a>
-  </p>
-</div>
-{{/unless}}
-{{/ifAll ~}}
-{{/inline ~}}
 
 <div class="title t-padding-full">
   {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
   {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
-
-  {{#with @root.data.primaryResponse.hits.hits.[0]._source ~}}
-  <div class="columns {{#if content}} t-margin-full t-padding-full{{/if}}">
-    {{#each @root.context.metaData.menus.default ~}}
-      {{> childMenu this level=1}}
-    {{/each ~}}
-  </div>
-  {{/with ~}}
   {{/if ~}}
 
+  <div class="columns  t-margin-full t-padding-full">
+    <div class="column col-6 col-lg-12 v-margin-full">
+      <div class="text-center"><span class="fal fa-fw fa-users fa-4x">&nbsp;</span></div>
+      <h2>
+        <a href="/for-individuals" style="text-decoration:none;">Individuals</a>
+      </h2>
+      <p>Information on supporting friends and family with digital skills</p>
+      <p class="card-footer">
+        <a href="/for-individuals">Find out more</a>
+      </p>
+    </div>
+    <div class="column col-6 col-lg-12 v-margin-full">
+      <div class="text-center"><span class="fal fa-fw fa-edit fa-4x">&nbsp;</span></div>
+      <h2>
+        <a href="/organisations" style="text-decoration:none;">Organisations</a>
+      </h2>
+      <p>Find out how organisations can get involved in the Connecting Scotland Initiative</p>
+      <p class="card-footer">
+        <a href="/organisations">Find out more</a>
+      </p>
+    </div>
+    <div class="column col-6 col-lg-12 v-margin-full">
+      <iframe style="padding-right:2rem;" width="100%" height="315" src="https://www.youtube.com/embed/UlooStgKZG0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="column col-6 col-lg-12 v-margin-full">
+      <div class="text-center"><span class="fal fa-fw fa-user-headset fa-4x">&nbsp;</span></div>
+      <h2>
+        <a href="/digital-champions" style="text-decoration:none;">Digital Champions</a>
+      </h2>
+      <p>Resources for Digital Champions in the Connecting Scotland Initiative</p>
+      <p class="card-footer">
+        <a href="/digital-champions">Find out more</a>
+      </p>
+    </div>
+  </div>
 </div>

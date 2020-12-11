@@ -9,8 +9,6 @@
       "note": "to be deleted",
       "label": "Individuals",
       "path": "/for-individuals",
-      "description": "Information on supporting friends and family with digital skills",
-      "icon": "users",
       "route": "^/for-individuals$"
     },
     {
@@ -141,8 +139,6 @@
       "label": "Organisations",
       "path": "/organisations",
       "route": "^/organisations$",
-      "description": "Find out how organisations can get involved in the connecting scotland initiative",
-      "icon": "edit",
       "children": [
         {
           "label": "Older & disabled people",
@@ -206,8 +202,6 @@
       "label": "Digital Champions",
       "path": "/digital-champions",
       "route": "^/digital-champions$",
-      "description": "Information for staff and volunteers who are Digital Champions in the Connecting Scotland initiative",
-      "icon": "user-headset",
       "children": [
         {
           "label": "Supporting a new learner",
