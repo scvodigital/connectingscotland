@@ -6,7 +6,7 @@
     {{/if ~}}
   </div>
   <div class="column col-4 col-md-6 col-sm-12 l-padding-full" style="margin: 0 auto;">
-    {{#if (regexMatch @root.request.url.pathname "^/digital-champions|^/for-organisations|^/citizens" "gi")}}
+    {{#if (regexMatch @root.request.url.pathname "^/digital-champions|^/organisations|^/citizens" "gi")}}
       {{!-- <ul class="menu side-nav">
       {{#each (getProperty @root.context.metaData.menus (itemAt (split @root.request.params.path '_') 0)) ~}}
       <li><a class="{{#if (regexMatch @root.request.url.pathname route 'gi')}}active{{/if}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
