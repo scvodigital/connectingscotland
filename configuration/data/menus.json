@@ -6,6 +6,138 @@
       "route": "^/home$"
     },
     {
+      "note": "to be deleted",
+      "label": "Individuals",
+      "path": "/for-individuals",
+      "route": "^/for-individuals$"
+    },
+    {
+      "label": "Citizens",
+      "path": "/citizens",
+      "route": "^/citizens$",
+      "children": [
+        {
+          "label": "How to choose",
+          "label_full": "How to choose a device & internet",
+          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
+          "path": "/citizens/how-to-choose-bundle",
+          "route": "^/citizens/how-to-choose-bundle$",
+          "children": [
+            {
+              "label": "How to choose a device",
+              "description": " ",
+              "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
+              "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
+            },
+            {
+              "label": "What is mi-fi",
+              "description": "Information on what mi-fi is and why we recommend it over broadband",
+              "path": "/citizens/how-to-choose-bundle/what-is-mi-fi",
+              "route": "^/citizens/how-to-choose-bundle/what-is-mi-fi$"
+            },
+            {
+              "label": "How much data do I need",
+              "description": "Information on what data means and how much you need",
+              "path": "/citizens/how-to-choose-bundle/how-much-data-do-i-need",
+              "route": "^/citizens/how-to-choose-bundle/how-much-data-do-i-need$"
+            },
+            {
+              "label": "Computer terms and jargon",
+              "description": " ",
+              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
+              "route": "^/citizens/how-to-choose-bundle/computer-terms-and-jargon$"
+            }
+          ]
+        },
+        {
+          "label": "How to set up",
+          "label_full": "How to set up device & internet",
+          "description": "Information on how to set up the device and how to set up the mi-fi",
+          "path": "/citizens/how-to-set-up-device-and-internet",
+          "route": "^/citizens/how-to-set-up-device-and-internet$",
+          "children": [
+            {
+              "label": "How to set up the device",
+              "description": " ",
+              "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device",
+              "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device$"
+            },
+            {
+              "label": "How to set up the internet connection",
+              "description": " ",
+              "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
+              "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi$"
+            },
+            {
+              "label": "Computer terms and jargon",
+              "description": " ",
+              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
+              "route": "^/citizens/how-to-set-up-device-and-internet/computer-terms-and-jargon$"
+            }
+          ]
+        },
+        {
+          "label": "How to use",
+          "label_full": "How to use your device",
+          "description": "Information on how to switch on and use the device",
+          "path": "/citizens/basics-on-how-to-use-device",
+          "route": "^/citizens/basics-on-how-to-use-device$",
+          "children": [
+            {
+              "label": "Using an iPad",
+              "description": " ",
+              "path": "/citizens/basics-on-how-to-use-device/using-an-ipad",
+              "route": "^/citizens/basics-on-how-to-use-device/using-an-ipad$"
+            },
+            {
+              "label": "Using a Chromebook",
+              "description": " ",
+              "path": "/citizens/basics-on-how-to-use-device/using-a-chromebook",
+              "route": "^/citizens/basics-on-how-to-use-device/using-a-chromebook$"
+            },
+            {
+              "label": "Computer terms and jargon",
+              "description": " ",
+              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
+              "route": "^/citizens/basics-on-how-to-use-device/computer-terms-and-jargon$"
+            }
+          ]
+        },
+        {
+          "label": "How to do things",
+          "description": "Information on how to use the internet, make video calls, use email, etc.",
+          "path": "/citizens/how-to-use-tools",
+          "route": "^/citizens/how-to-use-tools$",
+          "children": [
+            {
+              "label": "Using the internet",
+              "description": " ",
+              "path": "/citizens/how-to-use-tools/using-the-internet",
+              "route": "^/citizens/how-to-use-tools/using-the-internet$"
+            },
+            {
+              "label": "Making a video call",
+              "description": " ",
+              "path": "/citizens/how-to-use-tools/making-a-video-call",
+              "route": "^/citizens/how-to-use-tools/making-a-video-call$"
+            },
+            {
+              "label": "Using email",
+              "description": " ",
+              "path": "/citizens/how-to-use-tools/using-email",
+              "route": "^/citizens/how-to-use-tools/using-email$"
+            },
+            {
+              "label": "Computer terms and jargon",
+              "description": " ",
+              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
+              "route": "^/citizens/how-to-use-tools/computer-terms-and-jargon$"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "label": "Organisations",
       "path": "/organisations",
       "route": "^/organisations$",
@@ -69,11 +201,6 @@
       ]
     },
     {
-      "label": "Individuals",
-      "path": "/for-individuals",
-      "route": "^/for-individuals$"
-    },
-    {
       "label": "Digital Champions",
       "path": "/digital-champions",
       "route": "^/digital-champions$",
@@ -81,7 +208,29 @@
         {
           "label": "Supporting a new learner",
           "path": "/digital-champions/supporting-a-new-learner",
-          "route": "^/digital-champions/supporting-a-new-learner$"
+          "route": "^/digital-champions/supporting-a-new-learner$",
+          "children": [
+            {
+              "label": "Delivering remote support",
+              "path": "/digital-champions/supporting-a-new-learner/delivering-remote-support",
+              "route": "^/digital-champions/supporting-a-new-learner/delivering-remote-support$"
+            },
+            {
+              "label": "Preparing for support sessions with your learner",
+              "path": "/digital-champions/supporting-a-new-learner/preparing",
+              "route": "^/digital-champions/supporting-a-new-learner/preparing$"
+            },
+            {
+              "label": "Getting your learner online",
+              "path": "/digital-champions/supporting-a-new-learner/online",
+              "route": "^/digital-champions/supporting-a-new-learner/online$"
+            },
+            {
+              "label": "Explaining common digital terms",
+              "path": "/digital-champions/supporting-a-new-learner/explaining-common-digital-terms",
+              "route": "^/digital-champions/supporting-a-new-learner/explaining-common-digital-terms$"
+            }
+          ]
         },
         {
           "label": "Delivering remote support",
@@ -159,105 +308,6 @@
           "label": "Share your stories",
           "path": "/digital-champions/share-your-stories",
           "route": "^/digital-champions/share-your-stories$"
-        }
-      ]
-    },
-    {
-      "label": "Citizens",
-      "path": "/citizens",
-      "route": "^/citizens$",
-      "children": [
-        {
-          "label": "How to choose",
-          "label_full": "How to choose the device/data bundle/internet connection",
-          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
-          "path": "/citizens/how-to-choose-bundle",
-          "route": "^/citizens/how-to-choose-bundle$",
-          "children": [
-            {
-              "label": "How to choose a device",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
-              "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
-            },
-            {
-              "label": "What is mi-fi",
-              "description": "Information on what mi-fi is and why we recommend it over broadband",
-              "path": "/citizens/how-to-choose-bundle/what-is-mi-fi",
-              "route": "^/citizens/how-to-choose-bundle/what-is-mi-fi$"
-            },
-            {
-              "label": "How much data do I need",
-              "description": "Information on what data means and how much you need",
-              "path": "/citizens/how-to-choose-bundle/how-much-data-do-i-need",
-              "route": "^/citizens/how-to-choose-bundle/how-much-data-do-i-need$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
-              "route": "^/citizens/how-to-choose-bundle/computer-terms-and-jargon$"
-            }
-          ]
-        },
-        {
-          "label": "How to set up",
-          "label_full": "How to set up the device and internet connection",
-          "description": "Information on how to set up the device and how to set up the mi-fi",
-          "path": "/citizens/how-to-set-up-device-and-internet",
-          "route": "^/citizens/how-to-set-up-device-and-internet$",
-          "children": [
-            {
-              "label": "How to set up the device",
-              "description": " ",
-              "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device",
-              "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device$"
-            },
-            {
-              "label": "How to set up the internet connection",
-              "description": " ",
-              "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
-              "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon"
-            }
-          ]
-        },
-        {
-          "label": "How to use",
-          "label_full": "Basics on how to use the device",
-          "description": "Information on how to switch on and use the device",
-          "path": "/citizens/basics-on-how-to-use-device",
-          "route": "^/citizens/basics-on-how-to-use-device$",
-          "children": [
-            {
-              "label": "Using an iPad",
-              "description": " ",
-              "path": "/citizens/basics-on-how-to-use-device/using-an-ipad",
-              "route": "^/citizens/basics-on-how-to-use-device/using-an-ipad$"
-            },
-            {
-              "label": "Using a Chromebook",
-              "description": " ",
-              "path": "/citizens/basics-on-how-to-use-device/using-a-chromebook",
-              "route": "^/citizens/basics-on-how-to-use-device/using-a-chromebook$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon"
-            }
-          ]
-        },
-        {
-          "label": "How to do things",
-          "label_full": "How to do things",
-          "description": "Information on how to use the internet, make video calls, use email, etc.",
-          "path": "/citizens/how-to-use-tools",
-          "route": "^/citizens/how-to-use-tools$"
         }
       ]
     }

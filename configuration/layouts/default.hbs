@@ -92,11 +92,11 @@
   <main>
     <header class="navbar header">
       <div class="container">
-        <div class="navbar-section">
+        <div class="navbar-section navbar-header">
           <span class="navbar__title catalog-title">
             <a href="/" class="brand-logo" title="Connecting Scotland"><span class="hidden">Connecting Scotland</span></a>
           </span>
-          <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full hide-md pull-right" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
+          <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full hide-lg pull-right" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
               {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
               {{#unless (compare label "Citizens")}}
@@ -197,10 +197,12 @@
     </div>
 
     <div class="container">
-      {{{layoutParts.header}}}
-      <section class="main">
-        {{{layoutParts.body}}}
-      </section>
+      <div class="body-content">
+        {{{layoutParts.header}}}
+        <section class="main">
+          {{{layoutParts.body}}}
+        </section>
+      </div>
     </div>
   </main>
 
