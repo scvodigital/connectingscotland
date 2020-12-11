@@ -9,16 +9,18 @@
       "note": "to be deleted",
       "label": "Individuals",
       "path": "/for-individuals",
+      "description": "Information on supporting friends and family with digital skills",
+      "icon": "users",
       "route": "^/for-individuals$"
     },
     {
       "label": "Citizens",
       "path": "/citizens",
       "route": "^/citizens$",
+      "description": "Information on supporting friends and family with digital skills",
       "children": [
         {
-          "label": "How to choose",
-          "label_full": "How to choose a device & internet",
+          "label": "How to choose a device & internet",
           "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
           "path": "/citizens/how-to-choose-bundle",
           "route": "^/citizens/how-to-choose-bundle$",
@@ -50,8 +52,7 @@
           ]
         },
         {
-          "label": "How to set up",
-          "label_full": "How to set up device & internet",
+          "label": "How to set up device & internet",
           "description": "Information on how to set up the device and how to set up the mi-fi",
           "path": "/citizens/how-to-set-up-device-and-internet",
           "route": "^/citizens/how-to-set-up-device-and-internet$",
@@ -77,8 +78,7 @@
           ]
         },
         {
-          "label": "How to use",
-          "label_full": "How to use your device",
+          "label": "How to use your device",
           "description": "Information on how to switch on and use the device",
           "path": "/citizens/basics-on-how-to-use-device",
           "route": "^/citizens/basics-on-how-to-use-device$",
@@ -141,6 +141,8 @@
       "label": "Organisations",
       "path": "/organisations",
       "route": "^/organisations$",
+      "description": "Find out how organisations can get involved in the connecting scotland initiative",
+      "icon": "edit",
       "children": [
         {
           "label": "Older & disabled people",
@@ -204,6 +206,8 @@
       "label": "Digital Champions",
       "path": "/digital-champions",
       "route": "^/digital-champions$",
+      "description": "Information for staff and volunteers who are Digital Champions in the Connecting Scotland initiative",
+      "icon": "user-headset",
       "children": [
         {
           "label": "Supporting a new learner",

@@ -1,11 +1,35 @@
-<div class="columns title">
-  <div class="column col-12 col-md-12 r-padding-full">
-    {{!-- <img src="{{~>asset_url url='images/home.png'~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" /> --}}
-    {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
-    {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
-    {{/if ~}}
+{{#*inline "childMenu" ~}}
+{{#ifAll path icon ~}}
+{{#unless menu_hidden}}
+<div class="column col-4 col-lg-6 col-md-12 v-margin-full">
+  {{#ifAny label label_full ~}}
+  <div class="text-center">{{#if icon}}<span class="fal fa-fw fa-{{icon}} fa-4x">&nbsp;</span>{{/if}}</div>
+  <h2>
+    <a href="{{path}}" style="text-decoration:none;">{{#if label_full}}{{{label_full}}}{{else}}{{{label}}}{{/if}}</a>
+  </h2>
+  {{/ifAny ~}}
+  {{#if description ~}}
+  <p>{{{description}}}</p>
+  {{/if ~}}
+  <p class="card-footer">
+    <a href="{{path}}">{{default link_label "Find out more"}}</a>
+  </p>
+</div>
+{{/unless}}
+{{/ifAll ~}}
+{{/inline ~}}
+
+<div class="title t-padding-full">
+  {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
+  {{{@root.data.primaryResponse.hits.hits.[0]._source.content}}}
+
+  {{#with @root.data.primaryResponse.hits.hits.[0]._source ~}}
+  <div class="columns {{#if content}} t-margin-full t-padding-full{{/if}}">
+    {{#each @root.context.metaData.menus.default ~}}
+      {{> childMenu this level=1}}
+    {{/each ~}}
   </div>
-  {{!-- <div class="column col-4 col-md-6 hide-sm l-padding-full align-centre" style="margin: 0 auto;">
-    <img src="{{~>asset_url url='images/home.png'~}}" alt="" class="responsive-img" />
-  </div> --}}
+  {{/with ~}}
+  {{/if ~}}
+
 </div>
