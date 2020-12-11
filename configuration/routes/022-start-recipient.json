@@ -1,7 +1,7 @@
 {
   "name": "page_recipient-start",
   "debug": false,
-  "pattern": "/forms/recipient-data",
+  "pattern": "/organisations/forms/recipient-data",
   "metaData": {
     "title": "Recipient data - Connecting Scotland"
   },

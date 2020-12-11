@@ -1,9 +1,14 @@
 {
   "default": [
     {
-      "label": "For organisations",
-      "path": "/for-organisations",
-      "route": "^/for-organisations$|^/forms",
+      "label": "Home",
+      "path": "/",
+      "route": "^/home$"
+    },
+    {
+      "label": "Organisations",
+      "path": "/organisations",
+      "route": "^/organisations$",
       "children": [
         {
           "label": "Older & disabled people",
@@ -11,18 +16,18 @@
         },
         {
           "label": "Guidance",
-          "path": "/for-organisations/older-disabled-people-application-guidance",
-          "route": "^/for-organisations/older-disabled-people-application-guidance$"
+          "path": "/organisations/older-disabled-people-application-guidance",
+          "route": "^/organisations/older-disabled-people-application-guidance$"
         },
         {
           "label": "FAQs",
-          "path": "/for-organisations/older-disabled-people-application-faqs",
-          "route": "/for-organisations/older-disabled-people-application-faqs"
+          "path": "/organisations/older-disabled-people-application-faqs",
+          "route": "/organisations/older-disabled-people-application-faqs"
         },
         {
           "label": "Application",
-          "path": "/forms/phase-2-older-people",
-          "route": "^/forms/phase-2-older-people"
+          "path": "/organisations/forms/phase-2-older-people",
+          "route": "^/organisations/forms/phase-2-older-people"
         },
         {
           "label": "Families & care leavers",
@@ -30,18 +35,18 @@
         },
         {
           "label": "Guidance",
-          "path": "/for-organisations/application-guidance",
-          "route": "^/for-organisations/application-guidance$"
+          "path": "/organisations/application-guidance",
+          "route": "^/organisations/application-guidance$"
         },
         {
           "label": "FAQs",
-          "path": "/for-organisations/faqs",
-          "route": "^/for-organisations/faqs"
+          "path": "/organisations/faqs",
+          "route": "^/organisations/faqs"
         },
         {
           "label": "Application",
-          "path": "/for-organisations/apply",
-          "route": "^/for-organisations/apply"
+          "path": "/organisations/apply",
+          "route": "^/organisations/apply"
         },
         {
           "label": "Care homes",
@@ -49,8 +54,8 @@
         },
         {
           "label": "Application",
-          "path": "/forms/residential-care-application",
-          "route": "^/forms/residential-care-application"
+          "path": "/organisations/forms/residential-care-application",
+          "route": "^/organisations/forms/residential-care-application"
         },
         {
           "label": "Existing projects",
@@ -58,8 +63,8 @@
         },
         {
           "label": "Welcome pack",
-          "path": "/for-organisations/welcome-pack",
-          "route": "^/for-organisations/welcome-pack"
+          "path": "/organisations/welcome-pack",
+          "route": "^/organisations/welcome-pack"
         }
       ]
     },
@@ -163,7 +168,7 @@
       ]
     },
     {
-      "label": "For individuals",
+      "label": "Individuals",
       "path": "/for-individuals",
       "route": "^/for-individuals$"
     },

@@ -1,7 +1,7 @@
 {
   "name": "page_apply-residential-care",
   "debug": false,
-  "pattern": "/forms/residential-care-application",
+  "pattern": "/organisations/forms/residential-care-application",
   "metaData": {
     "title": "Residential care application - Connecting Scotland"
   },

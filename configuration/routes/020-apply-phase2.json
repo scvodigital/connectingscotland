@@ -1,7 +1,7 @@
 {
   "name": "page_apply-phase2",
   "debug": false,
-  "pattern": "/for-organisations/apply",
+  "pattern": "/organisations/apply",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },

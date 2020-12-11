@@ -1,7 +1,7 @@
 {
   "name": "page_upload-user-data",
   "debug": false,
-  "pattern": "/forms/upload-user-data",
+  "pattern": "/organisations/forms/upload-user-data",
   "metaData": {
     "title": "Upload user data - Connecting Scotland"
   },

@@ -1,6 +1,6 @@
 {
-  "name": "redirect_forms",
-  "pattern": "/forms",
+  "name": "redirect_forms_home",
+  "pattern": "/organisations/forms",
   "tasks": [
     {
       "name": "url",
