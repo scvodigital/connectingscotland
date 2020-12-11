@@ -233,11 +233,6 @@
           ]
         },
         {
-          "label": "Delivering remote support",
-          "path": "/digital-champions/delivering-remote-support",
-          "route": "^/digital-champions/delivering-remote-support$"
-        },
-        {
           "label": "Resources for Digital Champions",
           "path": "/digital-champions/resources",
           "route": "^/digital-champions/resources$",
@@ -275,16 +270,6 @@
           ]
         },
         {
-          "label": "Preparing for support sessions with your learner",
-          "path": "/digital-champions/preparing-for-support-sessions-with-your-learner",
-          "route": "^/digital-champions/preparing-for-support-sessions-with-your-learner$"
-        },
-        {
-          "label": "Getting your learner online",
-          "path": "/digital-champions/getting-your-learner-online",
-          "route": "^/digital-champions/getting-your-learner-online$"
-        },
-        {
           "label": "Foundation Digital Skills",
           "path": "/digital-champions/foundation-digital-skills",
           "route": "^/digital-champions/foundation-digital-skills$"
@@ -293,11 +278,6 @@
           "label": "Essential Digital Skills",
           "path": "/digital-champions/essential-digital-skills",
           "route": "^/digital-champions/essential-digital-skills$"
-        },
-        {
-          "label": "Explaining common digital terms",
-          "path": "/digital-champions/explaining-common-digital-terms",
-          "route": "^/digital-champions/explaining-common-digital-terms$"
         },
         {
           "label": "Training",
