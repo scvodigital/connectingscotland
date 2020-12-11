@@ -3,7 +3,7 @@
   "debug": false,
   "pattern": "/organisations",
   "metaData": {
-    "title": "For organisations - Connecting Scotland"
+    "title": "Organisations - Connecting Scotland"
   },
   "tasks": [
     "context.metaData.commonTasks.currentSite",
