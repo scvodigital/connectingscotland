@@ -2,7 +2,10 @@
   "name": "page-menu",
   "debug": false,
   "pattern": {
-    "citizens": "/citizens"
+    "citizens": "/citizens",
+    "citizens_how-to-choose": "/citizens/how-to-choose-bundle",
+    "citizens_how-to-set-up-device": "/citizens/how-to-set-up-device-and-internet",
+    "citizens_how-to-use-device": "/citizens/basics-on-how-to-use-device"
   },
   "metaData": {
     "title": "Connecting Scotland"
