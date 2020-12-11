@@ -41,13 +41,19 @@ wFORMS.behaviors.prefill.skip = false;
 </script>
 <script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=82d5a95104920de97db207ba606ec03573ed599c"></script>
 
+<ul class="breadcrumb breadcrumb-length-2" aria-hidden="true">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/for-organisations/">For organisations</a></li>
+  <li class="breadcrumb-item">Care homes - application</li>
+</ul>
+
 <!-- FORM: BODY SECTION -->
 <div class="wFormContainer detail">
   <div class="wForm" id="4866604-WRPR" dir="ltr">
     <div class="codesection" id="code-4866604"></div>
     <div class="columns">
-      <div class="col-9 col-xl-8 col-md-12">
-        <h1 class="wFormTitle" id="4866604-T">Residential care application</h1>
+      <div class="column col-8 col-md-12 r-padding-full">
+        <h1 class="wFormTitle" id="4866604-T">Care homes - application</h1>
 
         <h2>Introduction</h2>
         <p>
@@ -65,9 +71,11 @@ wFORMS.behaviors.prefill.skip = false;
         <p>
           <span class="text-error">*</span> Required field
         </p>
+        <a href="https://www.digihealthcare.scot" target="_blank" class="brand-logo"><img src="{{~>asset_url url=(concat 'images/residential-care-application.png')~}}" alt="" class="responsive-img" style="max-width: 380px;" /></a>
       </div>
-      <div class="col-3 col-xl-4 col-md-6 col-sm-10 text-center">
-        <a href="https://www.digihealthcare.scot" target="_blank" class="brand-logo"><img src="{{~>asset_url url=(concat 'images/residential-care-application.png')~}}" alt="" class="responsive-img" /></a>
+      <div class="column col-4 col-md-6 hide-sm l-padding-full">
+        <h1>&nbsp;</h1>
+        {{>sidebars_menu}}
       </div>
     </div>
 

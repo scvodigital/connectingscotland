@@ -1254,14 +1254,13 @@ form {
   }
 }
 
-.apple,
-.google {
+.apple-bg,
+.google-bg {
   background-color: $brand-pink;
   display: block;
   border: $brand-border-width solid $brand-typography;
-  padding: 0 $unit;
+  padding: 0 $unit $unit;
   margin: $unit*2 0;
-  margin-right: $unit;
   figure,
   iframe {
     width: 100%;
@@ -1271,39 +1270,43 @@ form {
   }
 }
 .page_start_home {
-  .apple,
-  .google {
+  .apple-bg,
+  .google-bg {
     margin-right: $unit*1.5;
     width: 47%;
   }
 }
 @media screen and (max-width: 960px) {
-  .apple,
-  .google {
+  .apple-bg,
+  .google-bg {
     width: 100% !important;
     margin-right: 0 !important;
   }
 }
-.apple:before,
-.google:before {
+// .apple-logo,
+// .google-logo {
+//   margin-right: $unit;
+// }
+.apple-logo:before,
+.google-logo:before {
   content: '\f179';
   font-family: 'Font Awesome\ 5 Brands';
   font-weight: 400;
   float: right;
-  margin-top: $unit;
+  // margin-top: $unit;
   margin-left: $unit;
   margin-bottom: $unit;
   font-size: $unit*2;
   line-height: $unit*2;
 }
-.google:before {
+.google-logo:before {
   content: '\f1a0';
 }
 body.ipad main {
   background-color: $brand-pink;
 }
 body.chromebook main,
-.google {
+.google-bg {
   background-color: $brand-green;
 }
 .wp-block-file {

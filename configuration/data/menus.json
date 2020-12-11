@@ -11,6 +11,64 @@
       "route": "^/for-organisations$|^/forms",
       "children": [
         {
+          "label": "Older & disabled people",
+          "heading": true
+        },
+        {
+          "label": "Guidance",
+          "path": "/for-organisations/older-disabled-people-application-guidance",
+          "route": "^/for-organisations/older-disabled-people-application-guidance$"
+        },
+        {
+          "label": "FAQs",
+          "path": "/for-organisations/older-disabled-people-application-faqs",
+          "route": "/for-organisations/older-disabled-people-application-faqs"
+        },
+        {
+          "label": "Application",
+          "path": "/for-organisations/apply",
+          "route": "^/for-organisations/apply"
+        },
+        {
+          "label": "Families & care leavers",
+          "heading": true
+        },
+        {
+          "label": "Guidance",
+          "path": "/for-organisations/application-guidance",
+          "route": "^/for-organisations/application-guidance$"
+        },
+        {
+          "label": "FAQs",
+          "path": "/for-organisations/faqs",
+          "route": "^/for-organisations/faqs"
+        },
+        {
+          "label": "Application",
+          "path": "/forms/phase-2-older-people",
+          "route": "^/forms/phase-2-older-people"
+        },
+        {
+          "label": "Care homes",
+          "heading": true
+        },
+        {
+          "label": "Application",
+          "path": "/forms/residential-care-application",
+          "route": "^/forms/residential-care-application"
+        },
+        {
+          "label": "Existing projects",
+          "heading": true
+        },
+        {
+          "label": "Welcome pack",
+          "path": "/for-organisations/welcome-pack",
+          "route": "^/for-organisations/welcome-pack"
+        }
+      ],
+      "old_children": [
+        {
           "label": "Application guidance",
           "path": "/for-organisations/application-guidance",
           "route": "^/for-organisations/application-guidance$"
