@@ -96,9 +96,7 @@
           <span class="navbar__title catalog-title">
             <a href="/" class="brand-logo" title="Connecting Scotland"><span class="hidden">Connecting Scotland</span></a>
           </span>
-        </div>
-        <div class="navbar-section hide-sm">
-          <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
+          <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full hide-md pull-right" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
               {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
               {{#unless (compare label "For citizens")}}
@@ -107,9 +105,7 @@
               {{/each ~}}
             </ul>
           </nav>
-        </div>
-        <div class="navbar-section pull-right">
-          <div class="mobile-header-buttons show-lg">
+          <div class="mobile-header-buttons show-lg pull-right">
             <a href="javascript:void(0);" class="btn btn-link no-margin" aria-expanded="false" id="menu" onclick="toggle('mobile-menu', 'menu')" aria-label="Open navigation menu" title="Open navigation menu" data-component="TasksTrigger"
               data-TasksTrigger='{
                 click: {
@@ -251,7 +247,10 @@
               {{else}}
               <a href="https://connecting.scot">Connecting Scotland</a>
               {{/compare ~}}
-              is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>.
+              is a <a href="https://gov.scot">Scottish Government</a> initiative being managed by the <a href="https://scvo.org">Scottish Council for Voluntary Organisations</a>. <a href="/about">Find out more</a>
+            </p>
+            <p>
+              <a href="/supporters">Programme supporters</a>
             </p>
           </div>
         </div>

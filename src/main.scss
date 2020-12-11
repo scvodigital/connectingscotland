@@ -382,6 +382,8 @@ a {
 }
 
 #main-tab-bar {
+  width: 100%;
+  text-align: right;
   margin: 0 0 2rem !important;
   ul {
     margin:0;
@@ -2515,6 +2517,9 @@ iframe {
   .mobile-contents {
     padding-top: 0 !important;
     background-color: $brand-typography;
+    header {
+      background: $brand-typography;
+    }
     .brand-logo {
       background-image: url('https://storage.googleapis.com/scvo-assets/test/connectingscotland/images/logos/connectingscotland_reversed.svg') !important;
     }

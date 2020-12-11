@@ -1,11 +1,6 @@
 {
   "default": [
     {
-      "label": "About",
-      "path": "/about",
-      "route": "^/about$"
-    },
-    {
       "label": "For organisations",
       "path": "/for-organisations",
       "route": "^/for-organisations$|^/forms",
@@ -260,11 +255,6 @@
           "route": "^/digital-champions/share-your-stories$"
         }
       ]
-    },
-    {
-      "label": "Supporters",
-      "path": "/supporters",
-      "route": "^/supporters$"
     }
   ],
   "start": [
