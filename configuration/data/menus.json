@@ -237,6 +237,31 @@
           ]
         },
         {
+          "label": "Digital Skills",
+          "path": "/digital-champions/digital-skills",
+          "route": "^/digital-champions/digital-skills$",
+          "children": [
+            {
+              "label": "Foundation Digital Skills",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/foundation"
+              "route": "^/digital-champions/digital-skills/foundation$"
+            },
+            {
+              "label": "Essential Digital Skills",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/essential"
+              "route": "^/digital-champions/digital-skills/essential$"
+            },
+            {
+              "label": "Families, Children and Young People",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/families-children-and-young-people"
+              "route": "^/digital-champions/digital-skills/families-children-and-young-people$"
+            }
+          ]
+        },
+        {
           "label": "Resources for Digital Champions",
           "path": "/digital-champions/resources",
           "route": "^/digital-champions/resources$",
@@ -257,36 +282,33 @@
               "route": "^/digital-champions/resources/information-videos$"
             },
             {
-              "label": "Webinar recordings",
-              "path": "/digital-champions/resources/webinars",
-              "route": "^/digital-champions/resources/webinars$"
-            },
-            {
               "label": "Blogs",
               "path": "/digital-champions/resources/blogs",
               "route": "^/digital-champions/resources/blogs$"
             },
             {
-              "label": "SCQF Level 4 Certificate in Digital Inclusion Support",
+              "label": "Digital Inclusion Qualifications",
               "path": "/digital-champions/resources/digital-inclusion-qualification",
               "route": "^/digital-champions/resources/digital-inclusion-qualification$"
             }
           ]
         },
         {
-          "label": "Foundation Digital Skills",
-          "path": "/digital-champions/foundation-digital-skills",
-          "route": "^/digital-champions/foundation-digital-skills$"
-        },
-        {
-          "label": "Essential Digital Skills",
-          "path": "/digital-champions/essential-digital-skills",
-          "route": "^/digital-champions/essential-digital-skills$"
-        },
-        {
           "label": "Training",
-          "path": "/digital-champions/training-2020",
-          "route": "^/digital-champions/training-2020$"
+          "path": "/digital-champions/training",
+          "route": "^/digital-champions/training$",
+          "children": [
+            {
+              "label": "Core Digital Champion Training",
+              "path": "/digital-champions/training/core-digital-champion-training",
+              "route": "^/digital-champions/training/core-digital-champion-training$"
+            },
+            {
+              "label": "Families, Children and Young People Training",
+              "path": "/digital-champions/training/families-children-and-young-people-training",
+              "route": "^/digital-champions/training/families-children-and-young-people-training$"
+            }
+          ]
         },
         {
           "label": "Share your stories",
