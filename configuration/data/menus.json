@@ -21,7 +21,7 @@
             {
               "label": "How to choose a device",
               "icon": "question-square",
-              "description": " ",
+              "description": "Information on the different types of device and how to choose one",
               "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
               "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
             },
