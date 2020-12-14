@@ -1,19 +1,26 @@
 {{#*inline "childMenu" ~}}
 {{#ifAll path (ifAny description icon) ~}}
 {{#unless menu_hidden}}
-<div class="column col-6 col-xl-12">
-  <div class="b-padding-full">
-    {{#ifAny label label_full ~}}
-    <h2>
-      <a href="{{path}}" style="text-decoration:none;">{{#if icon}}<span class="fal fa-fw fa-{{icon}} fa-2x">&nbsp;</span>{{/if}}{{#if label_full}}{{{label_full}}}{{else}}{{{label}}}{{/if}}</a>
-    </h2>
-    {{/ifAny ~}}
-    {{#if description ~}}
-    <p>{{{description}}}</p>
-    {{/if ~}}
-    <p class="card-footer">
-      <a href="{{path}}">{{default link_label "Find out more"}}</a>
-    </p>
+<div class="column col-12 col-xl-12">
+  <div class="b-padding-full t-margin">
+    <div class="columns">
+      <div class="column col-2 col-md-3 col-sm-4 col-mx-auto">
+        {{#if icon}}<span class="fal fa-fw fa-{{icon}} fa-5x t-margin">&nbsp;</span>{{/if}}
+      </div>
+      <div class="column col-10 col-md-9 col-sm-12">
+        {{#ifAny label label_full ~}}
+        <h2 style="margin: 0;">
+          <a href="{{path}}" style="text-decoration:none;">{{#if label_full}}{{{label_full}}}{{else}}{{{label}}}{{/if}}</a>
+        </h2>
+        {{/ifAny ~}}
+        {{#if description ~}}
+        <p>{{{description}}}</p>
+        {{/if ~}}
+        <p class="card-footer">
+          <a href="{{path}}">{{default link_label "Find out more"}}</a>
+        </p>
+      </div>
+    </div>
   </div>
 </div>
 {{/unless}}

@@ -1,6 +1,6 @@
 {
   "name": "redirect_for-individuals",
-  "pattern": "/for-individuals(/:one)(/:two)(/:three)(:/four)(:/five)(:/six)",
+  "pattern": "NEW_/for-individuals(/:one)(/:two)(/:three)(:/four)(:/five)(:/six)",
   "tasks": [
     {
       "name": "url",

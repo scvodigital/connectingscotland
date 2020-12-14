@@ -5,7 +5,8 @@
     "citizens": "/citizens",
     "citizens_how-to-choose": "/citizens/how-to-choose-bundle",
     "citizens_how-to-set-up-device": "/citizens/how-to-set-up-device-and-internet",
-    "citizens_how-to-use-device": "/citizens/basics-on-how-to-use-device"
+    "citizens_how-to-use-device": "/citizens/basics-on-how-to-use-device",
+    "citizens_how-to-use-tools": "/citizens/how-to-use-tools"
   },
   "metaData": {
     "title": "Connecting Scotland"

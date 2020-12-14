@@ -14,23 +14,27 @@
         {
           "label": "How to choose a device & internet",
           "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
+          "icon": "desktop",
           "path": "/citizens/how-to-choose-bundle",
           "route": "^/citizens/how-to-choose-bundle$",
           "children": [
             {
               "label": "How to choose a device",
+              "icon": "question-square",
               "description": " ",
               "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
               "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
             },
             {
               "label": "What is mi-fi",
+              "icon": "signal",
               "description": "Information on what mi-fi is and why we recommend it over broadband",
               "path": "/citizens/how-to-choose-bundle/what-is-mi-fi",
               "route": "^/citizens/how-to-choose-bundle/what-is-mi-fi$"
             },
             {
               "label": "How much data do I need",
+              "icon": "analytics",
               "description": "Information on what data means and how much you need",
               "path": "/citizens/how-to-choose-bundle/how-much-data-do-i-need",
               "route": "^/citizens/how-to-choose-bundle/how-much-data-do-i-need$"
@@ -40,18 +44,21 @@
         {
           "label": "How to set up device & internet",
           "description": "Information on how to set up the device and how to set up the mi-fi",
+          "icon": "cog",
           "path": "/citizens/how-to-set-up-device-and-internet",
           "route": "^/citizens/how-to-set-up-device-and-internet$",
           "children": [
             {
               "label": "How to set up the device",
               "description": " ",
+              "icon": "laptop-house",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device",
               "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device$"
             },
             {
               "label": "How to set up the internet connection",
               "description": " ",
+              "icon": "house-signal",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
               "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi$"
             }
@@ -60,18 +67,21 @@
         {
           "label": "How to use your device",
           "description": "Information on how to switch on and use the device",
+          "icon": "laptop-house",
           "path": "/citizens/basics-on-how-to-use-device",
           "route": "^/citizens/basics-on-how-to-use-device$",
           "children": [
             {
               "label": "Using an iPad",
               "description": " ",
+              "icon": "tablet",
               "path": "/citizens/basics-on-how-to-use-device/using-an-ipad",
               "route": "^/citizens/basics-on-how-to-use-device/using-an-ipad$"
             },
             {
               "label": "Using a Chromebook",
               "description": " ",
+              "icon": "laptop",
               "path": "/citizens/basics-on-how-to-use-device/using-a-chromebook",
               "route": "^/citizens/basics-on-how-to-use-device/using-a-chromebook$"
             }
@@ -80,30 +90,35 @@
         {
           "label": "How to do things",
           "description": "Information on how to use the internet, make video calls, use email, etc.",
+          "icon": "hammer",
           "path": "/citizens/how-to-use-tools",
           "route": "^/citizens/how-to-use-tools$",
           "children": [
             {
               "label": "Using the internet",
-              "description": " ",
+              "description": "Find information about how to use the internet, commonly called browsing or surfing.",
+              "icon": "window-alt",
               "path": "/citizens/how-to-use-tools/how-to-use-the-internet",
               "route": "^/citizens/how-to-use-tools/how-to-use-the-internet$"
             },
             {
               "label": "Making a video call",
-              "description": " ",
+              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other.",
+              "icon": "webcam",
               "path": "/citizens/how-to-use-tools/how-to-make-a-video-call",
               "route": "^/citizens/how-to-use-tools/how-to-make-a-video-call$"
             },
             {
               "label": "Using email",
-              "description": " ",
+              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other.",
+              "icon": "at",
               "path": "/citizens/how-to-use-tools/how-to-use-email",
               "route": "^/citizens/how-to-use-tools/how-to-use-email$"
             },
             {
               "label": "How to watch or listen to online content",
-              "description": " ",
+              "description": "There is a diverse range of entertainment/culture available online.",
+              "icon": "film-alt",
               "path": "/citizens/how-to-use-tools/how-to-watch-online",
               "route": "^/citizens/how-to-use-tools/how-to-watch-online$"
             }
@@ -112,6 +127,7 @@
         {
           "label": "Computer terms and jargon",
           "description": "The online world is full of jargon like, ‘inbox’, ‘spam’ and ‘upload’. It can be very confusing to someone who never used the internet. Here are some common jargon words you may see or hear.",
+          "icon": "question-square",
           "path": "/citizens/computer-terms-and-jargon",
           "route": "^/citizens/computer-terms-and-jargon$"
         }
