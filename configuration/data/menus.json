@@ -6,12 +6,6 @@
       "route": "^/home$"
     },
     {
-      "note": "to be deleted",
-      "label": "Individuals",
-      "path": "/for-individuals",
-      "route": "^/for-individuals$"
-    },
-    {
       "label": "Citizens",
       "path": "/citizens",
       "route": "^/citizens$",
@@ -40,12 +34,6 @@
               "description": "Information on what data means and how much you need",
               "path": "/citizens/how-to-choose-bundle/how-much-data-do-i-need",
               "route": "^/citizens/how-to-choose-bundle/how-much-data-do-i-need$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
-              "route": "^/citizens/how-to-choose-bundle/computer-terms-and-jargon$"
             }
           ]
         },
@@ -66,12 +54,6 @@
               "description": " ",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
               "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
-              "route": "^/citizens/how-to-set-up-device-and-internet/computer-terms-and-jargon$"
             }
           ]
         },
@@ -92,12 +74,6 @@
               "description": " ",
               "path": "/citizens/basics-on-how-to-use-device/using-a-chromebook",
               "route": "^/citizens/basics-on-how-to-use-device/using-a-chromebook$"
-            },
-            {
-              "label": "Computer terms and jargon",
-              "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
-              "route": "^/citizens/basics-on-how-to-use-device/computer-terms-and-jargon$"
             }
           ]
         },
@@ -110,28 +86,34 @@
             {
               "label": "Using the internet",
               "description": " ",
-              "path": "/citizens/how-to-use-tools/using-the-internet",
-              "route": "^/citizens/how-to-use-tools/using-the-internet$"
+              "path": "/citizens/how-to-use-tools/how-to-use-the-internet",
+              "route": "^/citizens/how-to-use-tools/how-to-use-the-internet$"
             },
             {
               "label": "Making a video call",
               "description": " ",
-              "path": "/citizens/how-to-use-tools/making-a-video-call",
-              "route": "^/citizens/how-to-use-tools/making-a-video-call$"
+              "path": "/citizens/how-to-use-tools/how-to-make-a-video-call",
+              "route": "^/citizens/how-to-use-tools/how-to-make-a-video-call$"
             },
             {
               "label": "Using email",
               "description": " ",
-              "path": "/citizens/how-to-use-tools/using-email",
-              "route": "^/citizens/how-to-use-tools/using-email$"
+              "path": "/citizens/how-to-use-tools/how-to-use-email",
+              "route": "^/citizens/how-to-use-tools/how-to-use-email$"
             },
             {
-              "label": "Computer terms and jargon",
+              "label": "How to watch or listen to online content",
               "description": " ",
-              "path": "/citizens/how-to-choose-bundle/computer-terms-and-jargon",
-              "route": "^/citizens/how-to-use-tools/computer-terms-and-jargon$"
+              "path": "/citizens/how-to-use-tools/how-to-watch-online",
+              "route": "^/citizens/how-to-use-tools/how-to-watch-online$"
             }
           ]
+        },
+        {
+          "label": "Computer terms and jargon",
+          "description": "The online world is full of jargon like, ‘inbox’, ‘spam’ and ‘upload’. It can be very confusing to someone who never used the internet. Here are some common jargon words you may see or hear.",
+          "path": "/citizens/computer-terms-and-jargon",
+          "route": "^/citizens/computer-terms-and-jargon$"
         }
       ]
     },

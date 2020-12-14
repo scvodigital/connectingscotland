@@ -99,9 +99,7 @@
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full hide-lg pull-right" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
               {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
-              {{#unless (compare label "Citizens")}}
               <li><a class="mdc-tab{{#ifAll (compare label 'Home') (compare @root.request.url.pathname '/')}} mdc-tab--active{{else}}{{#if (regexMatch @root.request.url.pathname (replace route '$' '') 'gi')}} mdc-tab--active{{/if}}{{/ifAll}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
-              {{/unless}}
               {{/each ~}}
             </ul>
           </nav>
@@ -178,7 +176,6 @@
         <div class="b-margin-full v-padding-full">
           <ul class="menu b-padding-full">
             {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
-            {{#unless (compare label "For citizens")}}
             <li class="menu-item">
               <a href="{{stripTrailingSlash path}}" class="{{#if (regexMatch @root.request.url.pathname route 'gi')}} active{{/if}}">
                 {{#if icon ~}}
@@ -187,7 +184,6 @@
                 {{{label}}}
               </a>
             </li>
-            {{/unless}}
             {{/each ~}}
           </ul>
           {{!-- <h5 class="x-padding">Our sites</h5>
