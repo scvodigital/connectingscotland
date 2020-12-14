@@ -9,11 +9,11 @@
       "label": "Citizens",
       "path": "/citizens",
       "route": "^/citizens$",
-      "description": "Information on supporting friends and family with digital skills",
+      "description": "Information on supporting friends and family with digital skills.",
       "children": [
         {
           "label": "How to choose a device & internet",
-          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
+          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need.",
           "icon": "desktop",
           "path": "/citizens/how-to-choose-bundle",
           "route": "^/citizens/how-to-choose-bundle$",
@@ -21,7 +21,7 @@
             {
               "label": "How to choose a device",
               "icon": "question-square",
-              "description": "Information on the different types of device and how to choose one",
+              "description": "Information on the different types of device and how to choose one.",
               "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
               "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
             },
@@ -43,20 +43,20 @@
         },
         {
           "label": "How to set up device & internet",
-          "description": "Information on how to set up the device and how to set up the mi-fi",
+          "description": "Information on how to set up the device and how to set up the mi-fi.",
           "icon": "cogs",
           "path": "/citizens/how-to-set-up-device-and-internet",
           "route": "^/citizens/how-to-set-up-device-and-internet$",
           "children": [
             {
-              "label": "How to set up the device",
+              "label": "How to set up the device.",
               "description": " ",
               "icon": "laptop-house",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device",
               "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device$"
             },
             {
-              "label": "How to set up the internet connection",
+              "label": "How to set up the internet connection.",
               "description": " ",
               "icon": "house-signal",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
@@ -66,7 +66,7 @@
         },
         {
           "label": "How to use your device",
-          "description": "Information on how to switch on and use the device",
+          "description": "Information on how to switch on and use the device.",
           "icon": "laptop-house",
           "path": "/citizens/basics-on-how-to-use-device",
           "route": "^/citizens/basics-on-how-to-use-device$",
@@ -89,7 +89,7 @@
         },
         {
           "label": "How to stay safe online",
-          "description": "It’s important that you know how to keep yourself safe online.",
+          "description": "It is important that you know how to keep yourself safe online.",
           "icon": "user-shield",
           "path": "/citizens/how-to-stay-safe-online",
           "route": "^/citizens/how-to-stay-safe-online$"
@@ -123,7 +123,7 @@
               "route": "^/citizens/how-to-use-tools/how-to-use-email$"
             },
             {
-              "label": "How to watch or listen to online content",
+              "label": "How to watch or listen to online content.",
               "description": "There is a diverse range of entertainment/culture available online.",
               "icon": "film-alt",
               "path": "/citizens/how-to-use-tools/how-to-watch-online",
