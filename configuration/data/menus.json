@@ -44,7 +44,7 @@
         {
           "label": "How to set up device & internet",
           "description": "Information on how to set up the device and how to set up the mi-fi",
-          "icon": "cog",
+          "icon": "cogs",
           "path": "/citizens/how-to-set-up-device-and-internet",
           "route": "^/citizens/how-to-set-up-device-and-internet$",
           "children": [
@@ -86,6 +86,13 @@
               "route": "^/citizens/basics-on-how-to-use-device/using-a-chromebook$"
             }
           ]
+        },
+        {
+          "label": "How to stay safe online",
+          "description": "It’s important that you know how to keep yourself safe online.",
+          "icon": "user-shield",
+          "path": "/citizens/how-to-stay-safe-online",
+          "route": "^/citizens/how-to-stay-safe-online$"
         },
         {
           "label": "How to do things",
