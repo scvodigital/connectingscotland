@@ -49,14 +49,14 @@
           "route": "^/citizens/how-to-set-up-device-and-internet$",
           "children": [
             {
-              "label": "How to set up the device.",
+              "label": "How to set up the device",
               "description": " ",
               "icon": "laptop-house",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device",
               "route": "^/citizens/how-to-set-up-device-and-internet/how-to-set-up-the-device$"
             },
             {
-              "label": "How to set up the internet connection.",
+              "label": "How to set up the internet connection",
               "description": " ",
               "icon": "house-signal",
               "path": "/citizens/how-to-set-up-device-and-internet/how-to-set-up-mifi",
