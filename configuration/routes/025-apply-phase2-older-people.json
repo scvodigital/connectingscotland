@@ -1,7 +1,7 @@
 {
   "name": "page_apply-phase2-older-people",
   "debug": false,
-  "pattern": "/organisations/forms/phase-2-older-people",
+  "pattern": "/organisations/form/older-and-disabled-people",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },

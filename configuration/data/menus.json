@@ -160,11 +160,6 @@
           "route": "/organisations/older-disabled-people-application-faqs"
         },
         {
-          "label": "Application",
-          "path": "/organisations/forms/phase-2-older-people",
-          "route": "^/organisations/forms/phase-2-older-people"
-        },
-        {
           "label": "Families & care leavers",
           "heading": true
         },
@@ -177,11 +172,6 @@
           "label": "FAQs",
           "path": "/organisations/faqs",
           "route": "^/organisations/faqs"
-        },
-        {
-          "label": "Application",
-          "path": "/organisations/apply",
-          "route": "^/organisations/apply"
         },
         {
           "label": "Care homes",
