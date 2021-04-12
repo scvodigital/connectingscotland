@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function checkProject(evt) {
     var projectId = evt.target.value = evt.target.value.toUpperCase();
-    if (evt.ctrlKey || projectId.match(/^CS-[0-9]{3}/)) {
+    if (evt.ctrlKey || projectId.match(/^CS-[0-9]{2,3}/)) {
       var url = '/forms/recipient-data/' + projectId;
       $('#submit_button')
         .removeAttr('disabled', false)
