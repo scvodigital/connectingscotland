@@ -303,6 +303,11 @@
           "label": "Share your stories",
           "path": "/digital-champions/share-your-stories",
           "route": "^/digital-champions/share-your-stories$"
+        },
+        {
+          "label": "Spotlight",
+          "path": "/digital-champions/spotlight",
+          "route": "^/digital-champions/spotlight$"
         }
       ]
     }
