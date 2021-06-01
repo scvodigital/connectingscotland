@@ -1,7 +1,7 @@
 {
   "name": "page_apply-phase3",
   "debug": true,
-  "pattern": "/organisations/form/families-and-care-leavers",
+  "pattern": "/organisations/form/phase-3",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },
