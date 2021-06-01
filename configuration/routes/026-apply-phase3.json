@@ -1,7 +1,7 @@
 {
-  "name": "page_apply-phase2",
-  "debug": false,
-  "pattern": "_legacy_/organisations/form/families-and-care-leavers",
+  "name": "page_apply-phase3",
+  "debug": true,
+  "pattern": "/organisations/form/families-and-care-leavers",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },
@@ -22,9 +22,9 @@
           "default": {
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
-              "head": ">context.metaData.handlebars.templates.head-tags",
+              "head": ">context.metaData.handlebars.templates.forms_head-apply-phase3",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase2",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase3",
               "foot": ""
             },
             "contentType": "text/html"
