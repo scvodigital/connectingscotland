@@ -146,50 +146,81 @@
       "route": "^/organisations$",
       "children": [
         {
-          "label": "Older & disabled people",
+          "label": "Employability",
           "heading": true
         },
         {
           "label": "Guidance",
-          "path": "/organisations/older-disabled-people-application-guidance",
-          "route": "^/organisations/older-disabled-people-application-guidance$"
+          "path": "/organisations/employability/guidance",
+          "route": "^/organisations/employability/guidance$"
         },
         {
           "label": "FAQs",
-          "path": "/organisations/older-disabled-people-application-faqs",
-          "route": "/organisations/older-disabled-people-application-faqs"
-        },
-        {
-          "label": "Families & care leavers",
-          "heading": true
-        },
-        {
-          "label": "Guidance",
-          "path": "/organisations/application-guidance",
-          "route": "^/organisations/application-guidance$"
-        },
-        {
-          "label": "FAQs",
-          "path": "/organisations/faqs",
-          "route": "^/organisations/faqs"
-        },
-        {
-          "label": "Care homes",
-          "heading": true
+          "path": "/organisations/employability/faqs",
+          "route": "^/organisations/employability/faqs$"
         },
         {
           "label": "Application",
-          "path": "/organisations/forms/residential-care-application",
-          "route": "^/organisations/forms/residential-care-application"
+          "path": "/organisations/employability/apply",
+          "route": "^/organisations/employability/apply$"
+        },
+        {
+          "label": "Fast track",
+          "heading": true
+        },
+        {
+          "label": "Guidance",
+          "path": "/organisations/fast-track/guidance",
+          "route": "^/organisations/fast-track/guidance$"
+        },
+        {
+          "label": "FAQs",
+          "path": "/organisations/fast-track/faqs",
+          "route": "^/organisations/fast-track/faqs$"
+        },
+        {
+          "label": "Application",
+          "path": "/organisations/fast-track/apply",
+          "route": "^/organisations/fast-track/apply$"
         },
         {
           "label": "Existing projects",
           "heading": true
         },
         {
-          "label": "Welcome pack",
-          "path": "/organisations/welcome-pack",
-          "route": "^/organisations/welcome-pack"
+          "label": "Previous phases",
+          "path": "/organisations/existing-projects/previous-phases",
+          "route": "^/organisations/existing-projects/previous-phases$"
+        },
+        {
+          "label": "Roles and responsibilities",
+          "path": "/organisations/existing-projects/roles-and-responsibilities",
+          "route": "^/organisations/existing-projects/roles-and-responsibilities$"
+        },
+        {
+          "label": "Documents and downloads",
+          "path": "/organisations/existing-projects/documents-and-downloads",
+          "route": "^/organisations/existing-projects/documents-and-downloads$"
+        },
+        {
+          "label": "Devices and connectivity",
+          "path": "/organisations/existing-projects/devices-and-connectivity",
+          "route": "^/organisations/existing-projects/devices-and-connectivity$"
+        },
+        {
+          "label": "Digital Champion training",
+          "path": "/organisations/existing-projects/digital-champion-training",
+          "route": "^/organisations/existing-projects/digital-champion-training$"
+        },
+        {
+          "label": "Monitoring and evaluation",
+          "path": "/organisations/existing-projects/monitoring-and-evaluation",
+          "route": "^/organisations/existing-projects/monitoring-and-evaluation$"
+        },
+        {
+          "label": "Further support",
+          "path": "/organisations/existing-projects/further-support",
+          "route": "^/organisations/existing-projects/further-support$"
         }
       ]
     },
