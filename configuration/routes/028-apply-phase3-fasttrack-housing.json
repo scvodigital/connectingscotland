@@ -1,0 +1,36 @@
+{
+  "name": "page_apply-phase3-fasttrack-housing",
+  "debug": true,
+  "pattern": "/organisations/fast-track-housing/apply-test",
+  "metaData": {
+    "title": "Application form - Connecting Scotland"
+  },
+  "tasks": [
+    "context.metaData.commonTasks.currentSite",
+    {
+      "name": "destination",
+      "taskModule": "renderLayout",
+      "renderer": "handlebars",
+      "config": {
+        "logic": {
+          "if": [
+            "default"
+          ]
+        },
+        "output": "body",
+        "layouts": {
+          "default": {
+            "layout": ">context.metaData.handlebars.layouts.default",
+            "parts": {
+              "head": ">context.metaData.handlebars.templates.forms_head-apply-phase3-fasttrack-housing",
+              "header": ">context.metaData.handlebars.templates.header-page",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase3-fasttrack-housing",
+              "foot": ""
+            },
+            "contentType": "text/html"
+          }
+        }
+      }
+    }
+  ]
+}
