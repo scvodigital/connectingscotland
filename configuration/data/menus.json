@@ -184,7 +184,7 @@
           "route": "^/organisations/fast-track/apply$"
         },
         {
-          "label": "Fast track - housing",
+          "label": "Social housing",
           "heading": true
         },
         {
