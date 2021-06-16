@@ -1,6 +1,6 @@
 {
   "name": "@scvo/connectingscotland",
-  "version": "0.0.167",
+  "version": "0.0.168",
   "description": "Site configuration and assets for connecting.scot",
   "main": "index.js",
   "scripts": {
