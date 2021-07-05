@@ -160,11 +160,6 @@
           "route": "^/organisations/employability/faqs$"
         },
         {
-          "label": "Application",
-          "path": "/organisations/employability/apply",
-          "route": "^/organisations/employability/apply$"
-        },
-        {
           "label": "Fast track",
           "heading": true
         },
