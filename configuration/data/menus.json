@@ -146,20 +146,6 @@
       "route": "^/organisations$",
       "children": [
         {
-          "label": "Employability",
-          "heading": true
-        },
-        {
-          "label": "Guidance",
-          "path": "/organisations/employability/guidance",
-          "route": "^/organisations/employability/guidance$"
-        },
-        {
-          "label": "FAQs",
-          "path": "/organisations/employability/faqs",
-          "route": "^/organisations/employability/faqs$"
-        },
-        {
           "label": "Fast track",
           "heading": true
         },
