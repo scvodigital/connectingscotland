@@ -1,0 +1,996 @@
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(){
+  const FORM_TIME_START = Math.floor((new Date).getTime()/1000);
+  let formElement = document.getElementById("tfa_0");
+  if (null === formElement) {
+    formElement = document.getElementById("0");
+  }
+  let appendJsTimerElement = function(){
+    let formTimeDiff = Math.floor((new Date).getTime()/1000) - FORM_TIME_START;
+    let cumulatedTimeElement = document.getElementById("tfa_dbCumulatedTime");
+    if (null !== cumulatedTimeElement) {
+      let cumulatedTime = parseInt(cumulatedTimeElement.value);
+      if (null !== cumulatedTime && cumulatedTime > 0) {
+        formTimeDiff += cumulatedTime;
+      }
+    }
+    let jsTimeInput = document.createElement("input");
+    jsTimeInput.setAttribute("type", "hidden");
+    jsTimeInput.setAttribute("value", formTimeDiff.toString());
+    jsTimeInput.setAttribute("name", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("id", "tfa_dbElapsedJsTime");
+    jsTimeInput.setAttribute("autocomplete", "off");
+    if (null !== formElement) {
+      formElement.appendChild(jsTimeInput);
+    }
+  };
+  if (null !== formElement) {
+    if(formElement.addEventListener){
+      formElement.addEventListener('submit', appendJsTimerElement, false);
+    } else if(formElement.attachEvent){
+      formElement.attachEvent('onsubmit', appendJsTimerElement);
+    }
+  }
+});
+</script>
+
+<link href="https://www.tfaforms.com/dist/form-builder/5.0.0/wforms-jsonly.css?v=1627897552" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms.js?v=1627897552"></script>
+<script type="text/javascript">
+wFORMS.behaviors.prefill.skip = false;
+</script>
+<link rel="stylesheet" type="text/css" href="https://www.tfaforms.com/css/kalendae.css" />
+<script type="text/javascript" src="https://www.tfaforms.com/js/kalendae/kalendae.standalone.min.js" ></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/wforms_calendar.js"></script>
+<script type="text/javascript" src="https://www.tfaforms.com/wForms/3.11/js/localization-en_GB.js?v=1627897552"></script>
+
+<ul class="breadcrumb breadcrumb-length-2" aria-hidden="true">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/organisations/">Organisations</a></li>
+  <li class="breadcrumb-item">Recipient data</li>
+</ul>
+
+<!-- FORM: BODY SECTION -->
+<div class="wFormContainer detail">
+  {{#withExtend this project=@root.data.project_data.request.data.data_object.get_data.records.[0]}}
+  {{#if project}}
+  <div class="wFormHeader"></div>
+  <div class="wForm" id="4922889-WRPR" dir="ltr">
+    <div class="codesection" id="code-4922889"></div>
+    <h1 class="wFormTitle" id="4922889-T">Device request form</h1>
+
+    <p>
+      Connecting Scotland (https://connecting.scot) is a programme set up by the Scottish Government to tackle digital exclusion. It provides devices, internet connections and support to people on low incomes to get online.
+    </p>
+    <p>
+      You have been identified as eligible for a device through the current application round, which is supporting unemployed people. The device and, where applicable, the internet connectivity will be provided to you at no cost.
+    </p>
+    <p>
+      Please complete this form to request a device. This information will be shared with the organisations involved in managing Connecting Scotland: the Scottish Government, the Scottish Council for Voluntary Organisations (SCVO) and your local Council.
+    </p>
+
+    <p>
+      <span class="text-error">*</span> Required field
+    </p>
+
+    <form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" id="4922889" role="form">
+      {{!-- <h2>Your details</h2> --}}
+      <div class="form-group oneField field-container-D" id="tfa_4-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_4-L" class="form-label preField reqMark" for="tfa_4">Project reference number {{#unless @root.request.params.project_ref}}(e.g. CS-0001){{/unless}}</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_4" name="tfa_4" value="{{@root.request.params.project_ref}}" autocomplete="nope" data-lpignore="true" class="form-input required" required {{#if @root.request.params.project_ref}}readonly{{/if}}>
+        </div>
+      </div>
+      <div class="form-group oneField field-container-D" id="tfa_2-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_2-L" class="form-label preField reqMark" for="tfa_2">Your organisation</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="tfa_2" name="tfa_2" value="{{project.Name_of_Organisation__c}}" autocomplete="nope" data-lpignore="true" class="form-input required" required {{#if project.Name_of_Organisation__c}}readonly{{/if}}>
+          <p class="caption">
+            If these details are incorrect, please go back and <a href="/forms/recipient-data">enter your correct project reference number</a> or email <a href="mailto:help@connecting.scot">help@connecting.scot</a> if the issue persists
+          </p>
+        </div>
+      </div>
+      <div id="tfa_277" class="section">
+        <h2 id="tfa_277-L h3">About you</h2>
+        <div class="form-group oneField field-container-D" id="tfa_5-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_5-L" class="form-label preField reqMark" for="tfa_5">First name</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_5" name="tfa_5" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_6-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_6-L" class="form-label preField reqMark" for="tfa_6">Last name</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_6" name="tfa_6" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_8-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_8-L" class="form-label preField " for="tfa_8">Date of birth</label>
+          </div>
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 has-icon-right">
+            <input type="text" id="tfa_8" name="tfa_8" value="" autocomplete="off" data-lpignore="true" class="validate-datecal c-hand form-input">
+            <i class="form-icon far fa-calendar-alt r-margin-full"></i>
+          </div>
+        </div>
+
+        <h2>Your contact details</h2>
+        <p>
+          If you have an email address or mobile phone number, please enter it below. We will use this to contact you to provide you with important information regarding the project, your device or your internet connection or ask for your feedback.
+        </p>
+        <div class="form-group oneField field-container-D" id="tfa_9-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_9-L" class="form-label preField " for="tfa_9">Email address</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_9" name="tfa_9" value="" autocomplete="nope" data-lpignore="true" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_7-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_7-L" class="form-label preField " for="tfa_7">Phone number</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_7" name="tfa_7" value="" autocomplete="nope" data-lpignore="true" class="form-input">
+          </div>
+        </div>
+
+        <h2>Recipient address</h2>
+        <div class="form-group oneField field-container-D" id="tfa_23-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_23-L" class="form-label preField reqMark" for="tfa_23">Address line 1</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_23" name="tfa_23" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_24-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_24-L" class="form-label preField " for="tfa_24">Address line 2</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_24" name="tfa_24" value="" autocomplete="nope" data-lpignore="true" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_25-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_25-L" class="form-label preField " for="tfa_25">Address line 3</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_25" name="tfa_25" value="" autocomplete="nope" data-lpignore="true" class="form-input">
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_26-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_26-L" class="form-label preField reqMark" for="tfa_26">Town/city</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_26" name="tfa_26" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_27-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_27-L" class="form-label preField reqMark" for="tfa_27">Postcode</label>
+          </div>
+          <div class="col-3 col-xl-5 col-lg-7 col-md-6 col-sm-12">
+            <input type="text" id="tfa_27" name="tfa_27" value="" title="Please enter a valid UK postcode" pattern="^(([gG][iI][rR] {0,}0[aA]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y]?[0-9][0-9]?)|(([a-pr-uwyzA-PR-UWYZ][0-9][a-hjkstuwA-HJKSTUW])|([a-pr-uwyzA-PR-UWYZ][a-hk-yA-HK-Y][0-9][abehmnprv-yABEHMNPRV-Y]))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2}))$" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_28-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_28-L" class="form-label preField reqMark" for="tfa_28">Local authority</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_28" name="tfa_28" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_29" id="tfa_29">Aberdeen</option>
+              <option value="tfa_30" id="tfa_30">Aberdeenshire</option>
+              <option value="tfa_31" id="tfa_31">Angus</option>
+              <option value="tfa_32" id="tfa_32">Argyll &amp; Bute</option>
+              <option value="tfa_33" id="tfa_33">Clackmannanshire</option>
+              <option value="tfa_34" id="tfa_34">Dumfries &amp; Galloway</option>
+              <option value="tfa_35" id="tfa_35">Dundee</option>
+              <option value="tfa_36" id="tfa_36">East Ayrshire</option>
+              <option value="tfa_37" id="tfa_37">East Dunbartonshire</option>
+              <option value="tfa_38" id="tfa_38">East Lothian</option>
+              <option value="tfa_39" id="tfa_39">East Renfrewshire</option>
+              <option value="tfa_40" id="tfa_40">Edinburgh</option>
+              <option value="tfa_41" id="tfa_41">Falkirk</option>
+              <option value="tfa_42" id="tfa_42">Fife</option>
+              <option value="tfa_43" id="tfa_43">Glasgow</option>
+              <option value="tfa_44" id="tfa_44">Highland</option>
+              <option value="tfa_45" id="tfa_45">Inverclyde</option>
+              <option value="tfa_46" id="tfa_46">Midlothian</option>
+              <option value="tfa_47" id="tfa_47">Moray</option>
+              <option value="tfa_48" id="tfa_48">Na h-Eileanan Siar</option>
+              <option value="tfa_49" id="tfa_49">North Ayrshire</option>
+              <option value="tfa_50" id="tfa_50">North Lanarkshire</option>
+              <option value="tfa_51" id="tfa_51">Orkney</option>
+              <option value="tfa_52" id="tfa_52">Perth &amp; Kinross</option>
+              <option value="tfa_53" id="tfa_53">Renfrewshire</option>
+              <option value="tfa_54" id="tfa_54">Scottish Borders</option>
+              <option value="tfa_55" id="tfa_55">Shetland</option>
+              <option value="tfa_56" id="tfa_56">South Ayrshire</option>
+              <option value="tfa_57" id="tfa_57">South Lanarkshire</option>
+              <option value="tfa_58" id="tfa_58">Stirling</option>
+              <option value="tfa_59" id="tfa_59">West Dunbartonshire</option>
+              <option value="tfa_60" id="tfa_60">West Lothian</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>Understanding you</h2>
+        <p>
+          These questions help us understand the type of people Connecting Scotland is supporting.
+        </p>
+
+        <div class="form-group oneField field-container-D" id="tfa_13-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_13-L" class="form-label preField reqMark" for="tfa_13">Do you consider yourself to have a disability?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_13" name="tfa_13" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_14" id="tfa_14">Yes</option>
+              <option value="tfa_15" id="tfa_15">No</option>
+              <option value="tfa_16" id="tfa_16">Rather not say</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_679-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_679-L" class="form-label preField reqMark" for="tfa_679">Do you look after a friend, family member or neighbour due to old age, physical or mental illness, disability, or an addiction? This is sometimes called being an unpaid carer.</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_679" name="tfa_679" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_680" id="tfa_680">Yes</option>
+              <option value="tfa_681" id="tfa_681">No</option>
+              <option value="tfa_682" id="tfa_682">Rather not say</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_687-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_687-L" class="form-label preField reqMark" for="tfa_687">How long have you been unemployed?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_687" name="tfa_687" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_688" id="tfa_688">I am in low-paid work</option>
+              <option value="tfa_689" id="tfa_689">Up to 3 months</option>
+              <option value="tfa_690" id="tfa_690">Up to 6 months</option>
+              <option value="tfa_691" id="tfa_691">Up to 1 year</option>
+              <option value="tfa_692" id="tfa_692">More than 1 year</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_693-D" role="radiogroup" aria-labelledby="tfa_693-L" data-tfa-labelledby="-L tfa_693-L">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_693-L" class="form-label preField reqMark">Which of the following best describes your readiness for a job?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <span id="tfa_693" class="choices vertical ">
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_694-L" for="tfa_694">
+                  <input type="radio" value="tfa_694" id="tfa_694" name="tfa_693" aria-labelledby="tfa_694-L" data-tfa-labelledby="tfa_693-L tfa_694-L">
+                  <span class="form-icon"></span>
+                  I don’t feel ready for a job. I’m not sure what sorts of things I should be doing and I would need support to get started
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_695-L" for="tfa_695">
+                  <input type="radio" value="tfa_695" id="tfa_695" name="tfa_693" aria-labelledby="tfa_695-L" data-tfa-labelledby="tfa_693-L tfa_695-L">
+                  <span class="form-icon"></span>
+                  I would like to find a job but there are things in my personal life (such as my mental health, my financial situation) that I need to deal with first.
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_696-L" for="tfa_696">
+                  <input type="radio" value="tfa_696" id="tfa_696" name="tfa_693" aria-labelledby="tfa_696-L" data-tfa-labelledby="tfa_693-L tfa_696-L">
+                  <span class="form-icon"></span>
+                  I feel I would be ready for a job if I had more workplace training, skills or experience.
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_697-L" for="tfa_697">
+                  <input type="radio" value="tfa_697" id="tfa_697" name="tfa_693" aria-labelledby="tfa_697-L" data-tfa-labelledby="tfa_693-L tfa_697-L">
+                  <span class="form-icon"></span>
+                  I feel ready to start a job but I need to find opportunities that are right for me, work on applications and prepare for interviews.
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_698-L" for="tfa_698">
+                  <input type="radio" value="tfa_698" id="tfa_698" name="tfa_693" aria-labelledby="tfa_698-L" data-tfa-labelledby="tfa_693-L tfa_698-L">
+                  <span class="form-icon"></span>
+                  I am currently in employment but I am looking for opportunities to move into a different job or position.
+                </label>
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_704-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_704-L" class="form-label preField reqMark" for="tfa_704">Over the past 3 months, have you been paid through a casual or zero-hour contract, or undertaken any temporary work?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_704" name="tfa_704" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_705" id="tfa_705">Yes</option>
+              <option value="tfa_708" id="tfa_708">No</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_77-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_77-L" class="form-label preField reqMark" for="tfa_77">How would you rate your own level of digital skills and confidence?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_77" name="tfa_77" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_78" id="tfa_78">None</option>
+              <option value="tfa_79" id="tfa_79">Low</option>
+              <option value="tfa_80" id="tfa_80">Average</option>
+              <option value="tfa_81" id="tfa_81">High</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>Your household</h2>
+        <p>
+          Where you normally live, do you currently have regular access to&hellip;
+        </p>
+        <div class="form-group oneField field-container-D" id="tfa_61-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_61-L" class="form-label preField reqMark" for="tfa_61">A mobile phone with access to the internet</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_61" name="tfa_61" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_62" id="tfa_62">Yes</option>
+              <option value="tfa_63" id="tfa_63">No</option>
+              <option value="tfa_64" id="tfa_64">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_65-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_65-L" class="form-label preField reqMark" for="tfa_65">Broadband / WiFi</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_65" name="tfa_65" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_66" id="tfa_66">Yes</option>
+              <option value="tfa_67" id="tfa_67">No</option>
+              <option value="tfa_68" id="tfa_68">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_69-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_69-L" class="form-label preField reqMark" for="tfa_69">A tablet computer</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_69" name="tfa_69" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_70" id="tfa_70">Yes</option>
+              <option value="tfa_71" id="tfa_71">No</option>
+              <option value="tfa_72" id="tfa_72">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_73-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_73-L" class="form-label preField reqMark" for="tfa_73">A laptop or desktop computer</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_73" name="tfa_73" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_74" id="tfa_74">Yes</option>
+              <option value="tfa_75" id="tfa_75">No</option>
+              <option value="tfa_76" id="tfa_76">Unknown</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_712-D" role="radiogroup" aria-labelledby="tfa_712-L" data-tfa-labelledby="-L tfa_712-L">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_712-L" class="form-label preField reqMark">Do you require an internet connection (through a mobile WiFi device) to be provided by Connecting Scotland?</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <span id="tfa_712" class="choices vertical ">
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_713-L" for="tfa_713">
+                  <input type="radio" value="tfa_713" id="tfa_713" name="tfa_712" aria-labelledby="tfa_713-L" data-tfa-labelledby="tfa_712-L tfa_713-L">
+                  <span class="form-icon"></span>
+                  No – I already have access to an internet connection at home
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_714-L" for="tfa_714">
+                  <input type="radio" value="tfa_714" id="tfa_714" name="tfa_712" aria-labelledby="tfa_714-L" data-tfa-labelledby="tfa_712-L tfa_714-L">
+                  <span class="form-icon"></span>
+                  Yes – I need the mobile WiFi for internet access
+                </label>
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group oneField field-container-D" id="tfa_10-D" role="radiogroup" aria-labelledby="tfa_10-L" data-tfa-labelledby="-L tfa_10-L">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_10-L" class="form-label preField reqMark">Will the device provided by Connecting Scotland be used</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <span id="tfa_10" class="choices vertical ">
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_11-L" for="tfa_11">
+                  <input type="radio" value="tfa_11" id="tfa_11" name="tfa_10" aria-labelledby="tfa_11-L" data-tfa-labelledby="tfa_10-L tfa_11-L">
+                  <span class="form-icon"></span>
+                  Only by you
+                </label>
+              </span>
+              <span class="oneChoice">
+                <label class="form-radio postField" id="tfa_12-L" for="tfa_12">
+                  <input type="radio" value="tfa_12" id="tfa_12" name="tfa_10" aria-labelledby="tfa_12-L" data-tfa-labelledby="tfa_10-L tfa_12-L">
+                  <span class="form-icon"></span>
+                  By you and other people in your household
+                </label>
+              </span>
+            </span>
+          </div>
+        </div>
+
+        {{!-- <div class="form-group oneField field-container-D" id="tfa_77-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_77-L" class="form-label preField reqMark" for="tfa_77">Estimated level of digital skills and confidence</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_77" name="tfa_77" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_78" id="tfa_78">None</option>
+              <option value="tfa_79" id="tfa_79">Low</option>
+              <option value="tfa_80" id="tfa_80">Average</option>
+              <option value="tfa_81" id="tfa_81">High</option>
+            </select>
+          </div>
+        </div> --}}
+        <h2>Household members - adults</h2>
+        <div class="form-group oneField field-container-D" id="tfa_82-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_82-L" class="form-label preField reqMark" for="tfa_82">Number of Adults aged 16-25</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_82" name="tfa_82" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_282" id="tfa_282">0</option>
+              <option value="tfa_83" id="tfa_83">1</option>
+              <option value="tfa_84" id="tfa_84">2</option>
+              <option value="tfa_85" id="tfa_85">3</option>
+              <option value="tfa_86" id="tfa_86">4</option>
+              <option value="tfa_87" id="tfa_87">5</option>
+              <option value="tfa_88" id="tfa_88">More than 5</option>
+              <option value="tfa_89" id="tfa_89">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_98-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_98-L" class="form-label preField reqMark" for="tfa_98">Number of Adults aged 26-40</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_98" name="tfa_98" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_283" id="tfa_283">0</option>
+              <option value="tfa_99" id="tfa_99">1</option>
+              <option value="tfa_100" id="tfa_100">2</option>
+              <option value="tfa_101" id="tfa_101">3</option>
+              <option value="tfa_102" id="tfa_102">4</option>
+              <option value="tfa_103" id="tfa_103">5</option>
+              <option value="tfa_104" id="tfa_104">More than 5</option>
+              <option value="tfa_105" id="tfa_105">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_114-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_114-L" class="form-label preField reqMark" for="tfa_114">Number of Adults aged 41-60</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_114" name="tfa_114" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_280" id="tfa_280">0</option>
+              <option value="tfa_115" id="tfa_115">1</option>
+              <option value="tfa_116" id="tfa_116">2</option>
+              <option value="tfa_117" id="tfa_117">3</option>
+              <option value="tfa_118" id="tfa_118">4</option>
+              <option value="tfa_119" id="tfa_119">5</option>
+              <option value="tfa_120" id="tfa_120">More than 5</option>
+              <option value="tfa_121" id="tfa_121">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_130-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_130-L" class="form-label preField reqMark" for="tfa_130">Number of Adults aged 61-70</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_130" name="tfa_130" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_281" id="tfa_281">0</option>
+              <option value="tfa_131" id="tfa_131">1</option>
+              <option value="tfa_132" id="tfa_132">2</option>
+              <option value="tfa_133" id="tfa_133">3</option>
+              <option value="tfa_134" id="tfa_134">4</option>
+              <option value="tfa_135" id="tfa_135">5</option>
+              <option value="tfa_136" id="tfa_136">More than 5</option>
+              <option value="tfa_137" id="tfa_137">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_146-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_146-L" class="form-label preField reqMark" for="tfa_146">Number of Adults aged 71-80</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_146" name="tfa_146" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_279" id="tfa_279">0</option>
+              <option value="tfa_147" id="tfa_147">1</option>
+              <option value="tfa_148" id="tfa_148">2</option>
+              <option value="tfa_149" id="tfa_149">3</option>
+              <option value="tfa_150" id="tfa_150">4</option>
+              <option value="tfa_151" id="tfa_151">5</option>
+              <option value="tfa_152" id="tfa_152">More than 5</option>
+              <option value="tfa_153" id="tfa_153">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_162-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_162-L" class="form-label preField reqMark" for="tfa_162">Number of Adults aged 81+</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_162" name="tfa_162" class="form-select required" required>
+              <option value="" disabled selected>Please select&hellip;</option>
+              <option value="tfa_278" id="tfa_278">0</option>
+              <option value="tfa_163" id="tfa_163">1</option>
+              <option value="tfa_164" id="tfa_164">2</option>
+              <option value="tfa_165" id="tfa_165">3</option>
+              <option value="tfa_166" id="tfa_166">4</option>
+              <option value="tfa_167" id="tfa_167">5</option>
+              <option value="tfa_168" id="tfa_168">More than 5</option>
+              <option value="tfa_169" id="tfa_169">Unknown</option>
+            </select>
+          </div>
+        </div>
+        <h2>Household members - children</h2>
+        <div class="form-group oneField field-container-D" id="tfa_300-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_300-L" class="form-label preField reqMark" for="tfa_300">Total number of children in household</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_300" name="tfa_300" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_672" id="tfa_672">0</option>
+              <option value="tfa_301" id="tfa_301" data-conditionals="#tfa_311">1</option>
+              <option value="tfa_302" id="tfa_302" data-conditionals="#tfa_349,#tfa_311">2</option>
+              <option value="tfa_303" id="tfa_303" data-conditionals="#tfa_387,#tfa_349,#tfa_311">3</option>
+              <option value="tfa_304" id="tfa_304" data-conditionals="#tfa_425,#tfa_387,#tfa_349,#tfa_311">4</option>
+              <option value="tfa_305" id="tfa_305" data-conditionals="#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">5</option>
+              <option value="tfa_306" id="tfa_306" data-conditionals="#tfa_501,#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">6</option>
+              <option value="tfa_307" id="tfa_307" data-conditionals="#tfa_539,#tfa_501,#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">7</option>
+              <option value="tfa_308" id="tfa_308" data-conditionals="#tfa_577,#tfa_539,#tfa_501,#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">8</option>
+              <option value="tfa_309" id="tfa_309" data-conditionals="#tfa_615,#tfa_577,#tfa_539,#tfa_501,#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">9</option>
+              <option value="tfa_310" id="tfa_310" data-conditionals="#tfa_653,#tfa_615,#tfa_577,#tfa_539,#tfa_501,#tfa_463,#tfa_425,#tfa_387,#tfa_349,#tfa_311">10</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_311-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_311-L" class="form-label preField reqMark" for="tfa_311">Age of first child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_311" name="tfa_311" data-condition="`#tfa_301` OR `#tfa_302` OR `#tfa_303` OR `#tfa_304` OR `#tfa_305` OR `#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of first child"  class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_312" id="tfa_312">Unknown</option>
+              <option value="tfa_313" id="tfa_313">Under 1</option>
+              <option value="tfa_314" id="tfa_314">1</option>
+              <option value="tfa_315" id="tfa_315">2</option>
+              <option value="tfa_316" id="tfa_316">3</option>
+              <option value="tfa_317" id="tfa_317">4</option>
+              <option value="tfa_318" id="tfa_318">5</option>
+              <option value="tfa_319" id="tfa_319">6</option>
+              <option value="tfa_320" id="tfa_320">7</option>
+              <option value="tfa_321" id="tfa_321">8</option>
+              <option value="tfa_322" id="tfa_322">9</option>
+              <option value="tfa_323" id="tfa_323">10</option>
+              <option value="tfa_324" id="tfa_324">11</option>
+              <option value="tfa_325" id="tfa_325">12</option>
+              <option value="tfa_326" id="tfa_326">13</option>
+              <option value="tfa_327" id="tfa_327">14</option>
+              <option value="tfa_328" id="tfa_328">15</option>
+              <option value="tfa_329" id="tfa_329">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_349-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_349-L" class="form-label preField reqMark" for="tfa_349">Age of second child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_349" name="tfa_349" data-condition="`#tfa_302` OR `#tfa_303` OR `#tfa_304` OR `#tfa_305` OR `#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of second child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_350" id="tfa_350">Unknown</option>
+              <option value="tfa_351" id="tfa_351">Under 1</option>
+              <option value="tfa_352" id="tfa_352">1</option>
+              <option value="tfa_353" id="tfa_353">2</option>
+              <option value="tfa_354" id="tfa_354">3</option>
+              <option value="tfa_355" id="tfa_355">4</option>
+              <option value="tfa_356" id="tfa_356">5</option>
+              <option value="tfa_357" id="tfa_357">6</option>
+              <option value="tfa_358" id="tfa_358">7</option>
+              <option value="tfa_359" id="tfa_359">8</option>
+              <option value="tfa_360" id="tfa_360">9</option>
+              <option value="tfa_361" id="tfa_361">10</option>
+              <option value="tfa_362" id="tfa_362">11</option>
+              <option value="tfa_363" id="tfa_363">12</option>
+              <option value="tfa_364" id="tfa_364">13</option>
+              <option value="tfa_365" id="tfa_365">14</option>
+              <option value="tfa_366" id="tfa_366">15</option>
+              <option value="tfa_367" id="tfa_367">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_387-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_387-L" class="form-label preField reqMark" for="tfa_387">Age of third child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_387" name="tfa_387" data-condition="`#tfa_303` OR `#tfa_304` OR `#tfa_305` OR `#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of third child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_388" id="tfa_388">Unknown</option>
+              <option value="tfa_389" id="tfa_389">Under 1</option>
+              <option value="tfa_390" id="tfa_390">1</option>
+              <option value="tfa_391" id="tfa_391">2</option>
+              <option value="tfa_392" id="tfa_392">3</option>
+              <option value="tfa_393" id="tfa_393">4</option>
+              <option value="tfa_394" id="tfa_394">5</option>
+              <option value="tfa_395" id="tfa_395">6</option>
+              <option value="tfa_396" id="tfa_396">7</option>
+              <option value="tfa_397" id="tfa_397">8</option>
+              <option value="tfa_398" id="tfa_398">9</option>
+              <option value="tfa_399" id="tfa_399">10</option>
+              <option value="tfa_400" id="tfa_400">11</option>
+              <option value="tfa_401" id="tfa_401">12</option>
+              <option value="tfa_402" id="tfa_402">13</option>
+              <option value="tfa_403" id="tfa_403">14</option>
+              <option value="tfa_404" id="tfa_404">15</option>
+              <option value="tfa_405" id="tfa_405">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_425-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_425-L" class="form-label preField reqMark" for="tfa_425">Age of fourth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_425" name="tfa_425" data-condition="`#tfa_304` OR `#tfa_305` OR `#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of fourth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_426" id="tfa_426">Unknown</option>
+              <option value="tfa_427" id="tfa_427">Under 1</option>
+              <option value="tfa_428" id="tfa_428">1</option>
+              <option value="tfa_429" id="tfa_429">2</option>
+              <option value="tfa_430" id="tfa_430">3</option>
+              <option value="tfa_431" id="tfa_431">4</option>
+              <option value="tfa_432" id="tfa_432">5</option>
+              <option value="tfa_433" id="tfa_433">6</option>
+              <option value="tfa_434" id="tfa_434">7</option>
+              <option value="tfa_435" id="tfa_435">8</option>
+              <option value="tfa_436" id="tfa_436">9</option>
+              <option value="tfa_437" id="tfa_437">10</option>
+              <option value="tfa_438" id="tfa_438">11</option>
+              <option value="tfa_439" id="tfa_439">12</option>
+              <option value="tfa_440" id="tfa_440">13</option>
+              <option value="tfa_441" id="tfa_441">14</option>
+              <option value="tfa_442" id="tfa_442">15</option>
+              <option value="tfa_443" id="tfa_443">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_463-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_463-L" class="form-label preField reqMark" for="tfa_463">Age of fifth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_463" name="tfa_463" data-condition="`#tfa_305` OR `#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of fifth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_464" id="tfa_464">Unknown</option>
+              <option value="tfa_465" id="tfa_465">Under 1</option>
+              <option value="tfa_466" id="tfa_466">1</option>
+              <option value="tfa_467" id="tfa_467">2</option>
+              <option value="tfa_468" id="tfa_468">3</option>
+              <option value="tfa_469" id="tfa_469">4</option>
+              <option value="tfa_470" id="tfa_470">5</option>
+              <option value="tfa_471" id="tfa_471">6</option>
+              <option value="tfa_472" id="tfa_472">7</option>
+              <option value="tfa_473" id="tfa_473">8</option>
+              <option value="tfa_474" id="tfa_474">9</option>
+              <option value="tfa_475" id="tfa_475">10</option>
+              <option value="tfa_476" id="tfa_476">11</option>
+              <option value="tfa_477" id="tfa_477">12</option>
+              <option value="tfa_478" id="tfa_478">13</option>
+              <option value="tfa_479" id="tfa_479">14</option>
+              <option value="tfa_480" id="tfa_480">15</option>
+              <option value="tfa_481" id="tfa_481">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_501-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_501-L" class="form-label preField reqMark" for="tfa_501">Age of sixth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_501" name="tfa_501" data-condition="`#tfa_306` OR `#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of sixth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_502" id="tfa_502">Unknown</option>
+              <option value="tfa_503" id="tfa_503">Under 1</option>
+              <option value="tfa_504" id="tfa_504">1</option>
+              <option value="tfa_505" id="tfa_505">2</option>
+              <option value="tfa_506" id="tfa_506">3</option>
+              <option value="tfa_507" id="tfa_507">4</option>
+              <option value="tfa_508" id="tfa_508">5</option>
+              <option value="tfa_509" id="tfa_509">6</option>
+              <option value="tfa_510" id="tfa_510">7</option>
+              <option value="tfa_511" id="tfa_511">8</option>
+              <option value="tfa_512" id="tfa_512">9</option>
+              <option value="tfa_513" id="tfa_513">10</option>
+              <option value="tfa_514" id="tfa_514">11</option>
+              <option value="tfa_515" id="tfa_515">12</option>
+              <option value="tfa_516" id="tfa_516">13</option>
+              <option value="tfa_517" id="tfa_517">14</option>
+              <option value="tfa_518" id="tfa_518">15</option>
+              <option value="tfa_519" id="tfa_519">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_539-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_539-L" class="form-label preField reqMark" for="tfa_539">Age of seventh child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_539" name="tfa_539" data-condition="`#tfa_307` OR `#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of seventh child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_540" id="tfa_540">Unknown</option>
+              <option value="tfa_541" id="tfa_541">Under 1</option>
+              <option value="tfa_542" id="tfa_542">1</option>
+              <option value="tfa_543" id="tfa_543">2</option>
+              <option value="tfa_544" id="tfa_544">3</option>
+              <option value="tfa_545" id="tfa_545">4</option>
+              <option value="tfa_546" id="tfa_546">5</option>
+              <option value="tfa_547" id="tfa_547">6</option>
+              <option value="tfa_548" id="tfa_548">7</option>
+              <option value="tfa_549" id="tfa_549">8</option>
+              <option value="tfa_550" id="tfa_550">9</option>
+              <option value="tfa_551" id="tfa_551">10</option>
+              <option value="tfa_552" id="tfa_552">11</option>
+              <option value="tfa_553" id="tfa_553">12</option>
+              <option value="tfa_554" id="tfa_554">13</option>
+              <option value="tfa_555" id="tfa_555">14</option>
+              <option value="tfa_556" id="tfa_556">15</option>
+              <option value="tfa_557" id="tfa_557">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_577-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_577-L" class="form-label preField reqMark" for="tfa_577">Age of eighth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_577" name="tfa_577" data-condition="`#tfa_308` OR `#tfa_309` OR `#tfa_310`" title="Age of eighth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_578" id="tfa_578">Unknown</option>
+              <option value="tfa_579" id="tfa_579">Under 1</option>
+              <option value="tfa_580" id="tfa_580">1</option>
+              <option value="tfa_581" id="tfa_581">2</option>
+              <option value="tfa_582" id="tfa_582">3</option>
+              <option value="tfa_583" id="tfa_583">4</option>
+              <option value="tfa_584" id="tfa_584">5</option>
+              <option value="tfa_585" id="tfa_585">6</option>
+              <option value="tfa_586" id="tfa_586">7</option>
+              <option value="tfa_587" id="tfa_587">8</option>
+              <option value="tfa_588" id="tfa_588">9</option>
+              <option value="tfa_589" id="tfa_589">10</option>
+              <option value="tfa_590" id="tfa_590">11</option>
+              <option value="tfa_591" id="tfa_591">12</option>
+              <option value="tfa_592" id="tfa_592">13</option>
+              <option value="tfa_593" id="tfa_593">14</option>
+              <option value="tfa_594" id="tfa_594">15</option>
+              <option value="tfa_595" id="tfa_595">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_615-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_615-L" class="form-label preField reqMark" for="tfa_615">Age of ninth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_615" name="tfa_615" data-condition="`#tfa_309` OR `#tfa_310`" title="Age of ninth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_616" id="tfa_616">Unknown</option>
+              <option value="tfa_617" id="tfa_617">Under 1</option>
+              <option value="tfa_618" id="tfa_618">1</option>
+              <option value="tfa_619" id="tfa_619">2</option>
+              <option value="tfa_620" id="tfa_620">3</option>
+              <option value="tfa_621" id="tfa_621">4</option>
+              <option value="tfa_622" id="tfa_622">5</option>
+              <option value="tfa_623" id="tfa_623">6</option>
+              <option value="tfa_624" id="tfa_624">7</option>
+              <option value="tfa_625" id="tfa_625">8</option>
+              <option value="tfa_626" id="tfa_626">9</option>
+              <option value="tfa_627" id="tfa_627">10</option>
+              <option value="tfa_628" id="tfa_628">11</option>
+              <option value="tfa_629" id="tfa_629">12</option>
+              <option value="tfa_630" id="tfa_630">13</option>
+              <option value="tfa_631" id="tfa_631">14</option>
+              <option value="tfa_632" id="tfa_632">15</option>
+              <option value="tfa_633" id="tfa_633">16 and over</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group oneField field-container-D" id="tfa_653-D">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+            <label id="tfa_653-L" class="form-label preField reqMark" for="tfa_653">Age of tenth child</label>
+          </div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <select id="tfa_653" name="tfa_653" data-condition="`#tfa_310`" title="Age of tenth child" class="form-select required" required>
+              <option value="">Please select&hellip;</option>
+              <option value="tfa_654" id="tfa_654">Unknown</option>
+              <option value="tfa_655" id="tfa_655">Under 1</option>
+              <option value="tfa_656" id="tfa_656">1</option>
+              <option value="tfa_657" id="tfa_657">2</option>
+              <option value="tfa_658" id="tfa_658">3</option>
+              <option value="tfa_659" id="tfa_659">4</option>
+              <option value="tfa_660" id="tfa_660">5</option>
+              <option value="tfa_661" id="tfa_661">6</option>
+              <option value="tfa_662" id="tfa_662">7</option>
+              <option value="tfa_663" id="tfa_663">8</option>
+              <option value="tfa_664" id="tfa_664">9</option>
+              <option value="tfa_665" id="tfa_665">10</option>
+              <option value="tfa_666" id="tfa_666">11</option>
+              <option value="tfa_667" id="tfa_667">12</option>
+              <option value="tfa_668" id="tfa_668">13</option>
+              <option value="tfa_669" id="tfa_669">14</option>
+              <option value="tfa_670" id="tfa_670">15</option>
+              <option value="tfa_671" id="tfa_671">16 and over</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="label label-info v-margin-full b-padding-full h-padding-full">
+          <h2>Device request submission</h2>
+          <p>
+            <strong>For completion by staff member from the organisation</strong>
+          </p>
+          <p>
+            Before submitting a device request you must first:
+          </p>
+          <ul>
+            <li>Collect the referral data from the recipient (by phone or in person using this form)</li>
+            <li>Ensure they understand their personal information will be shared with the Scottish Government and the organisations managing Connecting Scotland to process the device request </li>
+            <li>If they need an internet connection to be provided, check they will have Vodafone signal at their home address by using the Vodafone signal checker: <a href="https://www.vodafone.co.uk/network/status-checker" target="_blank">https://www.vodafone.co.uk/network/status-checker</a></li>
+            <li>EE is available as an alternative where there is no Vodafone signal. However, a monthly data usage limit of 30GB may apply and the MiFi may take longer to be delivered. Check EE coverage at: <a href="https://coverage.ee.co.uk" target="_blank">https://coverage.ee.co.uk</a></li>
+          </ul>
+
+          <div class="form-group oneField field-container-D" id="tfa_172-D">
+            <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_172-L" class="form-label preField reqMark" for="tfa_172">What device is being requested?</label>
+            </div>
+            <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <select id="tfa_172" name="tfa_172" class="form-select required" required>
+                <option value="" disabled selected>Please select&hellip;</option>
+                <option value="tfa_173" id="tfa_173">Chromebook</option>
+                <option value="tfa_174" id="tfa_174">Tablet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group oneField field-container-D" id="tfa_716-D" role="radiogroup" aria-labelledby="tfa_716-L" data-tfa-labelledby="-L tfa_716-L">
+            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_716-L" class="form-label preField reqMark">Do they need an internet connection (mobile WiFi) to be provided?</label>
+            </div>
+            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <span id="tfa_716" class="choices vertical ">
+                <span class="oneChoice">
+                  <label class="form-radio postField" id="tfa_717-L" for="tfa_717">
+                    <input type="radio" value="tfa_717" id="tfa_717" name="tfa_716" aria-labelledby="tfa_717-L" data-tfa-labelledby="tfa_716-L tfa_717-L">
+                    <span class="form-icon"></span>
+                    No
+                  </label>
+                </span>
+                <span class="oneChoice">
+                  <label class="form-radio postField" id="tfa_718-L" for="tfa_718">
+                    <input type="radio" value="tfa_718" id="tfa_718" name="tfa_716" aria-labelledby="tfa_718-L" data-tfa-labelledby="tfa_716-L tfa_718-L">
+                    <span class="form-icon"></span>
+                    Yes – unlimited data on Vodafone
+                  </label>
+                </span>
+                <span class="oneChoice">
+                  <label class="form-radio postField" id="tfa_719-L" for="tfa_719">
+                    <input type="radio" value="tfa_714" id="tfa_719" name="tfa_716" aria-labelledby="tfa_719-L" data-tfa-labelledby="tfa_716-L tfa_719-L">
+                    <span class="form-icon"></span>
+                    Yes – 30GB per month on EE
+                  </label>
+                </span>
+                <span class="oneChoice">
+                  <label class="form-radio postField" id="tfa_720-L" for="tfa_720">
+                    <input type="radio" value="tfa_720" id="tfa_720" name="tfa_716" aria-labelledby="tfa_720-L" data-tfa-labelledby="tfa_716-L tfa_720-L">
+                    <span class="form-icon"></span>
+                    Yes – but there is no Vodafone or EE coverage
+                  </label>
+                </span>
+              </span>
+            </div>
+          </div>
+
+          <p>The request is being made by</p>
+          <div class="form-group oneField field-container-D" id="tfa_1-D">
+            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_1-L" class="form-label preField reqMark" for="tfa_1">First name</label>
+            </div>
+            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <input type="text" id="tfa_1" name="tfa_1" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+            </div>
+          </div>
+          <div class="form-group oneField field-container-D" id="tfa_276-D">
+            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_276-L" class="form-label preField reqMark" for="tfa_276">Last name</label>
+            </div>
+            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <input type="text" id="tfa_276" name="tfa_276" value="" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+            </div>
+          </div>
+          <div class="form-group oneField field-container-D" id="tfa_3-D">
+            <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+              <label id="tfa_3-L" class="form-label preField reqMark" for="tfa_3">Your email address</label>
+            </div>
+            <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+              <input type="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" id="tfa_3" name="tfa_3" value="" title="Please enter a valid email address" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+            </div>
+          </div>
+        </div>
+        <div class="actions form-group" id="0-A">
+          <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
+          <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <input type="submit" data-label="Submit" class="btn" id="submit_button" value="Submit">
+          </div>
+        </div>
+        <input type="hidden" value="4922889" name="tfa_dbFormId" id="tfa_dbFormId">
+        <input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId">
+        <input type="hidden" value="163a6a68cbc2ea0d10aa7c4cd343f8a5" name="tfa_dbControl" id="tfa_dbControl">
+        <input type="hidden" value="" name="tfa_dbWorkflowSessionUuid" id="tfa_dbWorkflowSessionUuid">
+        <input type="hidden" value="3" name="tfa_dbVersionId" id="tfa_dbVersionId">
+        <input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+      </form>
+    </div>
+    {{else}}
+      <h2>Error</h2>
+      <p>
+        The project reference number could not be recognised, please try again or email <a href="mailto:help@connecting.scot">help@connecting.scot</a> quoting the web address of this page.
+      </p>
+    {{/if}}
+    {{/withExtend}}
+  </div>
+</div>

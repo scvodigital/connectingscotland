@@ -14,8 +14,11 @@
       <span class="text-error">*</span> Required field
     </p>
 
-    <div class="hintsBelow labelsAbove form-horizontal form b-margin-full b-padding-full" role="form">
-      <h2>Your details</h2>
+    <div class="hintsBelow labelsAbove form-horizontal form" role="form">
+      <h2>Monitoring information for projects who have issued devices</h2>
+      <p>
+        If you have already received a device and you need to submit the information on the person you awarded the device to, please enter your project ID (e.g. CS-0001) below to get started.
+      </p>
       <div class="form-group oneField field-container-D" id="project_ref-D">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
           <label id="tfa_4-L" class="form-label preField reqMark" for="project_ref">Project reference number (e.g. CS-0001)</label>
@@ -27,7 +30,28 @@
       <div class="actions form-group">
         <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
         <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
-          <a href="#" class="btn" id="submit_button" disabled>Submit</a>
+          <a href="#" class="btn" id="submit_button_project" disabled>Submit</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hintsBelow labelsAbove form-horizontal form hidden" role="form">
+      <h2>Employability projects – device request</h2>
+      <p>
+        If your project has been awarded devices and you need to complete a device request for someone you are working with, please enter your project ID (e.g. CS-0001) below to get started.
+      </p>
+      <div class="form-group oneField field-container-D" id="awarded_ref-D">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">
+          <label id="tfa_4-L" class="form-label preField reqMark" for="awarded_ref">Project reference number (e.g. CS-0001)</label>
+        </div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <input type="text" id="awarded_ref" name="awarded_ref" value="CS-" title="Project reference number (e.g. CS-0001)" maxlength="8" autocomplete="nope" data-lpignore="true" class="form-input required" required>
+        </div>
+      </div>
+      <div class="actions form-group">
+        <div class="col-3 col-xl-4 col-lg-5 col-md-6 col-sm-12 pr">&nbsp;</div>
+        <div class="col-6 col-xl-8 col-lg-7 col-md-6 col-sm-12">
+          <a href="#" class="btn" id="submit_button_awarded" disabled>Submit</a>
         </div>
       </div>
     </div>
@@ -52,18 +76,49 @@ document.addEventListener("DOMContentLoaded", function() {
   })
   .select();
 
+  $('#awarded_ref')
+  .on('keydown', function(evt) {
+    if (evt.ctrlKey) {
+      return;
+    }
+  })
+  .on('keyup', checkAwarded)
+  .on('change', checkAwarded)
+  .on('paste', function(evt) {
+    setTimeout(function() {
+      checkAwarded(evt);
+    }, 0);
+  })
+  .select();
+
   function checkProject(evt) {
     var projectId = evt.target.value = evt.target.value.toUpperCase();
     if (evt.ctrlKey || projectId.match(/^CS-[0-9]{2,3}/)) {
       var url = '/forms/recipient-data/' + projectId;
-      $('#submit_button')
+      $('#submit_button_project')
         .removeAttr('disabled', false)
         .attr('href', url);
       if (evt.which === 13) {
         window.location.href = url;
       }
     } else {
-      $('#submit_button')
+      $('#submit_button_project')
+      .attr('disabled', true)
+      .attr('href', '');
+    }
+  }
+  function checkAwarded(evt) {
+    var projectId = evt.target.value = evt.target.value.toUpperCase();
+    if (evt.ctrlKey || projectId.match(/^CS-[0-9]{2,3}/)) {
+      var url = '/forms/awarded-recipient-data/' + projectId;
+      $('#submit_button_awarded')
+        .removeAttr('disabled', false)
+        .attr('href', url);
+      if (evt.which === 13) {
+        window.location.href = url;
+      }
+    } else {
+      $('#submit_button_awarded')
       .attr('disabled', true)
       .attr('href', '');
     }

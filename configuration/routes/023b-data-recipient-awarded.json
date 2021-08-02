@@ -1,0 +1,46 @@
+{
+  "name": "page_recipient-data-awarded",
+  "debug": false,
+  "pattern": "/organisations/forms/awarded-recipient-data/:project_ref",
+  "metaData": {
+    "title": "Recipient data - Connecting Scotland"
+  },
+  "tasks": [
+    "context.metaData.commonTasks.currentSite",
+    {
+      "name": "project_data",
+      "taskModule": "request",
+      "config": {
+        "optionsTemplates": {
+          "request": ">context.metaData.handlebars.templates.utilities_scvo-connecting-scotland-project"
+        }
+      },
+      "renderer": "handlebars"
+    },
+    {
+      "name": "destination",
+      "taskModule": "renderLayout",
+      "renderer": "handlebars",
+      "config": {
+        "logic": {
+          "if": [
+            "default"
+          ]
+        },
+        "output": "body",
+        "layouts": {
+          "default": {
+            "layout": ">context.metaData.handlebars.layouts.default",
+            "parts": {
+              "head": ">context.metaData.handlebars.templates.head-tags",
+              "header": ">context.metaData.handlebars.templates.header-page",
+              "body": ">context.metaData.handlebars.templates.forms_body-data-recipient-awarded",
+              "foot": ""
+            },
+            "contentType": "text/html"
+          }
+        }
+      }
+    }
+  ]
+}
