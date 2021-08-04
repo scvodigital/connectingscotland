@@ -278,6 +278,24 @@
               "description": " ",
               "path": "/digital-champions/digital-skills/families-children-and-young-people",
               "route": "^/digital-champions/digital-skills/families-children-and-young-people$"
+            },
+            {
+              "label": "Employability",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/employability",
+              "route": "^/digital-champions/digital-skills/employability$"
+            },
+            {
+              "label": "Connecting and communicating",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/connecting-and-communicating",
+              "route": "^/digital-champions/digital-skills/connecting-and-communicating$"
+            },
+            {
+              "label": "Education",
+              "description": " ",
+              "path": "/digital-champions/digital-skills/education",
+              "route": "^/digital-champions/digital-skills/education$"
             }
           ]
         },
