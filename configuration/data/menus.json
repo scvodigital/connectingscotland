@@ -146,25 +146,6 @@
       "route": "^/organisations$",
       "children": [
         {
-          "label": "Social housing",
-          "heading": true
-        },
-        {
-          "label": "Guidance",
-          "path": "/organisations/fast-track-housing/guidance",
-          "route": "^/organisations/fast-track-housing/guidance$"
-        },
-        {
-          "label": "FAQs",
-          "path": "/organisations/fast-track-housing/faqs",
-          "route": "^/organisations/fast-track-housing/faqs$"
-        },
-        {
-          "label": "Application",
-          "path": "/organisations/fast-track-housing/apply",
-          "route": "^/organisations/fast-track-housing/apply$"
-        },
-        {
           "label": "Existing projects",
           "heading": true
         },
