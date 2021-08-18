@@ -1,0 +1,36 @@
+{
+  "name": "page_device-return-request",
+  "debug": true,
+  "pattern": "/organisations/device-return-request",
+  "metaData": {
+    "title": "Device return request - Connecting Scotland"
+  },
+  "tasks": [
+    "context.metaData.commonTasks.currentSite",
+    {
+      "name": "destination",
+      "taskModule": "renderLayout",
+      "renderer": "handlebars",
+      "config": {
+        "logic": {
+          "if": [
+            "default"
+          ]
+        },
+        "output": "body",
+        "layouts": {
+          "default": {
+            "layout": ">context.metaData.handlebars.layouts.default",
+            "parts": {
+              "head": ">context.metaData.handlebars.templates.forms_head-device-return",
+              "header": ">context.metaData.handlebars.templates.header-page",
+              "body": ">context.metaData.handlebars.templates.forms_body-device-return",
+              "foot": ""
+            },
+            "contentType": "text/html"
+          }
+        }
+      }
+    }
+  ]
+}
