@@ -1,7 +1,7 @@
 {
-  "name": "page_apply-phase3",
+  "name": "page_apply-phase3-round-2",
   "debug": true,
-  "pattern": "_disabled_/organisations/employability/apply",
+  "pattern": "/organisations/phase-3-round-2/apply",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },
@@ -22,9 +22,9 @@
           "default": {
             "layout": ">context.metaData.handlebars.layouts.default",
             "parts": {
-              "head": ">context.metaData.handlebars.templates.forms_head-apply-phase3",
+              "head": ">context.metaData.handlebars.templates.forms_head-apply-phase3round2",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase3",
+              "body": ">context.metaData.handlebars.templates.forms_body-apply-phase3round2",
               "foot": ""
             },
             "contentType": "text/html"
