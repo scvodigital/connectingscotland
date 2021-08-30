@@ -146,6 +146,25 @@
       "route": "^/organisations$",
       "children": [
         {
+          "label": "Employability",
+          "heading": true
+        },
+        {
+          "label": "Application guidance",
+          "path": "/organisations/employability/guidance",
+          "route": "^/organisations/employability/guidance$"
+        },
+        {
+          "label": "FAQs",
+          "path": "/organisations/employability/faqs",
+          "route": "^/organisations/employability/faqs$"
+        },
+        {
+          "label": "Apply",
+          "path": "/organisations/employability/apply",
+          "route": "^/organisations/employability/apply$"
+        },
+        {
           "label": "Existing projects",
           "heading": true
         },
