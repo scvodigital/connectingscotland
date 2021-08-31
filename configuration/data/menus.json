@@ -9,11 +9,11 @@
       "label": "Citizens",
       "path": "/citizens",
       "route": "^/citizens$",
-      "description": "Information on supporting friends and family with digital skills.",
+      "description": "Information on supporting friends and family with digital skills",
       "children": [
         {
           "label": "How to choose a device & internet",
-          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need.",
+          "description": "Information on choosing a device, what mi-fi is and why we recommend it over broadband, and what data means and how much you need",
           "icon": "desktop",
           "path": "/citizens/how-to-choose-bundle",
           "route": "^/citizens/how-to-choose-bundle$",
@@ -21,7 +21,7 @@
             {
               "label": "How to choose a device",
               "icon": "question-square",
-              "description": "Information on the different types of device and how to choose one.",
+              "description": "Information on the different types of device and how to choose one",
               "path": "/citizens/how-to-choose-bundle/how-to-choose-a-device",
               "route": "^/citizens/how-to-choose-bundle/how-to-choose-a-device$"
             },
@@ -43,7 +43,7 @@
         },
         {
           "label": "How to set up device & internet",
-          "description": "Information on how to set up the device and how to set up the mi-fi.",
+          "description": "Information on how to set up the device and how to set up the mi-fi",
           "icon": "cogs",
           "path": "/citizens/how-to-set-up-device-and-internet",
           "route": "^/citizens/how-to-set-up-device-and-internet$",
@@ -66,7 +66,7 @@
         },
         {
           "label": "How to use your device",
-          "description": "Information on how to switch on and use the device.",
+          "description": "Information on how to switch on and use the device",
           "icon": "laptop-house",
           "path": "/citizens/basics-on-how-to-use-device",
           "route": "^/citizens/basics-on-how-to-use-device$",
@@ -89,42 +89,42 @@
         },
         {
           "label": "How to stay safe online",
-          "description": "It is important that you know how to keep yourself safe online.",
+          "description": "It is important that you know how to keep yourself safe online",
           "icon": "user-shield",
           "path": "/citizens/how-to-stay-safe-online",
           "route": "^/citizens/how-to-stay-safe-online$"
         },
         {
           "label": "How to do things",
-          "description": "Information on how to use the internet, make video calls, use email, etc.",
+          "description": "Information on how to use the internet, make video calls, use email, etc",
           "icon": "hammer",
           "path": "/citizens/how-to-use-tools",
           "route": "^/citizens/how-to-use-tools$",
           "children": [
             {
               "label": "Using the internet",
-              "description": "Find information about how to use the internet, commonly called browsing or surfing.",
+              "description": "Find information about how to use the internet, commonly called browsing or surfing",
               "icon": "window-alt",
               "path": "/citizens/how-to-use-tools/how-to-use-the-internet",
               "route": "^/citizens/how-to-use-tools/how-to-use-the-internet$"
             },
             {
               "label": "Making a video call",
-              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other.",
+              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other",
               "icon": "webcam",
               "path": "/citizens/how-to-use-tools/how-to-make-a-video-call",
               "route": "^/citizens/how-to-use-tools/how-to-make-a-video-call$"
             },
             {
               "label": "Using email",
-              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other.",
+              "description": "Video calls help people to stay in touch more easily. They are better than phone calls because you can see each other",
               "icon": "at",
               "path": "/citizens/how-to-use-tools/how-to-use-email",
               "route": "^/citizens/how-to-use-tools/how-to-use-email$"
             },
             {
-              "label": "How to watch or listen to online content.",
-              "description": "There is a diverse range of entertainment/culture available online.",
+              "label": "How to watch or listen to online content",
+              "description": "There is a diverse range of entertainment/culture available online",
               "icon": "film-alt",
               "path": "/citizens/how-to-use-tools/how-to-watch-online",
               "route": "^/citizens/how-to-use-tools/how-to-watch-online$"
@@ -133,7 +133,7 @@
         },
         {
           "label": "Computer terms and jargon",
-          "description": "The online world is full of jargon like, ‘inbox’, ‘spam’ and ‘upload’. It can be very confusing to someone who never used the internet. Here are some common jargon words you may see or hear.",
+          "description": "The online world is full of jargon like, ‘inbox’, ‘spam’ and ‘upload’. It can be very confusing to someone who never used the internet. Here are some common jargon words you may see or hear",
           "icon": "question-square",
           "path": "/citizens/computer-terms-and-jargon",
           "route": "^/citizens/computer-terms-and-jargon$"
