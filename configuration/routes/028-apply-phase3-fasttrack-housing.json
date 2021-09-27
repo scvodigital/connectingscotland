@@ -1,7 +1,7 @@
 {
   "name": "page_apply-phase3-fasttrack-housing",
   "debug": true,
-  "pattern": "_disabled_/organisations/fast-track-housing/apply",
+  "pattern": "/organisations/fast-track-housing/apply",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },
