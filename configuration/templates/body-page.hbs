@@ -2,7 +2,7 @@
   <div class="column col-8 col-md-12 r-padding-full">
     <img src="{{~>asset_url url=(concat 'images/' (itemAt (arrayify (split @root.request.url.pathname '/')) 1) '.png')~}}" alt="" class="responsive-img text-center show-sm b-margin-full b-padding-full" />
     {{#if @root.data.primaryResponse.hits.hits.[0] ~}}
-    {{{replace (replace (replace (replace (replace @root.data.primaryResponse.hits.hits.[0]._source.content '/connecting-scotland' '') 'http://connecting.scot' '') 'https://connecting.scot' '') 'http://cms.scvo.org' '') 'https://cms.scvo.org' ''}}}
+    {{{replace (replace (replace (replace (replace (replace @root.data.primaryResponse.hits.hits.[0]._source.content '/connecting-scotland' '') 'http://connecting.scot' '') 'https://connecting.scot' '') 'http://cms.scvo.org' '') 'https://cms.scvo.org' '') 'https://scvo.scot' ''}}}
     {{/if ~}}
   </div>
   <div class="column col-4 col-md-6 col-sm-12 l-padding-full" style="margin: 0 auto;">
