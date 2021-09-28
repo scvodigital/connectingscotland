@@ -3,7 +3,7 @@
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   {{#each breadcrumb ~}}
   {{#unless (compare title "Connecting Scotland")}}
-  <li class="breadcrumb-item"><a href="{{replace (replace (replace url '/connecting-scotland' '') 'http://cms.scvo.org' '') 'https://cms.scvo.org' ''}}">{{{striptags title}}}</a></li>
+  <li class="breadcrumb-item"><a href="{{replace (replace (replace (replace url '/connecting-scotland' '') 'http://cms.scvo.org' '') 'https://cms.scvo.org' '') 'https://scvo.scot' ''}}">{{{striptags title}}}</a></li>
   {{/unless}}
   {{/each ~}}
   <li class="breadcrumb-item">{{{striptags title}}}</li>
