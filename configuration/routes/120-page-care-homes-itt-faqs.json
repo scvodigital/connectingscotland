@@ -3,7 +3,7 @@
   "debug": false,
   "pattern": "/organisations/care-homes-itt",
   "metaData": {
-    "title": "FAQs - Connecting Scotland"
+    "title": "Care Homes – Invitation to Tender - Connecting Scotland"
   },
   "tasks": [
     "context.metaData.commonTasks.currentSite",
