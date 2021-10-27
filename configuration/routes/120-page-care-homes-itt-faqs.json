@@ -1,7 +1,7 @@
 {
-  "name": "page_helpline-faqs",
+  "name": "page_care-homes-itt-faqs",
   "debug": false,
-  "pattern": "/faqs",
+  "pattern": "/organisations/care-homes-itt",
   "metaData": {
     "title": "FAQs - Connecting Scotland"
   },
@@ -37,7 +37,7 @@
             "name": "faqs",
             "index": "{$../data/elasticsearch-index.txt}",
             "type": "scvo-faq",
-            "template": ">context.metaData.handlebars.queries.faqs-helpline"
+            "template": ">context.metaData.handlebars.queries.faqs-care-homes-itt"
           }
         ]
       },
@@ -60,7 +60,7 @@
             "parts": {
               "head": ">context.metaData.handlebars.templates.head-tags",
               "header": ">context.metaData.handlebars.templates.header-page",
-              "body": ">context.metaData.handlebars.templates.body-faqs",
+              "body": ">context.metaData.handlebars.templates.body-page-faqs",
               "foot": ""
             },
             "contentType": "text/html"

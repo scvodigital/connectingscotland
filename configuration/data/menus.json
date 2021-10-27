@@ -223,9 +223,13 @@
           "route": "^/organisations/existing-projects/monitoring-and-evaluation$"
         },
         {
+          "label": "Information",
+          "heading": true
+        },
+        {
           "label": "Further support",
-          "path": "/organisations/existing-projects/further-support",
-          "route": "^/organisations/existing-projects/further-support$"
+          "path": "/organisations/further-support",
+          "route": "^/organisations/further-support$"
         }
       ]
     },

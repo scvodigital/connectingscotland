@@ -1,0 +1,20 @@
+{
+  "size": 100,
+  "_source": [
+    "title",
+    "description"
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "project_slug": [
+              "connectingscotland-care-homes-itt"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
