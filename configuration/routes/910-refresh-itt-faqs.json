@@ -1,0 +1,27 @@
+{
+  "name": "refresh-itt-faqs",
+  "pattern": "/organisations/care-homes-itt/refresh-faqs(/:one)(/:two)(/:three)(:/four)(:/five)(:/six)",
+  "tasks": [
+    {
+      "name": "refresh",
+      "taskModule": "request",
+      "renderer": "handlebars",
+      "config": {
+        "options": {
+          "geobytes": {
+            "url": "https://internals.scvo.scot/indexer/index-faqs?spreadsheet_id=1r3nfd_GruTzme0FVROHEYbIAPj5ND-XNYakXanW9ky8&project=connectingscotland-care-homes-itt",
+            "json": true
+          }
+        }
+      }
+    },
+    {
+      "name": "destination",
+      "taskModule": "redirect",
+      "config": {
+        "location": "/organisations/care-homes-itt",
+        "statusCode": 302
+      }
+    }
+  ]
+}
