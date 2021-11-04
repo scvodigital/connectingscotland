@@ -17,7 +17,7 @@
         <p>{{{description}}}</p>
         {{/if ~}}
         <p class="card-footer" style="margin:0;">
-          <strong style="text-decoration: underline;">{{default link_label "Find out more"}}</strong>
+          <strong style="text-decoration: underline;" aria-label="{{default link_label 'Find out more'}} about {{#if label_full}}{{{label_full}}}{{else}}{{{label}}}{{/if}}">{{default link_label "Find out more"}}</strong>
         </p>
       </div>
     </a>
