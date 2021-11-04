@@ -561,7 +561,14 @@ main header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-purple', endColorstr='$brand-pink',GradientType=0 );
   }
 }
+.page_start_home,
 .citizens,
+.getting-started,
+.accessibility,
+.communication,
+.health-wellbeing,
+.skills,
+.staying-safe-online,
 .for-individuals {
   main header {
     background: $brand-pink;
@@ -604,14 +611,8 @@ main header {
 }
 // .page_start_home,
 .skills.foundation,
-.getting-started,
-.health-wellbeing,
-.communication,
-.skills,
 .subjects,
-.accessibility,
-.services,
-.staying-safe-online {
+.services {
   main {
     background: $brand-purple !important;
   }

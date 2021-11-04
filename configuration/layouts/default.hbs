@@ -99,7 +99,7 @@
           <nav id="main-tab-bar" class="mdc-tab-bar t-margin-full t-padding-full hide-lg pull-right" [menu]="'main'" [menulinkselector]="''" [menulabelselector]="'span.mdc-tab--label'" [menuactiveclass]="'active'">
             <ul>
               {{#each (getProperty @root.context.metaData.menus @root.data.currentSite.name) ~}}
-              <li><a class="mdc-tab{{#ifAll (compare label 'Home') (compare @root.request.url.pathname '/')}} mdc-tab--active{{else}}{{#if (regexMatch @root.request.url.pathname (replace route '$' '') 'gi')}} mdc-tab--active{{/if}}{{/ifAll}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
+              <li><a class="mdc-tab{{#ifAll (compare label 'Home') (compare @root.request.url.pathname '/')}} mdc-tab--active{{else}}{{#compare @root.data.currentSite.name 'default'}}{{#if (regexMatch @root.request.url.pathname (replace route '$' '') 'gi')}} mdc-tab--active{{/if}}{{else}}{{#if (regexMatch @root.request.url.pathname route 'gi')}} mdc-tab--active{{/if}}{{/compare}}{{/ifAll}}" href="{{path}}"><span class="mdc-tab--label">{{{label}}}</span></a></li>
               {{/each ~}}
             </ul>
           </nav>
