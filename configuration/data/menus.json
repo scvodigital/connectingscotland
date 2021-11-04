@@ -356,9 +356,39 @@
               "route": "^/digital-champions/training/core-digital-champion-training$"
             },
             {
+              "label": "Chromebook and iPad Demo",
+              "path": "/digital-champions/training/chromebook-and-ipad-demo",
+              "route": "^/digital-champions/training/chromebook-and-ipad-demo$"
+            },
+            {
+              "label": "Employability",
+              "path": "/digital-champions/training/employability",
+              "route": "^/digital-champions/training/employability$"
+            },
+            {
               "label": "Families, Children and Young People Training",
               "path": "/digital-champions/training/families-children-and-young-people-training",
               "route": "^/digital-champions/training/families-children-and-young-people-training$"
+            },
+            {
+              "label": "Essential Digital Skills: Foundation Skills and Communication Tools",
+              "path": "/digital-champions/training/essential-digital-skills-foundation-skills-and-communication-tools",
+              "route": "^/digital-champions/training/essential-digital-skills-foundation-skills-and-communication-tools$"
+            },
+            {
+              "label": "Essential Digital Skills: Handling Information and Content",
+              "path": "/digital-champions/training/essential-digital-skills-handling-information-and-content",
+              "route": "^/digital-champions/training/essential-digital-skills-handling-information-and-content$"
+            },
+            {
+              "label": "Essential Digital Skills: Problem Solving and Staying Safe Online",
+              "path": "/digital-champions/training/essential-digital-skills-problem-solving-and-staying-safe-online",
+              "route": "^/digital-champions/training/essential-digital-skills-problem-solving-and-staying-safe-online$"
+            },
+            {
+              "label": "Essential Digital Skills: Transacting – Shopping, Public Services and Online Banking",
+              "path": "/digital-champions/training/essential-digital-skills-transacting",
+              "route": "^/digital-champions/training/essential-digital-skills-transacting$"
             }
           ]
         },
