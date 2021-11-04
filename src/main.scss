@@ -481,7 +481,7 @@ header.navbar {
       line-height: $unit*1.5;
       letter-spacing: normal;
       min-width: 0;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       border-radius: 0.15rem;
       padding: 0.1rem 0.5rem;
       text-transform: uppercase;
@@ -602,10 +602,12 @@ main header {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$brand-yellow', endColorstr='$brand-green',GradientType=0 );
   }
 }
-.page_start_home,
+// .page_start_home,
 .skills.foundation,
 .getting-started,
 .health-wellbeing,
+.communication,
+.skills,
 .subjects,
 .accessibility,
 .services,
