@@ -32,11 +32,6 @@
           "exists": {
             "field": "title"
           }
-        },
-        {
-          "prefix": {
-            "url": "https://scvo.scot/connecting-scotland"
-          }
         }
       ],
       "must": [

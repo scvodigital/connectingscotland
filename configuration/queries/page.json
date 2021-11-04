@@ -25,7 +25,8 @@
   ],
   "query": {
     "term": {
-      "path": "{{#if @root.request.params.path}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/microsite-getting-started{{/compare}}{{#compare @root.data.currentSite.name 'helpline'}}/microsite-helpline{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/microsite-apply{{/compare}}/{{replace @root.request.params.path '_' '/'}}{{else}}/connecting-scotland{{#compare @root.data.currentSite.name 'start'}}/microsite-getting-started{{/compare}}{{#compare @root.data.currentSite.name 'helpline'}}/microsite-helpline{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/microsite-apply{{/compare}}{{/if}}"
+      "path": "{{#if @root.request.params.path}}{{#compare @root.data.currentSite.name 'start'}}/microsite-getting-started{{/compare}}{{#compare @root.data.currentSite.name 'helpline'}}/microsite-helpline{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/microsite-apply{{/compare}}/{{replace @root.request.params.path '_' '/'}}{{else}}{{#compare @root.data.currentSite.name 'default'}}/connecting-scotland{{/compare}}{{#compare @root.data.currentSite.name 'start'}}/microsite-getting-started{{/compare}}{{#compare @root.data.currentSite.name 'helpline'}}/microsite-helpline{{/compare}}{{#compare @root.data.currentSite.name 'apply'}}/microsite-apply{{/compare}}
+      {{/if}}"
     }
   }
 }

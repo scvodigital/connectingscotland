@@ -17,7 +17,7 @@
         },
         "queryTemplates": {
           "index": "{$../data/elasticsearch-index.txt}",
-          "type": "scvo-page",
+          "type": "connectingscotland-page",
           "template": ">context.metaData.handlebars.queries.search"
         }
       },
