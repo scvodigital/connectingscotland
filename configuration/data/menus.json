@@ -184,6 +184,20 @@
           "route": "^/organisations/fast-track-housing/apply$"
         },
         {
+          "label": "College - fast-track",
+          "heading": true
+        },
+        {
+          "label": "Application guidance",
+          "path": "/organisations/fast-track-colleges/guidance",
+          "route": "^/organisations/fast-track-colleges/guidance$"
+        },
+        {
+          "label": "Apply",
+          "path": "/organisations/fast-track-colleges/apply",
+          "route": "^/organisations/fast-track-colleges/apply$"
+        },
+        {
           "label": "Existing projects",
           "heading": true
         },
