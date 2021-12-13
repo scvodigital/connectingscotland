@@ -2,6 +2,7 @@
   "size": 1,
   "_source": [
     "Id",
+    "name",
     "amount_awarded_total",
     "organisation_name",
     "organisation_name_full",

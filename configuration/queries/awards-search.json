@@ -3,6 +3,7 @@
   "from": {{multiply (subtract (default request.params.query.page 1) 1) 12}},
   "_source": [
     "Id",
+    "name",
     "amount_awarded_total",
     "organisation_name",
     "organisation_name_full",
