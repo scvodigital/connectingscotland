@@ -1,0 +1,103 @@
+<ul class="breadcrumb breadcrumb-length-3 breadcrumb-43948" aria-hidden="true">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/organisations">Organisations – supporting the most vulnerable to get online</a></li>
+  <li class="breadcrumb-item"><a href="/organisations/existing-projects">Existing projects</a></li>
+<li class="breadcrumb-item">Awards</li>
+</ul>
+
+{{{replace (replace (replace @root.data.primaryResponse.hits.hits.[0]._source.content "http://scvo.org.uk" "") "https://scvo.org.uk" "") "http://cms.scvo.org/" "/"}}}
+
+{{!-- <div class="divider"></div> --}}
+
+<form action="{{@root.request.url.pathname}}" method="GET" class="form form-horizontal search_form">
+  <div class="columns form-group detail">
+    <div class="column col-6 col-md-12">
+      <div class="input-group input-inline" style="width:100%">
+        <input type="text" class="form-input" name="q" id="award-cs-keywords" value="{{@root.request.params.query.q}}" placeholder="Search" style="border-right:none;">
+        <button type="submit" class="btn input-group-btn" aria-label="Search" alt="Search">
+          <span class="far fa-search" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="column col-3 col-lg-6 col-md-12">
+      <div class="form-group">
+        <select class="form-select" id="award-cs-local_authority" name="local_authority" onchange="this.form.submit()">
+          <option value=""{{#if @root.request.params.query.local_authority}}{{else}} selected{{/if}}>Local authority</option>
+          {{#each @root.data.supplimentaryResponses.types.aggregations.local_authorities.buckets ~}}
+          <option value="{{slugify key}}" {{#compare ../request.params.query.local_authority "===" (slugify key)}}selected{{/compare}}>{{key}} ({{doc_count}})</option>
+          {{/each ~}}
+        </select>
+      </div>
+    </div>
+    <div class="column col-3 col-lg-6 col-md-12">
+      <div class="form-group">
+        <select class="form-select" id="award-cs-phase" name="phase" onchange="this.form.submit()">
+          <option value=""{{#if @root.request.params.query.phases}}{{else}} selected{{/if}}>Phase</option>
+          {{#each @root.data.supplimentaryResponses.types.aggregations.phases.buckets ~}}
+          <option value="{{slugify key}}" {{#compare ../request.params.query.phase "===" (slugify key)}}selected{{/compare}}>{{key}} ({{doc_count}})</option>
+          {{/each ~}}
+        </select>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div class="detail equal-height v-margin-full">
+  {{#compare @root.data.supplimentaryResponses.grants.hits.total ">" 0 ~}}
+  {{> search_info paging=@root.data.supplimentaryResponses.grants.pagination}}
+
+  <div class="columns t-margin-full">
+    {{#each @root.data.supplimentaryResponses.grants.hits.hits ~}}
+    {{#with _source ~}}
+    <div class="column col-4 col-md-6 col-sm-12 b-margin-full">
+      <div class="t-padding-full card-no-padding scvo-grant scvo-award-cs">
+        <section class="card-header">
+          <h4 class="no-margin">
+            <a href="{{@root.request.url.pathname}}/{{Id}}/{{slugify organisation_name}}">{{{organisation_name}}}</a>
+          </h4>
+        </section>
+        <section class="card-body">
+          {{#if recipient_name ~}}
+          {{#compare recipient_name "!==" organisation_name ~}}
+          <p class="b-margin">
+            <strong>{{recipient_name}}</strong>
+          </p>
+          {{/compare ~}}
+          {{/if ~}}
+          {{#if description ~}}
+          {{{truncate description 180}}} <a href="{{@root.request.url.pathname}}/{{Id}}/{{slugify organisation_name}}">Read more</a>
+          {{else}}
+          {{#if description_alt ~}}
+          {{{truncate description_alt 180}}} <a href="{{@root.request.url.pathname}}/{{Id}}/{{slugify organisation_name}}">Read more</a>
+          {{/if ~}}
+          {{/if ~}}
+        </section>
+        <section class="card-footer">
+          <div class="post-info t-margin-full">
+            {{#if phase ~}}
+              <a href="{{@root.request.url.pathname}}?phase={{slugify phase}}" class="chip">
+                <span aria-hidden="true" class="far fa-calendar-alt pr"></span>
+                {{phase}}
+              </a>
+            {{/if ~}}
+            {{#if local_authorities ~}}
+              <a href="{{@root.request.url.pathname}}?local_authority={{local_authorities}}" class="chip">
+                <span aria-hidden="true" class="far fa-{{inflect local_authorities 'tag' 'tags'}} pr"></span>
+                {{local_authorities}}
+              </a>
+            {{/if ~}}
+          </div>
+        </section>
+      </div>
+    </div>
+    {{/with ~}}
+    {{/each ~}}
+  </div>
+
+  {{> pagination paging=@root.data.supplimentaryResponses.grants.pagination}}
+  {{else}}
+  <p>
+    No projects could be found, please try a different search.
+  </p>
+  {{/compare ~}}
+</div>

@@ -1,0 +1,141 @@
+{{#with data.primaryResponse.hits.hits.[0]._source ~}}
+{{#withExtend this title=(default organisation_name_care_home organisation_name)}}
+<ul class="breadcrumb breadcrumb-length-3 breadcrumb-43948" aria-hidden="true">
+  <li class="breadcrumb-item"><a href="/">Home</a></li>
+  <li class="breadcrumb-item"><a href="/organisations">Organisations – supporting the most vulnerable to get online</a></li>
+  <li class="breadcrumb-item"><a href="/organisations/existing-projects">Existing projects</a></li>
+  <li class="breadcrumb-item"><a href="/organisations/existing-projects/awards">Awards</a></li>
+  <li class="breadcrumb-item">{{{title}}}</li>
+</ul>
+
+<h1>{{{title}}}{{#compare title "!==" organisation_name}} ({{organisation_name}}){{/compare}}</h1>
+
+<div class="full detail scvo-grant scvo-grant-cs">
+  {{!-- {{#if organisation_name ~}}
+  <h3 class="black-text">{{{organisation_name}}}</h3>
+  {{/if ~}} --}}
+  {{#if recipient_charity_number ~}}
+  <p class="charity-info">
+    Charity registered in Scotland <a href="http://www.oscr.org.uk/about-charities/search-the-register/charity-details?number={{recipient_charity_number}}">{{recipient_charity_number}}</a>
+  </p>
+  {{/if ~}}
+  {{#if recipient_overview ~}}
+  <div class="black-text">
+    {{{markdown recipient_overview}}}
+  </div>
+  {{/if ~}}
+  <ul class="fa-ul">
+    {{#ifAll planned_start planned_end ~}}
+    <li style="list-style: none;">
+      <span class="fa-li"><span class="far fa-calendar-alt"></span></span>
+      From {{momentFormat (moment planned_start 'x') "Do MMMM YYYY"}}
+      to {{momentFormat (moment planned_end 'x') "Do MMMM YYYY"}}
+    </li>
+    {{/ifAll ~}}
+    {{#if phase ~}}
+    <li style="list-style: none;">
+      <span class="fa-li"><span class="fal fa-money-bill"></span></span>
+      {{#if amount_awarded_total ~}}
+      Award: &pound;{{addCommas amount_awarded_total}}
+      {{else}}
+      {{#if amount_requested_total ~}}
+      Award: &pound;{{addCommas amount_requested_total}}
+      {{else}}
+      {{#if amount_requested ~}}
+      Award: &pound;{{addCommas amount_requested}}
+      {{/if ~}}
+      {{/if ~}}
+      {{/if ~}}
+      via <a href="/organisations/existing-projects/awards?phase={{slugify phase}}">{{phase}}</a>
+    </li>
+    {{/if ~}}
+    {{!-- <li style="list-style: none;">
+      <span class="fa-li"><span class="far fa-database"></span></span>
+      <a href="http://grantnav.threesixtygiving.org/grant/360G-SCVO-{{Id}}" target="_blank">Data published on 360Giving</a>
+    </li> --}}
+    {{#if chromebooks ~}}
+    <li style="list-style: none;">
+      <span class="fa-li"><span class="fab fa-google"></span></span>
+      {{inflect chromebooks "Google Chromebook" "Google Chromebooks" true}}
+    </li>
+    {{/if ~}}
+    {{#if ipads ~}}
+    <li style="list-style: none;">
+      <span class="fa-li"><span class="fab fa-apple"></span></span>
+      {{inflect ipads "Apple iPad" "Apple iPads" true}}
+    {{/if ~}}
+    {{#if mifi ~}}
+    <li style="list-style: none;">
+      <span class="fa-li"><span class="far fa-wifi"></span></span>
+      {{inflect mifi "MiFi device" "MiFi devices" true}}
+    </li>
+    {{/if ~}}
+  </ul>
+
+  {{#if local_authorities ~}}
+  {{#compare (length local_authorities) ">" 0 ~}}
+  <div class="post-info">
+    <div class="post-info-item post-info-categories">
+      <a href="/organisations/existing-projects/awards?tag={{slugify local_authorities}}" class="chip">
+        <span aria-hidden="true" class="far fa-{{inflect local_authorities 'tag' 'tags'}} pr"></span>
+        {{local_authorities}}
+      </a>
+    </div>
+  </div>
+  {{/compare ~}}
+  {{/if ~}}
+
+  {{#if description ~}}
+  <h3 class="project-overview">Project description</h3>
+  <div class="project-overview">
+    {{{markdown description}}}
+  </div>
+  {{else}}
+  {{#if description_alt ~}}
+  <h3 class="project-overview">Project description</h3>
+  <div class="project-overview">
+    {{{markdown description_alt}}}
+  </div>
+  {{/if ~}}
+  {{/if ~}}
+
+  {{#if milestone_1_desc ~}}
+  <h2 class="project-milestones">Project milestones</h2>
+  <h3 class="project-milestone_1">Phase 1</h3>
+  <div class="project-milestone_1">
+    {{{markdown milestone_1_desc}}}
+  </div>
+  {{#if milestone_2_desc ~}}
+  <h3 class="project-milestone_2">Phase 2</h3>
+  <div class="project-milestone_2">
+    {{{markdown milestone_2_desc}}}
+  </div>
+  {{#if milestone_3_desc ~}}
+  <h3 class="project-milestone_3">Phase 3</h3>
+  <div class="project-milestone_3">
+    {{{markdown milestone_3_desc}}}
+  </div>
+  {{#if milestone_4_desc ~}}
+  <h3 class="project-milestone_4">Phase 4</h3>
+  <div class="project-milestone_4">
+    {{{markdown milestone_4_desc}}}
+  </div>
+  {{/if ~}}
+  {{/if ~}}
+  {{/if ~}}
+  {{/if ~}}
+
+  {{#compare (length project_updates) ">" 0 ~}}
+  <h2 class="project-evaluation">Evaluation</h2>
+  <h3 class="project-updates">Updates</h3>
+  <div class="project-updates">
+    {{#each project_updates ~}}
+    <p>
+      {{{markdown this.Project_Update__c}}}
+    </p>
+    {{/each ~}}
+  </div>
+  {{/compare ~}}
+</div>
+{{/withExtend}}
+{{/with ~}}

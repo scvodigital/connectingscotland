@@ -1,0 +1,65 @@
+{
+  "size": 12,
+  "from": {{multiply (subtract (default request.params.query.page 1) 1) 12}},
+  "_source": [
+    "Id",
+    "amount_awarded_total",
+    "organisation_name",
+    "organisation_name_full",
+    "organisation_name_care_home",
+    "chromebooks",
+    "ipads",
+    "mifi",
+    "phase",
+    "local_authority",
+    "local_authorities"
+  ],
+  "query": {
+    "bool": {
+      "must": [
+        {{#ifAny request.params.query.phase request.params.query.local_authority request.params.query.q ~}}
+        {{#if request.params.query.phase ~}}
+        {
+          "term": {
+            "phase-slug": "{{request.params.query.phase}}"
+          }
+        }
+        {{#if request.params.query.local_authority}},{{else}}{{#if request.params.query.q}},{{/if}}{{/if}}
+        {{/if ~}}
+        {{#if request.params.query.local_authority ~}}
+        {
+          "term": {
+            "local_authorities-slugs": "{{request.params.query.local_authority}}"
+          }
+        }
+        {{#if request.params.query.q}},{{/if}}
+        {{/if ~}}
+        {{#if request.params.query.q ~}}
+        {
+          "query_string": {
+            "query": {{{stringify (default request.params.query.q "")}}},
+            "default_field": "text_bag",
+            "default_operator": "AND",
+            "analyzer": "snowball"
+          }
+        }
+        {{/if ~}}
+        {{else}}
+        {
+          "match_all": {}
+        }
+        {{/ifAny ~}}
+      ],
+      "must_not": [
+        {
+          "term": {
+            "organisation_name": "Community Welfare Test (CO)"
+          }
+        }
+      ]
+    }
+  },
+  "sort": {
+    "organisation_name": "asc"
+  }
+}

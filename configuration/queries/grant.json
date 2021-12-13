@@ -1,0 +1,21 @@
+{
+  "size": 1,
+  "_source": [
+    "Id",
+    "amount_awarded_total",
+    "organisation_name",
+    "organisation_name_full",
+    "organisation_name_care_home",
+    "chromebooks",
+    "ipads",
+    "mifi",
+    "phase",
+    "local_authority",
+    "local_authorities"
+  ],
+  "query": {
+    "term": {
+      "Id": "{{@root.request.params.award_id}}"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "size": 0,
+  "_source": false,
+  "aggs": {
+    "local_authorities": {
+      "terms": {
+        "field": "local_authorities",
+        "order": {
+          "_term": "asc"
+        },
+        "size": 10000
+      }
+    },
+    "phases": {
+      "terms": {
+        "field": "phase",
+        "order": {
+          "_term": "asc"
+        },
+        "size": 10000
+      }
+    }
+  }
+}
