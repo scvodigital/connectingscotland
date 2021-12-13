@@ -1625,6 +1625,10 @@ hr {
   li.disabled:hover {
     background-color: inherit !important;
   }
+  a:hover, a:active, a:focus {
+    background: inherit;
+    border-radius: 50%;
+  }
 }
 
 footer {
