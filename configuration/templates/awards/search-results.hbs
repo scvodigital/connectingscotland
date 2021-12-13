@@ -58,6 +58,25 @@
           </h4>
         </section>
         <section class="card-body">
+          <ul class="fa-ul">
+            {{#if chromebooks ~}}
+            <li style="list-style: none;">
+              <span class="fa-li"><span class="far fa-laptop"></span></span>
+              {{inflect chromebooks "laptop" "laptops" true}}
+            </li>
+            {{/if ~}}
+            {{#if ipads ~}}
+            <li style="list-style: none;">
+              <span class="fa-li"><span class="far fa-tablet"></span></span>
+              {{inflect ipads "tablet" "tablets" true}}
+            {{/if ~}}
+            {{#if mifi ~}}
+            <li style="list-style: none;">
+              <span class="fa-li"><span class="far fa-router"></span></span>
+              {{inflect mifi "internet connection" "internet connections" true}}
+            </li>
+            {{/if ~}}
+          </ul>
           {{!-- {{#if recipient_name ~}}
           {{#compare recipient_name "!==" organisation_name ~}}
           <p class="b-margin">
@@ -73,7 +92,7 @@
           {{/if ~}}
           {{/if ~}} --}}
         </section>
-        <section class="card-footer">
+        {{!-- <section class="card-footer">
           <div class="post-info t-margin-full">
             {{#if phase ~}}
               <a href="{{@root.request.url.pathname}}?phase={{slugify phase}}" class="chip">
@@ -88,7 +107,7 @@
               </a>
             {{/if ~}}
           </div>
-        </section>
+        </section> --}}
       </div>
     </div>
     {{/withExtend}}
