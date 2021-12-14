@@ -1,7 +1,7 @@
 {
   "name": "page_apply-phase3-fasttrack",
   "debug": true,
-  "pattern": "/organisations/fast-track/apply",
+  "pattern": "_disabled_/organisations/fast-track/apply",
   "metaData": {
     "title": "Application form - Connecting Scotland"
   },
