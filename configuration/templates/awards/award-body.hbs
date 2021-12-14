@@ -1,14 +1,13 @@
 {{#with data.primaryResponse.hits.hits.[0]._source ~}}
-{{#withExtend this title=(default organisation_name_care_home organisation_name)}}
 <ul class="breadcrumb breadcrumb-length-3 breadcrumb-43948" aria-hidden="true">
   <li class="breadcrumb-item"><a href="/">Home</a></li>
   <li class="breadcrumb-item"><a href="/organisations">Organisations – supporting the most vulnerable to get online</a></li>
   <li class="breadcrumb-item"><a href="/organisations/existing-projects">Existing projects</a></li>
   <li class="breadcrumb-item"><a href="/organisations/existing-projects/awards">Awards</a></li>
-  <li class="breadcrumb-item">{{title}}{{#compare title "!==" organisation_name}} ({{organisation_name}}){{/compare}}</li>
+  <li class="breadcrumb-item">{{{default organisation_name_full organisation_name}}}</li>
 </ul>
 
-<h1>{{title}}{{#compare title "!==" organisation_name}} ({{organisation_name}}){{/compare}}</h1>
+<h1>{{{default organisation_name_full organisation_name}}}</h1>
 
 <div class="full detail scvo-grant scvo-grant-cs">
   <ul class="fa-ul">
@@ -45,5 +44,4 @@
   </ul>
 
 </div>
-{{/withExtend}}
 {{/with ~}}

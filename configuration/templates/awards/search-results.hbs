@@ -49,12 +49,11 @@
   <div class="columns t-margin-full">
     {{#each @root.data.supplimentaryResponses.grants.hits.hits ~}}
     {{#with _source ~}}
-    {{#withExtend this title=(default organisation_name_care_home organisation_name)}}
     <div class="column col-4 col-md-6 col-sm-12 b-margin-full">
       <div class="t-padding-full card-no-padding scvo-grant scvo-award-cs">
         <section class="card-header">
           <h4 class="no-margin">
-            <a href="{{@root.request.url.pathname}}/{{Id}}/{{#compare title "!==" organisation_name}}{{slugify (concat title ' ' organisation_name)}}{{else}}{{slugify title}}{{/compare}}">{{title}}{{#compare title "!==" organisation_name}} ({{organisation_name}}){{/compare}}</a>
+            <a href="{{@root.request.url.pathname}}/{{Id}}/{{slugify (default organisation_name_full organisation_name)}}">{{{default organisation_name_full organisation_name}}}</a>
           </h4>
         </section>
         <section class="card-body">
@@ -110,7 +109,6 @@
         </section> --}}
       </div>
     </div>
-    {{/withExtend}}
     {{/with ~}}
     {{/each ~}}
   </div>
