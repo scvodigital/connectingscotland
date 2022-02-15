@@ -146,6 +146,20 @@
       "route": "^/organisations$",
       "children": [
         {
+          "label": "College fast track",
+          "heading": true
+        },
+        {
+          "label": "Guidance",
+          "path": "/organisations/fast-track-colleges/guidance",
+          "route": "^/organisations/fast-track-colleges/guidance$"
+        },
+        {
+          "label": "Apply",
+          "path": "/organisations/fast-track-colleges/apply",
+          "route": "^/organisations/fast-track-colleges/apply$"
+        },
+        {
           "label": "Existing projects",
           "heading": true
         },
@@ -178,11 +192,6 @@
           "label": "Digital Champion training",
           "path": "/organisations/existing-projects/digital-champion-training",
           "route": "^/organisations/existing-projects/digital-champion-training$"
-        },
-        {
-          "label": "College fast track",
-          "path": "/organisations/fast-track-colleges/apply",
-          "route": "^/organisations/fast-track-colleges/apply$"
         },
         {
           "label": "Monitoring and evaluation",
