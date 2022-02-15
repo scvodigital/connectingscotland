@@ -206,11 +206,6 @@
           "label": "Further support",
           "path": "/organisations/further-support",
           "route": "^/organisations/further-support$"
-        },
-        {
-          "label": "Care Homes ITT",
-          "path": "/organisations/care-homes-itt",
-          "route": "^/organisations/care-homes-itt$"
         }
       ]
     },
