@@ -180,6 +180,11 @@
           "route": "^/organisations/existing-projects/digital-champion-training$"
         },
         {
+          "label": "College fast track",
+          "path": "/organisations/fast-track-colleges/apply",
+          "route": "^/organisations/fast-track-colleges/apply$"
+        },
+        {
           "label": "Monitoring and evaluation",
           "path": "/organisations/existing-projects/monitoring-and-evaluation",
           "route": "^/organisations/existing-projects/monitoring-and-evaluation$"
